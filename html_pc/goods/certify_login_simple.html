@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>간편결제</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+				<section class="contents">
+					<form class="orderZone"><!-- 2016-07-05 간편결제 로그인 추가 -->
+						<h3 class="order_tit" id="goodsinfoh3">비회원 주문</h3>
+						<div class="post_wrap">
+							<div class="tit">
+								<p>별도 회원가입 없이 바로 구매가 가능합니다.<br>
+								단, 비회원으로 주문 시 <em>상품 할인, 적립금 지급 등</em><br>
+								회원에게만 주어지는 <em>특별한 혜택을 받으실 수 없습니다.</em></p>
+							</div>
+							<div class="btns_wrap mg0">
+								<span class="btn size2 bgcolor5"><a href="#">비회원 주문하기</a></span>
+							</div>
+						</div>
+						<h3 class="order_tit" id="goodsinfoh3">회원 주문</h3>
+						<div class="loginZone">
+							<fieldset>
+								<legend class="blind">로그인</legend>
+								<div class="input_box">
+									<ul>
+										<li>
+											<span class="inputBox"><label for="id"><input type="text" placeholder="아이디" name="id" tabindex="1" autocapitalize="off" /></label></span>
+										</li>
+										<li>
+											<span class="inputBox"><label for="pw"><input type="password" placeholder="비밀번호" name="pw" tabindex="2" autocapitalize="off" /></label></span>
+										</li>
+									</ul>
+								</div>
+								<div class="login_btn"><span class="btn size3 bgcolor4"><a href="#">로그인</a></span></div>
+								<div class="message">
+									<!--
+									<p class="message emp2">비밀번호를 입력해 주세요.</p>
+									<p class="message emp2">아이디를 입력해주세요.</p>
+									<p class="message emp2">입력한 아이디 또는 비밀번호가 잘못되었습니다.</p>
+									<p class="message emp2">비밀번호 모르신다면  '비밀번호 찾기'를 누르세요!</p>
+									-->
+								</div>
+							</fieldset>
+							<div class="btns_wrap btn2">
+								<span class="btn size2 bgcolor2"><a href="#">아이디 찾기</a></span>
+								<span class="btn size2 bgcolor2"><a href="#">비밀번호 찾기</a></span>
+							</div>
+							<div class="btns_wrap">
+								<span class="btn fullwidth bgcolor5"><a href="#"><strong>회원 가입 후 주문하기</strong></a></span>
+							</div>
+							<ul class="mark">
+                            	<li class="refer"><em>※</em>기존 간편 가입을 통해 가입 하신 분들은 회원가입 절차를 완료 하셔야만 회원 주문이 가능합니다.</li>
+                            </ul>
+						</div>
+					</form>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

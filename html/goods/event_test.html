@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>이벤트</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents colorContents">
+						<div class="sub_tit_wrap">
+							<h2 class="sub_tit"><span class="tl">이벤트 이름</span></h2>
+							<div class="goodAlarm_btn">
+								<button class="btn_share"><span class="icon icon_sh"></span><span class="txt">공유</span></button>
+							</div>
+						</div>
+
+						<div class="eventmain">
+							<ul class="BannerList">
+								<li>
+									<div class="event_inner">
+										<img src="http://img.shoppingntmall.com/htmleditor/020/event_20180530041527647348785.jpg" alt="" width="100%" />
+										<a href="/customer/insert-saveamt?saveamtFlag=1&amp;rUrl=/plan/event/swipeDetail/2018030282?pageType=1"><img src="http://img.shoppingntmall.com/htmleditor/307/event_20180530051527647389009.jpg" alt=""></a>
+										<img src="http://img.shoppingntmall.com/htmleditor/438/event_20180530061527647441227.jpg" alt="">
+										<span class="div_half">
+											<a href="http://play.google.com/store/apps/details?id=com.shoppingntmall.mcapp" target="_blank"><img src="http://img.shoppingntmall.com/htmleditor/838/event_20180530071527647459105.jpg" alt=""></a>
+											<a href="https://itunes.apple.com/kr/app/syoping-ent/id1004806037?mt=8" target="_blank"><img src="http://img.shoppingntmall.com/htmleditor/107/event_20180530081527647480433.jpg" alt=""></a>
+										</span>
+										<img src="http://img.shoppingntmall.com/htmleditor/135/event_20180530091527647513113.jpg" alt="">
+										<a href="/customer/insert-saveamt?saveamtFlag=2&amp;rUrl=/plan/event/swipeDetail/2018030282?pageType=1"><img src="http://img.shoppingntmall.com/htmleditor/920/event_20180530101527647548053.jpg" alt=""></a>
+										<img src="http://img.shoppingntmall.com/htmleditor/528/event_20180530111527647574690.jpg" alt="">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</section>
+
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<div class="sns_pop" style="display:none;">
+		<div class="sns_pop_bg"></div>
+		<div class="sns_pop_con">
+			<dl class="sns_pop_dl">
+				<dt>공유하기</dt>
+				<dd>
+					<a href="#none" id="kakaoTalkBtn">카카오톡</a>
+					<a href="#none" id="smsShareBtn">문자</a>
+					<a href="#none" id="kakaoStoryBtn">카카오스토리</a>
+					<a href="#none" id="faceBookBtn">페이스북</a>
+					<a href="#none" id="LinkBtn">링크복사</a>
+				</dd>
+			</dl>
+			<button type="button" class="sns_pop_btn">닫기</button>
+		</div>
+	</div>
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+
+			//공유하기 팝업
+			$('.btn_share').click(function() {
+				$('.sns_pop').fadeIn(300);
+				$(".sns_pop, .sns_tost").insertAfter(".pc_wrap");
+			});
+			$('.sns_pop_btn, .sns_pop_bg').click(function() {
+				$('.sns_pop').fadeOut(300);
+			});
+
+			//모바일 PC 분기처리
+			var filter2 = 'win16|win32|win64|mac|macintel';
+		  if (navigator.platform) {
+		    if (filter2.indexOf(navigator.platform.toLowerCase()) < 0) {
+		      //모바일 접속
+		      $('.pro_pc').hide(0);
+		      $('.pro_mo').show(0);
+		    } else {
+		      //PC 접속
+		      $('.pro_mo').hide(0);
+		      $('.pro_pc').show(0);
+		    }
+		  }
+		});
+	</script>
+	<script type="text/javascript">
+		jQuery(function() {
+			var imgSlideList = jQuery('#img-swipe').find('.swipe-wrap').find('> li');
+			if (imgSlideList.length > 1) {
+				var imgSwipe = Swipe(document.getElementById('img-swipe'), {
+					callback: function(index, elem) {
+						jQuery('#swipe-circle').find('a').eq(index).addClass('active').siblings().removeClass('active');
+					},
+					enable3d: !isGinger
+				});
+			};
+
+			var eventSlideList = $('#ban-slide').find('.swipe-wrap').find('> li');
+			var eventSwipe = Swipe(document.getElementById('ban-slide'), {
+				callback: function(index, elem) {
+					$('#ban-circle').find('a').eq(index).addClass('active').siblings().removeClass('active');
+				},
+				auto: 10000
+			});
+			$('#ban-circle').find('a').each(function(idx) {
+				$(this).click(function() {
+					eventSwipe.slide(idx)
+				});
+			})
+		});
+	</script>
+</body>
+
+</html>

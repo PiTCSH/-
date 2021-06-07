@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>회원탈퇴</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+				<section class="contents">
+					<div class="memOutZone">
+						<div class="wrong">
+							<p>회원님께서는 진행중인 거래가 있어,<br />즉시 탈퇴가 어렵습니다.</p>
+							<span>주문/배송 및 취소/교환/반품 내역이<br />모두 처리완료가 된 후 탈퇴가 가능하오니,<br />확인하시기 바랍니다.</span>
+							<!-- buttons --><!-- 2015-06-01 수정, 2015-05-12 수정 -->
+							<div class="btns_wrap btn2">
+								<span class="btn size2 bgcolor5"><a>주문/배송현황</a></span>
+								<span class="btn size2 bgcolor5"><a>취소/교환/반품현황</a></span>
+							</div>
+							<!-- /buttons -->
+						</div>
+					</div>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

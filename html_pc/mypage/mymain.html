@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>My쇼핑</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+            <div class="mypage_wrap">
+              <div class="user_info">
+                <div class="memberphone">
+                  <em class="phone"><span>피설현 </span>님</em>
+                  <div class="change"><a href="https://m.shoppingntmall.com/member/modify/user/login">회원정보수정</a></div>
+                </div>
+              </div>
+              <div class="contents_wrap">
+                <!--						 20160616002895 // 123456  -->
+                <ul class="coupon">
+                  <li>
+                    <p>쿠폰</p>
+                  </li>
+                  <li>
+                    <p><a href="http://m.shoppingntmall.com/mypage/coupon">
+                        <em class="emp2">0</a></em>장
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>적립금</p>
+                  </li>
+                  <li>
+                    <p><a href="https://m.shoppingntmall.com/mypage/saveamt">
+                        <em class="emp2">0</em>원
+                      </a></p>
+                  </li>
+                </ul>
+
+
+                <h3 class="whitetype">장바구니 상품<span class="btn size2 bgcolor5"><a href="http://m.shoppingntmall.com/cart/cartdblist">전체보기</a></span></h3>
+                <div class="goods_wrap">
+                  <!-- 갤러리형 -->
+                  <ul id="goodsImage" class="goods_image">
+                    <li>
+                      <div class="goods">
+                        <div class="goods_img">
+                          <a href="/display/goods/10083430">
+                            <img src="http://img.shoppingntmall.com/goods/430/10083430_h.jpg" alt="" onerror='this.src="/resources/img/empty/image_H.jpg"' />
+                          </a>
+                        </div>
+                        <div class="goods_name" onclick="javascript:goUrl('http://m.shoppingntmall.com/display/goods/10083430');">세균싹 행주티슈 1+1세트 총23팩(3팩 추가구성포함) 무료체험분 30일 살균99.9% 캡형</div>
+                        <div class="goods_price">
+                          <del><em>39,900</em>원</del>
+                          <span class="sale"><em>38,900</em>원</span>
+                        </div>
+                        <a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="menulink">
+                <ul>
+                  <li><a href="/comment/commentList">상품평 작성 <span class="new_text"> (2)</span></a></li>
+                  <li><a href="http://m.shoppingntmall.com/mypage/wishlist">찜한 상품</a></li>
+                  <li><a href="/mypage/order/list">주문/배송 조회</a></li>
+                  <li><a href="/mypage/order/cancelList">취소/교환/반품 내역</a></li>
+                  <li><a href="/mypage/qna">나의 상품 Q&amp;A</a></li>
+                  <li><a href="/customer/counsel/list">1:1 문의 내역</a></li>
+                  <li><a href=" /mypage/broadAlarmList">나의 방송알림</a></li>
+                  <li><a href="/customer/main">고객센터 바로가기</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+	  });
+	</script>
+  <script>
+    $(function() {
+      $('input[name="temp_selectAddr"]').change(function() {
+        $(this).attr("checked", true);
+      });
+    });
+
+    //주소 검색 결과 호출
+    var postSearchCb;
+    var openPostYn = "0";
+
+    function openPostSearch(callbackFunction) {
+      openPostYn = "1";
+      var url = location.href;
+      if (url.indexOf("#postPop") < 0) { //= hard history back 으로 안갔을때에는 history 추가하지 않는다.
+        window.history.pushState('forward', null, '#postPop');
+      }
+      window.scrollTo(0, 1)
+
+
+      postSearchCb = callbackFunction;
+
+      jQuery('main#contents').hide();
+      jQuery('#postPopLayer').show();
+
+      /* 주소정제 2016-08-17 */
+      jQuery("#addrListPart").empty();
+      jQuery("#roadaddrListPart").empty();
+      jQuery("input#dongName").val("");
+      jQuery("input#roadName").val("");
+      jQuery("select#guCode").val("");
+      jQuery("select#cityCode").val("");
+
+      jQuery("input#sltDisplayPostNo").val("");
+      jQuery("input#sltDisplayBaseAddr").val("");
+      jQuery("input#inputDetailAddr").val("");
+
+      jQuery("input#sltDisplayRoadPostNo").val("");
+      jQuery("input#sltDisplayBaseRoadAddr").val("");
+      jQuery("input#inputDetailRoadAddr").val("");
+
+      jQuery("input#temp_sltPostNo").val("")
+      jQuery("input#temp_sltBaseAddr").val("")
+
+      jQuery("#addrResultPart").hide();
+      jQuery("#roadaddrResultPart").hide();
+
+      jQuery("#post1").show();
+      jQuery("#post2").hide();
+      jQuery("#post3").hide();
+      jQuery("#tapAddrPart").click();
+    }
+
+    function postPopAddrTapPart() {
+      jQuery("#guCode").empty();
+      jQuery("#guCode").append("<option value=''>시/군/구 선택</option>");
+
+      jQuery("input#dongName").val("");
+      jQuery("input#roadName").val("");
+
+      jQuery("input#sltDisplayPostNo").val("");
+      jQuery("input#sltDisplayBaseAddr").val("");
+      jQuery("input#inputDetailAddr").val("");
+
+      jQuery("input#temp_sltPostNo").val("");
+      jQuery("input#temp_sltBaseAddr").val("");
+
+      jQuery("input#temp_stdPost").val("");
+      jQuery("input#temp_stdPostSeq").val("");
+      jQuery("input#temp_stdPostAddr1").val("");
+      jQuery("input#temp_stdPostAddr2").val("");
+      jQuery("input#temp_stdPostLngx").val("");
+      jQuery("input#temp_stdPostLaty").val("");
+
+      jQuery("input#temp_stdRoadPost").val("");
+      jQuery("input#temp_stdRoadPostSeq").val("");
+      jQuery("input#temp_stdRoadPostAddr1").val("");
+      jQuery("input#temp_stdRoadPostAddr2").val("");
+      jQuery("input#temp_stdRoadPostLngx").val("");
+      jQuery("input#temp_stdRoadPostLaty").val("");
+
+      jQuery("input#temp_refineResultCode").val("");
+
+      jQuery("#addrResultPart").hide();
+      jQuery("#roadaddrResultPart").hide();
+    }
+
+    function postPopRoadTapPart() {
+      jQuery("input#dongName").val("");
+      jQuery("input#roadName").val("");
+      jQuery("select#guCode").val("");
+      jQuery("select#cityCode").val("");
+
+      jQuery("input#sltDisplayRoadPostNo").val("");
+      jQuery("input#sltDisplayBaseRoadAddr").val("");
+      jQuery("input#inputDetailRoadAddr").val("");
+
+      jQuery("input#temp_sltPostNo").val("");
+      jQuery("input#temp_sltBaseAddr").val("");
+
+      jQuery("input#temp_stdPost").val("");
+      jQuery("input#temp_stdPostSeq").val("");
+      jQuery("input#temp_stdPostAddr1").val("");
+      jQuery("input#temp_stdPostAddr2").val("");
+      jQuery("input#temp_stdPostLngx").val("");
+      jQuery("input#temp_stdPostLaty").val("");
+
+      jQuery("input#temp_stdRoadPost").val("");
+      jQuery("input#temp_stdRoadPostSeq").val("");
+      jQuery("input#temp_stdRoadPostAddr1").val("");
+      jQuery("input#temp_stdRoadPostAddr2").val("");
+      jQuery("input#temp_stdRoadPostLngx").val("");
+      jQuery("input#temp_stdRoadPostLaty").val("");
+
+      jQuery("input#temp_refineResultCode").val("");
+
+      jQuery("#addrResultPart").hide();
+      jQuery("#roadaddrResultPart").hide();
+
+      jQuery("#roadaddrAddPart").css('display', 'none');
+    }
+
+    jQuery(document).ready(function($) {
+      if (window.history && window.history.pushState) {
+        $(window).on('popstate', function() {
+          var hashLocation = location.hash;
+          var hashSplit = hashLocation.split("#!/");
+          var hashName = hashSplit[1];
+
+          if (hashName !== '') {
+            var hash = window.location.hash;
+            if (hash === '') {
+              //= 우편번호 Open상태에서 hard history back 발생 시 주문페이지로 이동
+              if (openPostYn == "1") {
+                //window.history.pushState('forward', null, '#postPop');
+                closePostPage();
+              }
+            }
+          }
+        });
+      }
+    });
+
+
+    function closePostPage() {
+      jQuery('#postPopLayer').hide();
+
+      jQuery('main#contents').show();
+    }
+
+
+    function searchPostSubmit(sltPostFlag) {
+
+      var dongName = "";
+      var cityCode = "";
+      var guCode = "";
+      var roadName = "";
+
+      jQuery("input#currentPage").val("1");
+      var currentPage = Number(jQuery("input#currentPage").val());
+      var rowsPerPage = Number(jQuery("input#rowsPerPage").val());
+
+      jQuery("#addrNoDataMsgPart").css('display', 'none');
+      jQuery("#addrResultMsgPart").css('display', 'none');
+      jQuery("#roadaddrNoDataMsgPart").css('display', 'none');
+      jQuery("#roadaddrResultMsgPart").css('display', 'none');
+
+      jQuery("#roadaddrAddPart").css('display', 'none');
+
+      if ("1" == sltPostFlag) {
+        cityCode = jQuery("#cityCode > option:selected").val();
+        guCode = jQuery("#guCode > option:selected").val();
+        roadName = jQuery.trim(jQuery("input#roadName").val());
+
+        if (cityCode == "") {
+          var msg = "시/도를 선택해 주세요.";
+          jQuery('#roadaddrNoDataMsgPart').html(msg);
+          jQuery("#roadaddrNoDataMsgPart").css('display', '');
+          jQuery("#cityCode").focus();
+          return false;
+        }
+
+        if (guCode == "") {
+          var msg = "시/군/구를 선택해 주세요.";
+          jQuery('#roadaddrNoDataMsgPart').html(msg);
+          jQuery("#roadaddrNoDataMsgPart").css('display', '');
+          jQuery("#guCode").focus();
+          return false;
+        }
+
+        if (roadName == "") {
+          var msg = "도로명을 입력해 주세요.";
+          jQuery('#roadaddrNoDataMsgPart').html(msg);
+          jQuery("#roadaddrNoDataMsgPart").css('display', '');
+          jQuery("#roadName").focus();
+          return false;
+        }
+
+        if (2 > roadName.length) {
+          var msg = "도로명은 2글자 이상 입력해 주세요.";
+          jQuery('#roadaddrNoDataMsgPart').html(msg);
+          jQuery("#roadaddrNoDataMsgPart").css('display', '');
+          jQuery("#dongName").focus();
+          return false;
+        }
+      } else {
+        dongName = jQuery.trim(jQuery("input#dongName").val());
+
+        if (dongName == "") {
+          var msg = "지역명을 입력해 주세요.";
+          jQuery('#addrNoDataMsgPart').html(msg);
+          jQuery("#addrNoDataMsgPart").css('display', '');
+          jQuery("#dongName").focus();
+          return false;
+        }
+
+        if (2 > dongName.length) {
+          var msg = "지역명은 2글자 이상 입력해 주세요.";
+          jQuery('#addrNoDataMsgPart').html(msg);
+          jQuery("#addrNoDataMsgPart").css('display', '');
+          jQuery("#dongName").focus();
+          return false;
+        }
+      }
+
+      var param = new Object();
+      param['sltPostFlag'] = sltPostFlag;
+      param['dongName'] = dongName;
+      param['cityCode'] = cityCode;
+      param['guCode'] = guCode;
+      param['roadName'] = roadName;
+      param['currentPage'] = currentPage;
+      param['rowsPerPage'] = rowsPerPage;
+      ui_loading.attachLoading();
+
+      commonJsonAjax("/member/postno-list", param, 'json', 'POST')
+        .done(function(result, textStatus, jqXHR) {
+          var data = result.data;
+
+          if ("200" == data.code) {
+            if ("1" == sltPostFlag) {
+
+              var htm = [];
+              if ("0" == data.roadaddrList.length) {
+                htm.push("검색결과가 없습니다.");
+                jQuery("div.result").css('display', 'none');
+                jQuery("#roadaddrNoDataMsgPart").empty().append(htm.join('')).css('display', '');
+                ui_loading.detachLoading();
+              } else {
+                jQuery("#roadaddrListPart").empty();
+                jQuery.each(data.roadaddrList, function(index, model) {
+                  htm = "";
+                  /* 마현 주소정제 수정*/
+                  htm += "<tr>  ";
+                  htm += "	<td>" + model.postNo + "</td>	";
+                  /* //마현 주소정제 수정*/
+                  htm += "	<td>	";
+                  htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.roadPostAddr + "</p>";
+                  htm += "		<p class=\"juso2\">" + model.cityName + " " + model.guName + " " + model.postAddr + "</p>	";
+                  htm += "	</td>	";
+                  htm += "</tr> ";
+                  var html = jQuery(htm);
+                  html.data("model", model).on('click', function() {
+                    /* 마현 주소정제 수정*/
+                    //closePostPage();
+                    selectPost(model.postNo, model.postSeq, model.cityName + " " + model.guName + " " + model.roadPostAddr, model.custAreaGb, model.roadAddrNo, '1');
+                    //postSearchCb(model.postNo.substr(0,3), model.postNo.substr(3,3), model.postSeq, model.cityName+" "+model.guName+" "+model.roadPostAddr, model.custAreaGb, model.roadAddrNo,'1');
+                    /*// 마현 주소정제 수정*/
+                  });
+                  jQuery("#roadaddrListPart").append(html);
+
+                });
+
+                if (data.roadaddrList.length < rowsPerPage) {
+                  jQuery("#roadaddrAddPart").css('display', 'none');
+                } else {
+                  jQuery("#roadaddrAddPart").css('display', '');
+                }
+
+                jQuery("div.result").css('display', '');
+                jQuery("#roadaddrListPart").css('display', '');
+                ui_loading.detachLoading();
+              }
+
+            } else {
+
+              var htm = [];
+              if ("0" == data.postArr.length) {
+                htm.push("검색결과가 없습니다.");
+                jQuery("div.result").css('display', 'none');
+                jQuery("#addrNoDataMsgPart").empty().append(htm.join('')).css('display', '');
+                ui_loading.detachLoading();
+              } else {
+                jQuery("#addrListPart").empty();
+                jQuery.each(data.postArr, function(index, model) {
+                  htm = "";
+                  /* 마현 주소정제 수정*/
+                  htm += "<tr>  ";
+                  htm += "	<td>" + model.postNo + "</td>	";
+                  /* //마현 주소정제 수정*/
+                  htm += "	<td>	";
+                  if (model.note == null) {
+                    htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.dongName + "</p>";
+                  } else {
+                    htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.dongName + " " + model.note + "</p>";
+                  }
+                  htm += "	</td>	";
+                  htm += "</tr> ";
+                  var html = jQuery(htm);
+                  html.data("model", model).on('click', function() {
+                    /* 마현 주소정제 수정*/
+                    var thisData = jQuery(this).data("model");
+                    //closePostPage();
+                    selectPost(model.postNo, model.postSeq, model.dongDtName, model.custAreaGb, '', '0');
+                    //postSearchCb(thisData.postNo.substr(0,3), thisData.postNo.substr(3,3), thisData.postSeq, thisData.dongDtName, thisData.custAreaGb, '','0');
+                    /* // 마현 주소정제 수정*/
+                  });
+                  jQuery("#addrListPart").append(html);
+                });
+                jQuery("div.result").css('display', '');
+                jQuery("#addrListPart").css('display', '');
+                ui_loading.detachLoading();
+              }
+
+            }
+          } else {
+            alert(data.message);
+            ui_loading.detachLoading();
+          }
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+          alert("시스템 오류가 발생하였습니다.");
+          ui_loading.detachLoading();
+        });
+
+    }
+
+
+    //주소 검색 결과 호출
+    function addPostList(sltPostFlag) {
+
+      var currentPage = Number(jQuery("input#currentPage").val());
+      var rowsPerPage = Number(jQuery("input#rowsPerPage").val());
+
+      var dongName = "";
+      var cityCode = "";
+      var guCode = "";
+      var roadName = "";
+
+      currentPage++;
+      jQuery("#currentPage").val(currentPage);
+
+      jQuery("#addrNoDataMsgPart").css('display', 'none');
+      jQuery("#addrResultMsgPart").css('display', 'none');
+      jQuery("#roadaddrNoDataMsgPart").css('display', 'none');
+      jQuery("#roadaddrResultMsgPart").css('display', 'none');
+
+      if ("1" == sltPostFlag) {
+        cityCode = jQuery("#cityCode > option:selected").val();
+        guCode = jQuery("#guCode > option:selected").val();
+        roadName = jQuery.trim(jQuery("input#roadName").val());
+      } else {
+        dongName = jQuery.trim(jQuery("input#dongName").val());
+      }
+
+      var param = new Object();
+      param['sltPostFlag'] = sltPostFlag;
+      param['dongName'] = dongName;
+      param['cityCode'] = cityCode;
+      param['guCode'] = guCode;
+      param['roadName'] = roadName;
+      param['currentPage'] = currentPage;
+      param['rowsPerPage'] = rowsPerPage;
+      ui_loading.attachLoading();
+
+      commonJsonAjax("/member/postno-list", param, 'json', 'POST')
+        .done(function(result, textStatus, jqXHR) {
+          var data = result.data;
+          if ("200" == data.code) {
+            if ("1" == sltPostFlag) {
+
+              var htm = [];
+              if ("0" == data.roadaddrList.length) {
+                htm.push("검색결과가 없습니다.");
+                jQuery("div.result").css('display', 'none');
+                jQuery("#roadaddrNoDataMsgPart").empty().append(htm.join('')).css('display', '');
+                ui_loading.detachLoading();
+              } else {
+                jQuery.each(data.roadaddrList, function(index, model) {
+                  htm = "";
+                  /* 마현 주소정제 수정*/
+                  htm += "<tr >";
+                  htm += "	<td>" + model.postNo + "</td>	";
+                  /* //마현 주소정제 수정*/
+                  htm += "	<td>	";
+                  htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.roadPostAddr + "</p>";
+                  htm += "		<p class=\"juso2\">" + model.cityName + " " + model.guName + " " + model.postAddr + "</p>	";
+                  htm += "	</td>	";
+                  htm += "</tr> ";
+                  var html = jQuery(htm);
+
+                  html.data("model", model).on('click', function() {
+                    /* 마현 주소정제 수정*/
+                    //closePostPage();
+                    selectPost(model.postNo, model.postSeq, model.cityName + " " + model.guName + " " + model.roadPostAddr, model.custAreaGb, model.roadAddrNo, '1')
+                    //postSearchCb(model.postNo.substr(0,3), model.postNo.substr(3,3), model.postSeq, model.cityName+" "+model.guName+" "+model.roadPostAddr, model.custAreaGb, model.roadAddrNo,'1');
+                    /* //마현 주소정제 수정*/
+                  });
+
+                  jQuery("#roadaddrListPart").append(html);
+
+                });
+
+                if (data.roadaddrList.length < rowsPerPage) {
+                  jQuery("#roadaddrAddPart").css('display', 'none');
+                } else {
+                  jQuery("#roadaddrAddPart").css('display', '');
+                }
+
+                jQuery("div.result").css('display', '');
+                jQuery("#roadaddrListPart").css('display', '');
+                ui_loading.detachLoading();
+              }
+
+            } else {
+
+              var htm = [];
+              if ("0" == data.postArr.length) {
+                htm.push("검색결과가 없습니다.");
+                jQuery("div.result").css('display', 'none');
+                jQuery("#addrNoDataMsgPart").empty().append(htm.join('')).css('display', '');
+                ui_loading.detachLoading();
+              } else {
+                jQuery.each(data.postArr, function(index, model) {
+                  htm = "";
+                  /* 마현 주소정제 수정*/
+                  htm += "<tr>  ";
+                  htm += "	<td>" + model.postNo + "</td>	";
+                  /* //마현 주소정제 수정*/
+                  htm += "	<td>	";
+                  if (model.note == null) {
+                    htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.dongName + "</p>";
+                  } else {
+                    htm += "		<p class=\"juso1\">" + model.cityName + " " + model.guName + " " + model.dongName + " " + model.note + "</p>";
+                  }
+                  htm += "	</td>	";
+                  htm += "</tr> ";
+                  var html = jQuery(htm);
+                  html.data("model", model).on('click', function() {
+                    var thisData = jQuery(this).data("model");
+                    /* 마현 주소정제 수정*/
+                    //closePostPage();
+                    selectPost(model.postNo, model.postSeq, model.dongDtName, model.custAreaGb, '', '0');
+                    //postSearchCb(thisData.postNo.substr(0,3), thisData.postNo.substr(3,3), thisData.postSeq, thisData.dongDtName, thisData.custAreaGb, '','0');
+                    /* //마현 주소정제 수정*/
+                  });
+                  jQuery("#addrListPart").append(html);
+                });
+                jQuery("div.result").css('display', '');
+                jQuery("#addrListPart").css('display', '');
+                ui_loading.detachLoading();
+              }
+
+            }
+          } else {
+            alert(data.message);
+            ui_loading.detachLoading();
+          }
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+          alert("시스템 오류가 발생하였습니다.");
+          ui_loading.detachLoading();
+        });
+    }
+    jQuery(function() {
+
+
+      jQuery('input#dongName').on('keyup', function(e) {
+        jQuery("#addrNoDataMsgPart").css('display', 'none');
+        if (13 == e.keyCode) {
+          searchPostSubmit('0');
+        }
+
+      });
+
+      jQuery('input#roadName').on('keyup', function(e) {
+        jQuery("#roadaddrNoDataMsgPart").css('display', 'none');
+        if (13 == e.keyCode) {
+          searchPostSubmit('1');
+        }
+      });
+      //= 시/도 선택시 시/군/구 AJAX 조회
+      jQuery("#cityCode").change(function() {
+
+        jQuery("#roadaddrNoDataMsgPart").css('display', 'none');
+        jQuery("div.result").css('display', 'none');
+
+        var htm = [];
+        htm.push("<option value=''>시/군/구 선택</option>");
+        var cityCode = jQuery("#cityCode").val();
+
+        var param = new Object();
+        param['cityCode'] = cityCode;
+
+        commonJsonAjax("/member/gu-list", param, 'json', 'POST')
+          .done(function(result, textStatus, jqXHR) {
+            var data = result.data;
+            if ("200" == data.code) {
+              if ("0" != data.guList.length) {
+                jQuery.each(data.guList, function(index, model) {
+                  htm.push("<option value='" + model.guCode + "'>" + model.guName + "</option>");
+                });
+                jQuery("#guCode").empty().append(htm.join(''));
+                jQuery("#guCode option:first").attr('selected', 'selected');
+              }
+            } else {
+              if ("220.1" == data.code || "401" == data.code) {
+                checkLogin();
+              } else {
+                alert(data.message);
+                //window.location.reload(true);
+              }
+            }
+          })
+          .fail(function(jqXHR, textStatus, errorThrown) {
+            alert("시스템 오류가 발생하였습니다.");
+          });
+      });
+
+      //= 시/군/구 선택시 메시지 비노출
+      jQuery("#guCode").change(function() {
+        jQuery("#roadaddrNoDataMsgPart").css('display', 'none');
+        jQuery("div.result").css('display', 'none');
+      });
+    });
+    /* 마현 주소정제 수정 스크립트 맨 마지막 단 까지*/
+    //주소 조회 선택(정제 이후)
+    function selectPost(p1, seq, addr, agb, road, roadYn) {
+      if (roadYn == "1") {
+        jQuery("input#sltDisplayRoadPostNo").val(p1);
+        jQuery("input#sltDisplayBaseRoadAddr").val(addr);
+        jQuery("input#inputDetailRoadAddr").focus();
+      } else {
+        jQuery("input#sltDisplayPostNo").val(p1);
+        jQuery("input#sltDisplayBaseAddr").val(addr);
+        jQuery("input#inputDetailAddr").focus();
+      }
+      jQuery("input#temp_sltPostNo").val(p1);
+      jQuery("input#temp_sltBaseAddr").val(addr);
+      jQuery("input#temp_sltDetailAddr").val("");
+
+      jQuery("input#temp_sltPostSeq").val(seq);
+      jQuery("input#temp_sltCustAreaGb").val(agb);
+      jQuery("input#temp_sltRoadAddrNo").val(road);
+      jQuery("input#temp_sltRoadAddrYn").val(roadYn);
+    }
+
+    //주소 정제
+    function refinePost(roadYn) {
+      jQuery("#guCode").empty();
+      jQuery("#guCode").append("<option value=''>시/군/구 선택</option>");
+
+      if (jQuery("input#temp_sltPostNo").val() == "" || jQuery("input#temp_sltBaseAddr").val() == "") {
+        alert("해당되는 주소를 선택해 주세요.");
+        return false;
+      } else {
+        if (roadYn == "1") {
+          if (jQuery("input#inputDetailRoadAddr").val() == "") {
+            alert("상세 주소를 입력해 주세요.");
+            return false;
+          }
+        } else {
+          if (jQuery("input#inputDetailAddr").val() == "") {
+            alert("상세 주소를 입력해 주세요.");
+            return false;
+          }
+        }
+      }
+
+      var param = new Object();
+
+      var SearchMode = "J";
+      var postNo = "";
+      var baseAddr = "";
+      var DetailAddr = "";
+      var checkWord = /[#$%^*]/;
+
+      if (roadYn == "1") { // 입력 주소구분(J:지번, N:새길)
+        SearchMode = "N";
+        postNo = jQuery("input#sltDisplayRoadPostNo").val();
+        baseAddr = jQuery("input#sltDisplayBaseRoadAddr").val();
+        DetailAddr = jQuery("input#inputDetailRoadAddr").val();
+      } else {
+        SearchMode = "J";
+        postNo = jQuery("input#sltDisplayPostNo").val();
+        baseAddr = jQuery("input#sltDisplayBaseAddr").val();
+        DetailAddr = jQuery("input#inputDetailAddr").val();
+      }
+
+      if (checkWord.test(DetailAddr)) {
+        alert("상세 주소에 특수문자는 입력할 수 없습니다.");
+        return false;
+      }
+
+      jQuery("input#temp_sltPostNo").val(postNo);
+      jQuery("input#temp_sltBaseAddr").val(baseAddr);
+      jQuery("input#temp_sltDetailAddr").val(DetailAddr);
+
+      param['zipcode'] = postNo;
+      param['addr1'] = baseAddr;
+      param['addr2'] = DetailAddr;
+      param['SearchMode'] = SearchMode;
+
+      commonJsonAjax("/interfaces/refinePost", param, 'json', 'POST')
+        .done(function(result, textStatus, jqXHR) {
+          if ("200" == result.code) {
+            var refinePost = result.refinePost;
+            if (refinePost.resCode == "I" || refinePost.resCode == "H") {
+              var refinePostData = refinePost.refinePostData;
+
+              jQuery("input#temp_refineResultCode").val(refinePost.resCode);
+
+              jQuery("input#temp_stdPost").val(refinePostData.zprnj);
+              jQuery("input#temp_stdPostSeq").val(refinePostData.zprnsjb);
+              jQuery("input#temp_stdPostAddr1").val(refinePostData.addr1Y);
+              jQuery("input#temp_stdPostAddr2").val(refinePostData.stdaddr);
+              jQuery("input#temp_stdPostLngx").val(refinePostData.gisx);
+              jQuery("input#temp_stdPostLaty").val(refinePostData.gisy);
+
+              jQuery("input#temp_stdRoadPost").val(refinePostData.zprnr);
+              jQuery("input#temp_stdRoadPostSeq").val(refinePostData.zprnsr);
+              jQuery("input#temp_stdRoadPostAddr1").val(refinePostData.nadr1S);
+              jQuery("input#temp_stdRoadPostAddr2").val(refinePostData.nadr2S);
+              jQuery("input#temp_stdRoadPostLngx").val(refinePostData.nnmx);
+              jQuery("input#temp_stdRoadPostLaty").val(refinePostData.nnmy);
+
+              jQuery("input#temp_stdRoadNnmb").val(refinePostData.nnmb);
+
+              jQuery("input#sltDefaultInputAddrYn").val("0");
+              sltInputAddrShow();
+              displayRefine();
+
+            } else {
+              //입력주소 선택
+              jQuery("input#sltDefaultInputAddrYn").val("1");
+              sltInputAddrHide();
+              displayRefine();
+            }
+
+          } else {
+            //입력주소 선택
+            jQuery("input#sltDefaultInputAddrYn").val("1");
+            sltInputAddrHide();
+            displayRefine();
+          }
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+          //alert("시스템 오류가 발생하였습니다.");
+          //입력주소 선택
+          jQuery("input#sltDefaultInputAddrYn").val("1");
+          sltInputAddrHide();
+          displayRefine();
+        });
+    }
+
+    //= 정제주소 선택 영역 전시
+    function displayRefine() {
+      jQuery("#post1").hide();
+      jQuery("#post2").hide();
+      jQuery("#post3").show();
+
+      //window.scrollTo(0,1);
+    }
+
+    //= 정제  결과 영역 비전시( 정제주소 없어 입력주소 자동선택)
+    function sltInputAddrHide() {
+      jQuery("#sltRefineAddrTxt").html("매칭된 지번/도로명 주소가 없습니다. 입력된 주소를 사용하시겠습니까?");
+      jQuery("#sltRefineAddrTxt").show();
+
+      jQuery("#sltRefineAddrPart1").hide();
+      jQuery("#sltRefineAddrPart2").hide();
+      jQuery("#sltRefineAddrPart3").hide();
+      jQuery("#sltRefineAddrPart4").hide();
+      jQuery("#sltRefineAddrPart5").hide();
+      jQuery("#sltRefineAddrPart6").hide();
+    }
+
+    //= 정제 결과 영역 전시( 정상정제 )
+    function sltInputAddrShow() {
+      jQuery("#sltRefineAddrTxt").html("검색된 지번/도로명 주소 중 사용하실 주소를 선택해주세요.");
+      jQuery("#sltRefineAddrTxt").show();
+
+      jQuery("#sltRefineAddrPart1").show();
+      jQuery("#sltRefineAddrPart2").show();
+      jQuery("#sltRefineAddrPart3").show();
+      jQuery("#sltRefineAddrPart4").show();
+      jQuery("#sltRefineAddrPart5").show();
+      jQuery("#sltRefineAddrPart6").show();
+    }
+
+    function selectLastAddr() {
+      var postNo = "";
+      var postSeq = "";
+      var baseAddr = "";
+      var detailAddr = "";
+      var postGb = "";
+      var roadNo = "";
+      var roadYn = "";
+
+      var cnt = jQuery("input#recCnt").val();
+
+      if (jQuery("input#sltDefaultInputAddrYn").val() == "0") {
+        if (jQuery("input[name=temp_selectAddr]:checked").val() == "1") {
+          alert("검색된 지번/도로명 주소 중 사용하실 주소를 선택해주세요.");
+          return;
+        }
+        if (jQuery("input[name=temp_selectAddr]:checked").val() == "2") { //표준도로명
+          postNo = jQuery("input#temp_stdRoadPost").val();
+          postSeq = jQuery("input#temp_stdRoadPostSeq").val();
+          baseAddr = jQuery("input#temp_stdRoadPostAddr1").val();
+          detailAddr = jQuery("input#temp_stdRoadPostAddr2").val();
+        } else if (jQuery("input[name=temp_selectAddr]:checked").val() == "3") { //표준지번
+          postNo = jQuery("input#temp_stdPost").val();
+          postSeq = jQuery("input#temp_stdPostSeq").val();
+          baseAddr = jQuery("input#temp_stdPostAddr1").val();
+          detailAddr = jQuery("input#temp_stdPostAddr2").val();
+        } else {
+          postNo = jQuery("input#temp_sltPostNo").val();
+          postSeq = jQuery("input#temp_sltPostSeq").val();
+          baseAddr = jQuery("input#temp_sltBaseAddr").val();
+          detailAddr = jQuery("input#temp_sltDetailAddr").val();
+        }
+      } else { //입력주소
+        postNo = jQuery("input#temp_sltPostNo").val();
+        postSeq = jQuery("input#temp_sltPostSeq").val();
+        baseAddr = jQuery("input#temp_sltBaseAddr").val();
+        detailAddr = jQuery("input#temp_sltDetailAddr").val();
+        jQuery("input[name=temp_selectAddr]:checked").val("1");
+      }
+      postGb = jQuery("input#temp_sltCustAreaGb").val();
+      roadNo = jQuery("input#temp_sltRoadAddrNo").val();
+      roadYn = jQuery("input#temp_sltRoadAddrYn").val();
+
+      if (typeof postGb == 'undefined') {
+        postGb = jQuery("input#custAreaGb").val();
+      } else {
+        jQuery("input#custAreaGb").val(postGb);
+      }
+
+      jQuery("#post01").val(postNo);
+      jQuery("input[name=addr]").val(postNo);
+      jQuery("#baseAddr").val(baseAddr);
+      jQuery("#detailAddr").val(detailAddr);
+
+      //2016-08-22 jQuery("#receiverSeq").val('');
+      jQuery("#custAreaGb").val(postGb);
+      jQuery("#receiverPostSeq").val(postSeq);
+      jQuery("#roadAddrNo").val(roadNo);
+      jQuery("#roadAddrYn").val(roadYn);
+
+      jQuery("input#sltPostNo").val(jQuery("input#temp_sltPostNo").val());
+      jQuery("input#sltPostSeq").val(jQuery("input#temp_sltPostSeq").val());
+      jQuery("input#sltBaseAddr").val(jQuery("input#temp_sltBaseAddr").val());
+      jQuery("input#sltDetailAddr").val(jQuery("input#temp_sltDetailAddr").val());
+      jQuery("input#sltRoadAddrNo").val(jQuery("input#temp_sltRoadAddrNo").val());
+      jQuery("input#sltRoadAddrYn").val(jQuery("input#temp_sltRoadAddrYn").val());
+
+      jQuery("input#refineResultCode").val(jQuery("input#temp_refineResultCode").val());
+      jQuery("input#selectAddr").val(jQuery("input[name=temp_selectAddr]:checked").val());
+
+      jQuery("input#stdPost").val(jQuery("input#temp_stdPost").val());
+      jQuery("input#stdPostSeq").val(jQuery("input#temp_stdPostSeq").val());
+      jQuery("input#stdPostAddr1").val(jQuery("input#temp_stdPostAddr1").val());
+      jQuery("input#stdPostAddr2").val(jQuery("input#temp_stdPostAddr2").val());
+      jQuery("input#stdPostLngx").val(jQuery("input#temp_stdPostLngx").val());
+      jQuery("input#stdPostLaty").val(jQuery("input#temp_stdPostLaty").val());
+
+      jQuery("input#stdRoadPost").val(jQuery("input#temp_stdRoadPost").val());
+      jQuery("input#stdRoadPostSeq").val(jQuery("input#temp_stdRoadPostSeq").val());
+      jQuery("input#stdRoadPostAddr1").val(jQuery("input#temp_stdRoadPostAddr1").val());
+      jQuery("input#stdRoadPostAddr2").val(jQuery("input#temp_stdRoadPostAddr2").val());
+      jQuery("input#stdRoadPostLngx").val(jQuery("input#temp_stdRoadPostLngx").val());
+      jQuery("input#stdRoadPostLaty").val(jQuery("input#temp_stdRoadPostLaty").val());
+
+      jQuery("input#stdRoadNnmb").val(jQuery("input#temp_stdRoadNnmb").val());
+
+      selectPostParamSetting(postNo, postSeq, baseAddr, postGb, roadNo, roadYn)
+
+      closePostPage();
+
+    }
+
+    //주소 최종  선택(정제 이후)
+    function selectPostParamSetting(postNo, postSeq, baseAddr, postGb, roadNo, roadYn) {
+
+      var param = new Object();
+
+      param['post01'] = postNo;
+      param['post02'] = "";
+      param['postSeq'] = postSeq;
+      param['baseAddr'] = baseAddr;
+      param['custAreaGb'] = postGb;
+      param['roadAddrNo'] = roadNo;
+      param['receiverSeq'] = "";
+      param['roadAddrYn'] = roadYn;
+
+      param['sltPostNo'] = jQuery("input#sltPostNo").val();
+      param['sltPostSeq'] = jQuery("input#sltPostSeq").val();
+      param['sltBaseAddr'] = jQuery("input#sltBaseAddr").val();
+      param['sltDetailAddr'] = jQuery("input#sltDetailAddr").val();
+      param['sltRoadAddrNo'] = jQuery("input#sltRoadAddrNo").val();
+      param['sltRoadAddrYn'] = jQuery("input#sltRoadAddrYn").val();
+      param['refineResultCode'] = jQuery("input#refineResultCode").val();
+      param['selectAddr'] = jQuery("input#selectAddr").val();
+
+      param['stdPost'] = jQuery("input#stdPost").val();
+      param['stdPostSeq'] = jQuery("input#stdPostSeq").val();
+      param['stdPostAddr1'] = jQuery("input#stdPostAddr1").val();
+      param['stdPostAddr2'] = jQuery("input#stdPostAddr2").val();
+      param['stdPostLngx'] = jQuery("input#stdPostLngx").val();
+      param['stdPostLaty'] = jQuery("input#stdPostLaty").val();
+
+      param['stdRoadPost'] = jQuery("input#stdRoadPost").val();
+      param['stdRoadPostSeq'] = jQuery("input#stdRoadPostSeq").val();
+      param['stdRoadPostAddr1'] = jQuery("input#stdRoadPostAddr1").val();
+      param['stdRoadPostAddr2'] = jQuery("input#stdRoadPostAddr2").val();
+      param['stdRoadPostLngx'] = jQuery("input#stdRoadPostLngx").val();
+      param['stdRoadPostLaty'] = jQuery("input#stdRoadPostLaty").val();
+      param['stdRoadNnmb'] = jQuery("input#stdRoadNnmb").val();
+
+      //주문서 작성페이지에서만 사용하도록 처리
+      var path = window.location['pathname'];
+
+      if (path.indexOf("/order/purchase") > -1) {
+        selectPostOrder(param);
+      }
+
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      if (isApp()) {
+        if ((isAndroid() && !isSupportedAppVersion("2.1.2")) || (isIOS() && !isSupportedAppVersion("2.1.1"))) {
+          $('.bottom_menu').hide();
+        }
+      }
+    });
+
+    //하단 퀵메뉴
+    var UserAgent = navigator.platform;
+    if (UserAgent.match(/i(Phone|Pod)/i) != null) {
+      $('.bottom_menu').addClass('on');
+      $('.sc_con').css('padding-bottom', '60px');
+    } else {
+      var last_pos = 0;
+      $(window).scroll(function() {
+        var current_pos = $(this).scrollTop();
+        if (current_pos > last_pos) {
+          $('.bottom_menu').removeClass('on');
+        } else {
+          $('.bottom_menu').addClass('on');
+        }
+        last_pos = current_pos;
+      });
+    }
+  </script>
+  <script>
+    if (location.href.indexOf("/display/goods/") > 0) {
+      jQuery('.floating_btn_top').css('margin-bottom', 0);
+    }
+  </script>
+
+</body>
+</html>

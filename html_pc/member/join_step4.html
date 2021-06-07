@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>회원가입</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+					<form>
+						<div class="memCompleteZone">
+							<!-- 2015-04-29 수정 -->
+							<p><span>홍길동</span>님!<br />회원가입이 완료되었습니다.</p>
+							<p>쇼핑엔T 회원이 되신 것을<br />축하드리며, 다양한 혜택과 서비스를<br />경험하실 수 있습니다.</p>
+							<div class="btns_wrap">
+								<span class="btn size3 bgcolor4"><a href="#">확인</a></span>
+							</div>
+							<!-- /2015-04-29 수정 -->
+						</div>
+					</form>
+					<a href="#none" style="padding:10px; display:block;"><img src="../../img/mem_banner.jpg" alt="" style="width:100%;"></a>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

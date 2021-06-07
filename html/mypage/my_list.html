@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>나의 활동내역</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니</a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+						<div class="board noticewrap">
+							<div class="result_wrap bd">
+								<p class="count">나의 활동내역 목록</p>
+								<button type="button" class="result_del">작성하기</button>
+							</div>
+							<ul class="notice_list">
+								<li onclick="">
+									<p>2014년 10월 무이자할부 행사 안내 (10/1~10/31)</p>
+									<p>
+										<span class="date">2014.12.25</span>
+										<span class="new">new</span>
+									</p>
+								</li>
+								<li onclick="">
+									<p>[안내] 2014년 9월 무이자할부 행사 안내</p>
+									<p>
+										<span class="date">2014.12.25</span>
+										<span class="new">new</span>
+									</p>
+								</li>
+								<li onclick="">
+									<p>[공지] 2014년 8월 무이자할부 행사 안내</p>
+									<p>
+										<span class="date">2014.12.25</span>
+									</p>
+								</li>
+								<li onclick="">
+									<p>[공지] 2014년 8월 무이자할부 행사 안내</p>
+									<p>
+										<span class="date">2014.12.25</span>
+									</p>
+								</li>
+							</ul>
+							<div class="btns_wrap">
+								<span class="btn viewmore"><a>더보기</a></span>
+							</div>
+						</div>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+		});
+	</script>
+</body>
+
+</html>

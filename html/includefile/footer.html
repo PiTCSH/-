@@ -1,0 +1,69 @@
+<footer class="footer">
+	<nav class="fmu">
+		<ul>
+			<li><a href="https://m.shoppingntmall.com/member/login">로그인</a></li>
+			<li><a href="javascript:goCustMain()">고객센터</a></li>
+			<li><a href="tel:0801301010">상담전화</a></li>
+			<li><a href="http://m.shoppingntmall.com/service">회사소개</a></li>
+		</ul>
+	</nav>
+	<nav class="fmu2">
+		<ul>
+			<li><a href="javascript: windowOpen('/common/terms2');">이용약관</a></li>
+			<li><a href="javascript: windowOpen('/common/policy4');">청소년보호정책</a></li>
+			<li><b>
+					<a href="https://www.trncompany.co.kr/etc/etc03Snt.do">개인정보처리방침</a>
+				</b></li>
+			<li><a href="javascript: windowOpen('/common/picture-policy');">영상정보처리방침</a></li>
+		</ul>
+	</nav>
+	<address>
+		<p>주식회사 티알엔 대표이사&nbsp;: 민택근</p>
+		<p>서울특별시 중구 동호로310, 별관(장충동 2가, 태광산업)</p>
+		<p>사업자등록번호 : 116-81-50973</p>
+		<p>통신판매업신고 2010-서울중구-1670호</p>
+		<p class="cs"><span>문의 : <a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></span></p><!-- 2016-07-04 : 메일주소 수정 -->
+		<p><span class="tel"><a href="tel:0801301010">080-130-1010</a></span></p>
+		<p class="bt">
+			<span><a href="javascript: appWindowOpen('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1168150973');">사업자정보확인</a></span>
+			<span><a href="javascript:;" onclick="javascript:goUrl('/display/popup/guarantee');">하나은행 채무지급 보증안내</a></span>
+		</p>
+		<!--span><a href="http://m.shoppingntmall.com/common/creditKb">신한은행 채무지급 보증안내</a></span-->
+		<p></p>
+		<p class="ccm"><img src="http://m.shoppingntmall.com/contents/2015_t/img/icon_ccm.png" alt=""><span>소비자중심경영(CCM) 인증사</span></p>
+		<p class="copy">Copyright © SHOPPING&amp;T. All Rights Reserved.</p>
+	</address>
+</footer>
+
+<script type="text/javascript" src="../../resources/js/jquery-2.1.1.min.js"></script>
+<div class="bottom_menu on">
+	<a href="http://m.shoppingntmall.com/index" class="m1">홈</a>
+	<a onclick="javascript: retrieveCategoryBanner();" class="m2">카테고리</a>
+	<a href="http://m.shoppingntmall.com/mypage/mymain" class="m3">마이쇼핑
+		<span class="num">99+</span>
+	</a>
+	<a href="http://m.shoppingntmall.com/cart/cartdblist" class="m4">배송조회  </a>
+	<a href="http://m.shoppingntmall.com/category/todayGoodsList" class="m5">최근본상품<span class="img"><img src="https://img.shoppingntmall.com/goods/348/10019348_m.jpg" alt=""></span></a>
+</div>
+<script>
+	$(function() {
+		//하단 퀵메뉴
+		var UserAgent = navigator.platform;
+		if (UserAgent.match(/i(Phone|Pod)/i) != null) {
+			$('.bottom_menu').addClass('on');
+			//$('.footer address').attr('style', 'padding-bottom:60px !important');
+		} else {
+			var last_pos = 0;
+			$(window).scroll(function() {
+				var current_pos = $(this).scrollTop();
+				if (current_pos > last_pos) {
+					$('.bottom_menu').removeClass('on');
+				} else {
+					$('.bottom_menu').addClass('on');
+				}
+				last_pos = current_pos;
+			});
+		}
+	});
+</script>
+<div class="dim" style="display:none;"></div>

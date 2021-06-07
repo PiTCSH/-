@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>비밀번호 찾기</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+				<section class="contents">
+					<form>
+						<!-- 2015-04-28 수정 -->
+						<div class="memSrchZone">
+							<div class="tit">
+								<p>변경하실 새로운 <strong class="emp1">비밀번호</strong>를 입력해 주세요.</p><!-- 2015-05-29 수정 -->
+							</div>
+
+							<div class="pw_change">
+								<div>
+									<dl class="form_input2">
+										<dt><label for="pw1">새 비밀번호</label></dt>
+										<dd>
+											<span class="inputBox"><input type="password" name="pw1" tabindex="1" autocapitalize="off" placeholder="영문+숫자+특수문자 3가지 조합 8~15자" ></span>
+										</dd>
+									</dl>
+									<!--
+									<p class="message emp2">새 비밀번호를 입력해 주세요.</p>
+									<p class="message emp2">‘영문소문자’와 ‘숫자’로 조합하여 8자~15자로 입력해 주세요.</p>
+									<p class="message emp2">기존 비밀번호와 동일한 비밀번호는 사용하실 수 없습니다.</p>
+									<p class="message emp3">사용 가능한 비밀번호입니다.</p>
+									 -->
+								</div>
+								<div>
+									<dl class="form_input2">
+										<dt class="row2"><label for="pw2">새 비밀번호<br>확인</label></dt>
+										<dd>
+											<span class="inputBox"><input type="password" name="pw2" tabindex="1" autocapitalize="off" placeholder="비밀번호 확인" ></span>
+										</dd>
+									</dl>
+									<!--
+									<p class="message emp2">비밀번호 확인을 입력해 주세요.</p>
+									<p class="message emp2">비밀번호가 일치하지 않습니다.</p>
+									-->
+								</div>
+								<div class="btns_wrap"><span class="btn fullwidth bgcolor4"><a href="#">확인</a></span></div>
+							</div>
+							<div class="regard">
+								<dl>
+									<dt class="emp2">※ 비밀번호 입력 시 유의사항</dt>
+									<dd>
+										<ul class="mark refer">
+											<li>* 영문(대,소문자)+숫자+특수문자를 3가지 이상 조합하여 8~15자 사용 가능합니다.</li>
+											<li>* 고객님의 소중한 개인정보 보호를 위해 자신의 타인에게 비밀번호를 노출하지 마시기 바랍니다.</li>
+											<li>* 비밀번호를 주기적으로 변경하셔서 개인정보 도용으로 인한 피해를 예방하세요.</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+
+						</div>
+					</form>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

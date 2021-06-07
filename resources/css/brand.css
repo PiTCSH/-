@@ -1,0 +1,60 @@
+.brand {position:relative; padding-top:82px;}
+.brand_nav {width:100%; display:block; background:white;}
+.brand_nav.fixed {z-index:40; position:fixed;}
+.brand_nav.black {background:#252525;}
+.brand_nav.black .floating_btn_back a {background:url(../../img/ico_back_b.png) no-repeat center; background-size:10px auto;}
+.brand_nav.black h2 span {color:#fff; border:0;}
+.brand_tab_wrap {border-bottom:1px solid #ccc; width:100%; background:#fff; position:absolute; left:0; top:0;}
+.brand_tab {font-size:0; text-align:center; max-width:720px; margin:0 auto;}
+.brand_tab li {display:inline-block; width:50%;}
+.brand_tab button {background:white;  outline:0;  width:90%;}
+.brand_tab button span {display:block; height:38px; line-height:38px; font-size:15px; font-weight:700; color:#252525; padding:0 10px; border-bottom:3px solid white; padding-top:3px;}
+.brand_tab .on button {}
+.brand_tab .on button span {color:#e50278; border-bottom:3px solid #d51a8d;}
+
+.fixedt {position:fixed; width:100%; top:0; z-index:2; background:white;}
+.brand_tab_wrap.fixed {position:fixed; top:40px}
+
+.brand_div_tab {font-size:0; text-align:left; padding:20px 11px 0 11px;}
+.brand_div_tab button {margin:0 9px 20px 9px; width:30px; height:30px; border-radius:30px; display:inline-block; color:#555; font-size:15px; background:#f1f1f1; border:1px solid #f1f1f1;}
+.brand_div_tab button.etc {width:auto; padding:0 12px;}
+.brand_div_tab button.on {background:#fff; border:1px solid #e50278; color:#e50278; font-weight:700;}
+.brand_end dt {background:#f4f4f4; height:44px; line-height:44px; padding:0 16px; }
+.brand_end dt .end {font-size:15px; color:#252525; margin-right:10px}
+.brand_end dt .num {font-size:13px; color:#e50278;}
+.brand_end dd {padding:0 16px; margin-bottom:100px;}
+.brand_end dd ul li {font-size:15px; color:#252525; height:40px; line-height:40px; border-bottom:1px solid #ededed;}
+
+.brand_main {position:relative;}
+.brand_main .gh_wrap {position:relative; overflow:hidden;}
+.brand_main .brand_con {padding-top:39px; position:relative;}
+
+.brand_intro {padding:20px 0; background-size:100% auto !important; background-position:center top !important; background:#252525; position:relative;}
+.brand_bg {position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.4); z-index:1;}
+.brand_logo {text-align:center; padding:40px 0; position:relative; z-index:2; max-width:255px; margin:0 auto;}
+.brand_logo img {max-height:50px; max-width:100%;}
+
+.brand_txt_wrap {padding:0 20px; min-height:38px; position:relative; z-index:2;}
+.brand_txt {color:#e4e4e4; font-size:14px; color:#e4e4e4; line-height:20px; display:inline; margin-right:10px; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow:hidden;}
+.brand_txt_btn {display:inline-block;}
+.brand_txt_btn button {display:inline-block; background:none; color:#e4e4e4; text-decoration:underline; cursor:pointer; font-size:14px; color:#e4e4e4; }
+.brand_txt_btn .brand_txt_off {display:none;}
+
+.search_cate_swiper {position:relative; margin:0 0 32px 0 !important; padding:0 16px !important; overflow:hidden;}
+.search_cate_swiper ul {text-align:center;}
+.search_cate_swiper li {display:inline-block; width:auto; padding-right:24px;}
+.search_cate_swiper li a {display:block;}
+.search_cate_swiper li a .img {display:block; width:50px; height:50px; border:1px solid #f4f4f4; border-radius:100%; background:#f4f4f4; text-align:center; position:relative; margin:0 auto 8px auto; overflow:hidden; line-height:50px; color:#111; font-size:13px; font-weight:700;}
+.search_cate_swiper li a .img img {width:100%; position:absolute; left:0; top:0;}
+.search_cate_swiper li a .txt {display:block; margin:0 auto; color:#252525;}
+.search_cate_swiper li.active a .img {border:1px solid #000;}
+.search_cate_swiper li.active a .txt {font-weight:700;}
+
+.brand_main_tab {border-bottom:1px solid #d1d1d1; overflow:hidden;	background:url(../../img/bg_gnb.png) 0 0; position:absolute; left:0; top:0; width:100%;}
+.brand_main_tab.fixed {position:fixed; top:40px; z-index:2;}
+.brand_main_tab ul {text-align:center; height:39px; background:#fff; }
+.brand_main_tab ul li {display:inline-block; width:auto; }
+.brand_main_tab ul li a {display:block; padding:10px 8px 10px; color:#3b3b3b; font-size:15px; font-weight:700; line-height:1; text-align:center; position:relative;}
+.brand_main_tab ul li a i {text-indent:-9999px; background:#e50278; width:4px; height:4px; border-radius:100%; display:inline-block; vertical-align:top; position:absolute; right:0; top:3px;}
+.brand_main_tab ul li.active a {color:#e50278; border-bottom:solid 3px #e50278; padding-top:10px;}
+.brand_main_tab ul li.active a i {top:6px;}

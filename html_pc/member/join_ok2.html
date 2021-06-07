@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+  <? include "../includefile/skipNavi.html"; ?>
+  <? include "../includefile/header_pc.html"; ?>
+  <div class="container">
+    <div class="wrap">
+      <? include "../includefile/ctgr_sideBar.html"; ?>
+      <div class="wrap_inner">
+        <!--header S-->
+        <header class="header detail">
+          <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+          <span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+          <h2 class="goods_detail"><span>회원 확인</span></h2>
+          <div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+            <a class="txt"></a>
+            <a class="btn">버튼</a>
+          </div>
+          <a href="../mypage/cart.html" class="btn_cart">장바구니
+            <!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+        </header>
+        <!--header E-->
+        <!--main S-->
+        <main id="contents">
+          <section class="contents">
+            <form class="orderZone" id="joinForm" method="post" action="/member/easy-join/save">
+              <input type="hidden" name="checkEmNo" id="checkEmNo" control-id="ControlID-7">
+              <input type="hidden" name="joinKind" value="0" control-id="ControlID-8">
+              <input type="hidden" name="custNo" value="" control-id="ControlID-9">
+              <input type="hidden" name="stbId" value="" control-id="ControlID-10">
+              <input type="hidden" name="custName" value="피설현" control-id="ControlID-11">
+              <input type="hidden" name="orderEmailYn" value="1" control-id="ControlID-12">
+              <input type="hidden" name="orderSmsYn" value="1" control-id="ControlID-13">
+              <input type="hidden" name="receiverGb" value="00" control-id="ControlID-14">
+              <input type="hidden" name="ddd" value="" control-id="ControlID-15">
+              <input type="hidden" name="tel1" value="" control-id="ControlID-16">
+              <input type="hidden" name="tel2" value="" control-id="ControlID-17">
+              <input type="hidden" name="postNum" value="" control-id="ControlID-18">
+              <input type="hidden" name="hp1" id="hp1" value="010" control-id="ControlID-19">
+              <input type="hidden" name="hp2" id="hp2" value="333" control-id="ControlID-20">
+              <input type="hidden" name="hp3" id="hp3" value="3333" control-id="ControlID-21">
+              <input type="hidden" name="said" id="said" value="61036603277" control-id="ControlID-22">
+              <input type="hidden" name="insertMarketDateYn" id="insertMarketDateYn" value="" control-id="ControlID-23">
+              <!-- 마현 주소정제 추가 2016-08-17-->
+              <input type="hidden" id="sltPostNo" name="sltPostNo" value="" control-id="ControlID-24">
+              <input type="hidden" id="sltBaseAddr" name="sltBaseAddr" value="" control-id="ControlID-25">
+              <input type="hidden" id="sltDetailAddr" name="sltDetailAddr" value="" control-id="ControlID-26">
+              <input type="hidden" id="sltPostSeq" name="sltPostSeq" value="" control-id="ControlID-27">
+              <input type="hidden" id="sltRoadAddrNo" name="sltRoadAddrNo" value="" control-id="ControlID-28">
+              <input type="hidden" id="sltRoadAddrYn" name="sltRoadAddrYn" value="" control-id="ControlID-29">
+              <input type="hidden" id="selectAddr" name="selectAddr" value="" control-id="ControlID-30"> <!-- 주소선택구분[1]입력[2]도로명[3]표준지번 -->
+              <input type="hidden" id="refineResultCode" name="refineResultCode" value="" control-id="ControlID-31">
+              <input type="hidden" id="stdPost" name="stdPost" value="" control-id="ControlID-32">
+              <input type="hidden" id="stdPostSeq" name="stdPostSeq" value="" control-id="ControlID-33">
+              <input type="hidden" id="stdPostAddr1" name="stdPostAddr1" value="" control-id="ControlID-34">
+              <input type="hidden" id="stdPostAddr2" name="stdPostAddr2" value="" control-id="ControlID-35">
+              <input type="hidden" id="stdPostLngx" name="stdPostLngx" value="" control-id="ControlID-36">
+              <input type="hidden" id="stdPostLaty" name="stdPostLaty" value="" control-id="ControlID-37">
+              <input type="hidden" id="stdRoadPost" name="stdRoadPost" value="" control-id="ControlID-38">
+              <input type="hidden" id="stdRoadPostSeq" name="stdRoadPostSeq" value="" control-id="ControlID-39">
+              <input type="hidden" id="stdRoadPostAddr1" name="stdRoadPostAddr1" value="" control-id="ControlID-40">
+              <input type="hidden" id="stdRoadPostAddr2" name="stdRoadPostAddr2" value="" control-id="ControlID-41">
+              <input type="hidden" id="stdRoadPostLngx" name="stdRoadPostLngx" value="" control-id="ControlID-42">
+              <input type="hidden" id="stdRoadPostLaty" name="stdRoadPostLaty" value="" control-id="ControlID-43">
+              <input type="hidden" id="stdRoadNnmb" name="stdRoadNnmb" value="" control-id="ControlID-44">
+
+              <input type="hidden" id="sltDefaultInputAddrYn" name="sltDefaultInputAddrYn" value="" control-id="ControlID-45">
+
+              <!-- // 주소정제 추가 2016-08-17-->
+              <ol class="step half">
+                <!-- 2015-05-08 수정 -->
+                <li><span><u>1</u>가입확인</span></li>
+                <li class="current"><span><u>2</u>회원정보</span></li>
+                <!-- /2015-05-08 수정 -->
+              </ol>
+
+              <h3 class="order_tit" id="goodsinfoh3">회원정보 입력</h3><!-- 2016-06-29 : 회원정보 입력영역 추가 -->
+              <div class="memInforZone">
+                <div class="readonly">
+                  <dl class="form_input2">
+                    <dt>이름</dt>
+                    <dd>피설현</dd>
+                  </dl>
+                  <dl class="form_input2">
+                    <dt>생년월일</dt>
+                    <dd>1980년 1월 2일</dd>
+                  </dl>
+                  <dl class="form_input2">
+                    <dt>휴대폰 번호</dt>
+                    <dd>010-333-3333</dd>
+                  </dl>
+                </div>
+                <p class="message aligncenter">본인의 개인정보와 다르실 경우 <br> <em class="emp2">‘새입력’</em> 버튼을 터치해주세요.</p><!-- 2016-06-29 : aligncenter클래스 추가 -->
+                <div class="btns_wrap mg10">
+                  <span class="btn size2 bgcolor5"><a href="javascript:window.location.replace('/member/easy-join/auth?said=61036603277', '_self').close();">새입력</a></span>
+                </div>
+                <!-- 2015-05-08 수정 -->
+                <dl class="form_input">
+                  <dt><label for="id">아이디</label></dt>
+                  <dd>
+                    <div class="id_area">
+                      <span class="inputBox"><input type="text" name="memId" id="memId" tabindex="1" autocapitalize="off" control-id="ControlID-46"></span>
+                      <p class="dupl"><span class="btn size2 bgcolor1"><a href="javascript: checkMemId();" id="btn_id_dupl">중복확인</a></span></p>
+                    </div>
+                    <p class="message emp2" id="errorMemId" style="display:none;"></p>
+                    <p class="message">영문 소문자 또는 영문, 숫자 조합하여 6자~15자리</p>
+                  </dd>
+                </dl>
+                <dl class="form_input">
+                  <dt>비밀번호</dt>
+                  <dd>
+                    <div class="pw_area">
+                      <!-- 2015-05-08 -->
+                      <span class="inputBox"><input type="password" name="passwd" id="passwd" tabindex="2" autocapitalize="off" control-id="ControlID-47"></span>
+                    </div>
+                    <p class="message emp2" id="errorPasswd1" style="display:none;"></p>
+                    <p class="message">‘영문소문자’와 ‘숫자’로 조합하여 8자~15자리</p>
+                  </dd>
+                </dl>
+                <dl class="form_input">
+                  <dt>비밀번호 확인</dt>
+                  <dd>
+                    <div class="pw_area">
+                      <!-- 2015-05-08 -->
+                      <span class="inputBox"><input type="password" name="passwdRe" id="passwdRe" tabindex="3" autocapitalize="off" control-id="ControlID-48"></span>
+                    </div>
+                    <p class="message emp2" id="errorPasswd2" style="display:none;"></p>
+                    <p class="message">위에 입력한 비밀번호 재확인</p>
+                  </dd>
+                </dl>
+                <dl class="form_input">
+                  <dt>주소</dt>
+                  <dd>
+                    <div class="address_area">
+                      <p>
+                        <span>
+                          <span class="inputBox"><input type="text" name="postNum1" id="post01" readonly="readonly" tabindex="4" autocapitalize="off" autocomplete="off" value="" onclick="javascript:postPopOpen();" control-id="ControlID-49"></span>
+                        </span>
+                      </p>
+                      <input type="hidden" id="displayPostNo" name="displayPostNo" autocapitalize="off" onclick="javascript:postPopOpen();" readonly="readonly" value="-" control-id="ControlID-50">
+                      <span class="post"><span class="btn size2 bgcolor1"><a onclick="javascript:postPopOpen();">우편번호 찾기</a></span></span>
+                    </div>
+                    <p class="address_area2"><span class="inputBox"><input type="text" id="baseAddr" name="baseAddress" tabindex="6" autocomplete="off" autocapitalize="off" onclick="javascript:postPopOpen();" value="" readonly=""
+                          control-id="ControlID-51"></span></p>
+                    <p class="address_area2"><span class="inputBox"><input type="text" id="detailAddr" readonly="readonly" name="address" tabindex="7" autocomplete="off" autocapitalize="off" value="" control-id="ControlID-52"></span></p>
+                  </dd>
+                  <input type="hidden" name="custAreaGb" id="custAreaGb" control-id="ControlID-53">
+                  <input type="hidden" name="receiverPostSeq" id="postSeq" value="" control-id="ControlID-54">
+                  <input type="hidden" name="roadAddrNo" id="roadAddrNo" value="" control-id="ControlID-55">
+                  <input type="hidden" name="roadAddrYn" id="roadAddrYn" value="" control-id="ControlID-56">
+                  <input type="hidden" name="receiverSeq" id="receiverSeq" value="" control-id="ControlID-57">
+
+                  <p class="message emp2" id="errorAddr" style="display:none;"></p>
+                </dl>
+                <dl class="form_input">
+                  <dt>이메일</dt>
+                  <dd>
+                    <div class="email_area">
+                      <p>
+                        <span>
+                          <span class="inputBox">
+                            <input type="email" placeholder="" tabindex="10" autocapitalize="off" name="emailId" id="emailId" value="" control-id="ControlID-58">
+                          </span>
+                        </span>
+                      </p>
+                      <p>
+                        <span>
+                          <em>@</em>
+                          <span class="inputBox">
+                            <input type="email" placeholder="" tabindex="11" autocapitalize="off" name="emailDomain" id="emailDomain" value="" control-id="ControlID-59">
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                    <p class="message emp2" id="errorEmail" style="display:none;"></p>
+                  </dd>
+                </dl>
+
+                <dl class="form_input">
+                  <dt>성별</dt>
+                  <dd>
+                    <div class="check">
+                      <ul>
+                        <li><input type="radio" name="sex" id="female" value="2" checked="checked" control-id="ControlID-60"><label for="female">여성</label></li>
+                        <li><input type="radio" name="sex" id="male" value="1" control-id="ControlID-61"><label for="male">남성</label></li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="form_input">
+                  <dt>TV 비밀번호</dt>
+                  <dd>
+                    <div class="tv_pw_area">
+                      <span class="caution">TV에서 사용할 비밀번호 숫자 4자리 입력</span><!-- 2015-05-08 수정 -->
+                      <span class="inputBox">
+                        <input type="password" placeholder="TV 비밀번호" tabindex="14" autocapitalize="off" name="tvPasswd" id="tvPasswd" style="IME-MODE:disabled;" maxlength="4" control-id="ControlID-62">
+                      </span>
+                    </div>
+                    <p class="message emp2" id="errorTvPasswd1" style="display:none;"></p>
+                  </dd>
+                </dl>
+                <dl class="form_input">
+                  <dt>TV 비밀번호 확인</dt>
+                  <dd>
+                    <span class="inputBox">
+                      <input type="password" placeholder="TV 비밀번호 확인" tabindex="15" autocapitalize="off" name="tvPasswdRe" id="tvPasswdRe" style="IME-MODE:disabled;" maxlength="4" control-id="ControlID-63">
+                    </span>
+                    <p class="message emp2" id="errorTvPasswd2" style="display:none;"></p>
+                  </dd>
+                </dl>
+              </div>
+              <h3 class="order_tit" id="goodsinfoh3">약관 동의</h3><!-- 2016-06-29 : 약관동의영역 추가 -->
+              <div class="memAgreeZone">
+                <div class="whole_agree">
+                  <p class="check">
+                    <input type="checkbox" id="agree0" control-id="ControlID-64">
+                    <label for="agree0">회원 서비스 약관 전체동의</label>
+                  </p>
+                </div>
+                <div class="agree">
+                  <dl>
+                    <dt>이용약관</dt>
+                    <dd>
+                      <div class="check_box">
+                        <input type="checkbox" id="agree1" control-id="ControlID-65">
+                        <p><label for="agree1">약관에 동의합니다.</label><a href="javascript: windowOpen('/common/terms?win=pop');" class="btn_more">자세히 보기</a></p>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>개인정보 수집, 이용동의</dt>
+                    <dd>
+                      <ul class="accordion_list">
+                        <li>
+                          <div class="check_box accordion_tit">
+                            <input type="checkbox" id="agree2" control-id="ControlID-66">
+                            <p><label for="agree2">개인정보 수집, 이용에 동의합니다.</label></p>
+                          </div>
+                          <div class="agree_detail accordion_cont">
+                            <p>- 수집항목 : 이름, 생년원일, 휴대폰번호, 아이디, 비밀번호, 주소, 이메일, 성별, 쿠키, IP주소, 서비스이용기록, 접속로그, 기기정보(OS정보, 디바이스ID 등), 기타 이동경로 등<br>- 목적 : 쇼핑엔티 서비스 이용 및 원활한 주문, 배송업무, 웹로그분석, 마케팅 및 서비스 개편<br>- 보유 및 이용기간 : 회원탈퇴 혹은 동의 철회시 까지</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>청소년 보호정책</dt><!-- 2015-04-29 수정 -->
+                    <dd>
+                      <div class="check_box">
+                        <input type="checkbox" id="agree3" control-id="ControlID-67">
+                        <p><label for="agree3">약관에 동의합니다.</label><a href="javascript: windowOpen('/common/policy/4');" class="btn_more">자세히 보기</a></p>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>물품 관련 메시지</dt>
+                    <dd>
+                      <div class="check_box">
+                        <input type="checkbox" id="agree4" control-id="ControlID-68">
+                        <p><label for="agree4">결제/배송/반품/교환/환불 등과 관련된 SMS 수신동의</label><a href="javascript: windowOpen('/common/policy/3');"></a></p>
+                      </div>
+                    </dd>
+                  </dl>
+                  <!-- 2015-04-29 수정 -->
+                  <dl>
+                    <dt>마케팅 정보 수신 동의(선택)</dt>
+                    <dd>
+                      <ul class="accordion_list">
+                        <li>
+                          <div class="check_box accordion_tit">
+                            <input type="checkbox" id="marketAgree" name="marketAgree" control-id="ControlID-69">
+                            <p><label for="agree5">상품/이벤트 소식받기 전체동의</label></p>
+                          </div>
+                          <div class="agree_detail accordion_cont">
+                            <p>
+                              쇼핑엔티에서 제공하는 쿠폰, 적립금 등 혜택정보와 <strong>이벤트, 보험상품 등의&nbsp;정보안내</strong>를 문자, 전화, 이메일, 우편 등을 통해 받아 보는 것에 동의합니다.
+                            </p>
+                            <ul class="agree_detail_ul">
+                              <li>
+                                <div>1. 수집·이용 목적</div>
+                                쇼핑엔티에서 제공하는 쿠폰, 적립금 등 혜택정보와 이벤트, 보험상품 등의 정보 안내
+                              </li>
+                              <li>
+                                <div>2. 수집.이용할 개인정보의 내용</div>
+                                휴대폰번호, 이메일주소, 주소, 이름
+                              </li>
+                              <li>
+                                <div>3. 보유 및 이용기간</div>
+                                회원탈퇴 혹은 동의 철회시까지
+                              </li>
+                            </ul>
+
+                            <ul>
+                              <li></li>
+                            </ul>
+                            <p></p>
+                            <div class="check_cont">
+                              <ul>
+                                <li>
+                                  <input type="checkbox" id="agree001" name="agree001" control-id="ControlID-70">
+                                  <label for="agree001">문자</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="agree002" name="agree002" control-id="ControlID-71">
+                                  <label for="agree002">전화</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="agree003" name="agree003" control-id="ControlID-72">
+                                  <label for="agree003">이메일</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="agree004" name="agree004" control-id="ControlID-73">
+                                  <label for="agree004">우편</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>만 14세 이상</dt>
+                    <dd>
+                      <div class="check_box last">
+                        <input type="checkbox" id="agree6" control-id="ControlID-74">
+                        <p><label for="agree6">만 14세 이상임을 동의합니다.<br>(만 14세 미만일 경우 가입이 제한됩니다.)</label></p>
+                      </div>
+                    </dd>
+                  </dl>
+                  <!-- 2015-04-29 수정 -->
+                </div>
+                <!-- 2015-04-29 위치 수정 -->
+                <div class="btns_wrap btn2">
+                  <span class="btn size2 bgcolor5"><a href="javascript:;" id="joinCancleButton">취소</a></span>
+                  <span class="btn size2 bgcolor4"><a href="javascript:;" id="joinButton">회원가입</a></span>
+                </div>
+                <div>
+                  <input type="hidden" name="emailYn" id="emailYn" value="0" control-id="ControlID-75">
+                  <input type="hidden" name="smsYn" id="smsYn" value="0" control-id="ControlID-76">
+                  <input type="hidden" name="dmMkYn" id="dmMkYn" value="0" control-id="ControlID-77">
+                  <input type="hidden" name="telMkYn" id="telMkYn" value="0" control-id="ControlID-78">
+                  <input type="hidden" id="insertDmMkDateYn" name="insertDmMkDateYn" value="" control-id="ControlID-79">
+                  <input type="hidden" id="insertTelMkDateYn" name="insertTelMkDateYn" value="" control-id="ControlID-80">
+                  <input type="hidden" id="insertEmailDateYn" name="insertEmailDateYn" value="" control-id="ControlID-81">
+
+                </div>
+              </div>
+            </form>
+
+          </section>
+        </main>
+        <!--main E-->
+        <!--footer S-->
+        <? include "../includefile/footer.html"; ?>
+        <!-- dimmed-->
+        <div class="dim" style="display:none;"></div>
+        <!-- //dimmed -->
+        <!--footer E-->
+      </div><!-- end wrap_inner -->
+    </div><!-- end wrap -->
+    <? include "../includefile/page_top.html"; ?>
+  </div><!-- end container -->
+  <? include "../includefile/scriptlink.html"; ?>
+  <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //서브 클래스 추가
+      $(".header_wrap").addClass("sub");
+    });
+  </script>
+</body>
+
+</html>

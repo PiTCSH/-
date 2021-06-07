@@ -1,0 +1,32 @@
+<script type="text/javascript" src="../../resources_pc/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/touch.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/overflow.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/swipe.js"></script>
+<script type="text/javascript" src="../../resources_pc/resources2014/js/cware.mobile.init.js?2014120406"></script>
+<script type="text/javascript" src="../../resources_pc/js/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/swiper.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/slick.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/iscroll.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/jquery.watermark.js"></script> <!--2018-04-16 추가-->
+<script type="text/javascript" src="../../resources_pc/js/jquery-mobile.ui.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/loading.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/lib/LAB.js"></script>
+<script type="text/javascript" src="../../resources_pc/js/comUtil.js"></script>
+<script type="text/javascript" src="../../resources_pc/messages/ko_KR/message-common.js"></script>
+
+<button type="button" onClick="bn_onClick()" class="mopc_btn">MO버전</button>
+
+<script type="text/javascript">
+  function bn_onClick() {
+    $(location).attr('href');
+    var bn_pathname = window.location.href;
+    var en_pathname = bn_pathname.replace("html_pc/", "html/");
+    window.location.replace(en_pathname);
+  }
+</script>
+
+<style media="screen">
+  .mopc_btn {position:fixed; left:15px; bottom:15px; z-index:999999; font-size:13px; background:black; padding:3px 5px; color:#fff;}
+</style>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>나의 등급</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<div class="mypage_wrap">
+
+							<div class="rating_top">
+								<dl>
+									<dt><span>2018년 11월</span><b>이은주 고객님 등급은 GOLD입니다</b></dt>
+									<dd>
+										<img src="../../img/ticket_g.png" alt="VIP">
+										<a href="#none">등급혜택 더보기</a>
+									</dd>
+								</dl>
+
+								<!-- VIP & VVIP
+					 <dl>
+						<dt><span>2018년 11월</span><b>이은주 고객님 등급은 VIP입니다</b></dt>
+						<dd>
+							<img src="../../img/ticket_v.png" alt="VIP">
+							<a href="#none">등급혜택 더보기</a>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>2018년 11월</span><b>이은주 고객님 등급은 VVIP입니다</b></dt>
+						<dd>
+							<img src="../../img/ticket_vv.png" alt="VIP">
+							<a href="#none">등급혜택 더보기</a>
+						</dd>
+					</dl>
+					-->
+
+							</div>
+
+
+							<div class="nmy_space"></div>
+
+							<div class='rating_try'>
+								<dl>
+									<dt><b>12월에 VIP등급이 되시려면?</b><span class="col">11월 25일까지 <span>8건</span>을 더 구매해주세요!</span></dt>
+									<dd>고객님은 6개월간 8회, 3개월간 3회 주문하셨습니다.<br>(지난 달 25일 기준)</dd>
+								</dl>
+							</div>
+
+							<div class="nmy_space"></div>
+
+							<div class="rating_list">
+								<ul>
+									<li><span class="title">등급적용</span>매월 1일</li>
+									<li><span class="title">대상고객</span>쇼핑엔티 모든 고객 (등급 유지 기간 1개월)</li>
+									<li><span class="title">등급기준</span>
+										<ul>
+											<li><span class="title">VVIP</span>6/26일 - 11/25일까지 10회 이상 주문 </li>
+											<li><span class="title">VIP</span>9/26일 - 11/25일까지 3회 이상 주문 </li>
+											<li><span class="title">골드</span>9/26일 - 11/25일까지 1회 이상 주문 </li>
+											<li class="last">1건 기준은 주문번호이며, 배송완료 구매고객. (취소/반품 제외)</li>
+										</ul>
+									</li>
+									<li><span class="title">등급혜택</span>
+										<ul>
+											<li><span class="title">VVIP</span>쇼핑엔티 할인권 5만원</li>
+											<li><span class="title">VIP</span>쇼핑엔티 할인권 3만원</li>
+											<li><span class="title">골드</span>쇼핑엔티 할인권 1만원</li>
+										</ul>
+									</li>
+									<li><span class="title">혜택지급</span>매월 1일 자동지급 (사용가능기간 3개월)</li>
+								</ul>
+							</div>
+
+							<div class="nmy_space"></div>
+
+							<div class="rating_warring">
+								<dl>
+									<dt>유의사항</dt>
+									<dd>가격 할인권은 결제금액의 5% 할인가능. 일부상품 적용불가
+										<dl>
+											<dt>등급 적용기준</dt>
+											<dd>
+												<ul>
+													<li>· 고객등급은 쇼핑엔티 모바일에서만 적용</li>
+													<li>· 비회원 고객은 혜택 지급대상에서 제외</li>
+													<li>· 재판매 및 재제사유가 있는 고객등급은 조정 될 수 있음 </li>
+													<li>· 해당 등급기준은 당사의 사정에 의해 변경될 수 있음</li>
+												</ul>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+
+							<div class="nmy_space"></div>
+
+
+						</div>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+		});
+	</script>
+</body>
+
+</html>

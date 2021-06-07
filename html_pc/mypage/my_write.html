@@ -1,0 +1,100 @@
+ <!doctype html>
+ <html lang="ko">
+
+ <head>
+   <? include "../includefile/declare.html"; ?>
+ </head>
+
+ <body>
+   <? include "../includefile/skipNavi.html"; ?>
+   <? include "../includefile/header_pc.html"; ?>
+   <div class="container">
+     <div class="wrap">
+       <? include "../includefile/ctgr_sideBar.html"; ?>
+       <div class="wrap_inner">
+         <!--header S-->
+         <header class="header detail">
+           <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+           <span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+           <h2 class="goods_detail"><span>나의 활동내역</span></h2>
+           <div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+             <a class="txt"></a>
+             <a class="btn">버튼</a>
+           </div>
+           <a href="../mypage/cart.html" class="btn_cart">장바구니</a>
+         </header>
+         <!--header E-->
+         <!--main S-->
+         <main id="contents">
+           <section class="contents">
+             <div class="board">
+               <div class="inquiryZone">
+                 <form>
+                   <fieldset>
+                     <ul class="form_input2">
+                       <li>
+                         <span class="inputBox"><label for="subject"><input type="text" placeholder="제목을 30자 이내로 작성해 주세요." name="subject" tabindex="1" autocapitalize="off" /></label></span>
+                       </li>
+                       <li>
+                         <div class="textarea1">
+                           <textarea></textarea>
+                           <p class="placeholder ui-placeholder" style="display:block;">
+                             쇼핑엔티 고객모니터단으로서 활동하는 내용들을 작성해주세요. (500자 이내)<br>
+                             한번 작성한 글은 수정/삭제가 되지 않으니 신중하게 작성해주세요.
+                           </p>
+                         </div>
+                       </li>
+                       <li>
+                         <div class="alim_regard">
+                           <p class="refer fl">* 최대 2개 총 10MB까지만 첨부 가능합니다.</p>
+                           <button type="button" class="alim_regard_btn">첨부파일 업로드</button>
+                         </div>
+                         <dl class="madd_file">
+                           <dt>첨부파일 :</dt>
+                           <dd>
+                             <span class="name">1월 30일 홍길동 쇼핑엔티 고객서비스단 활동내역.pptx</span>
+                             <span class="size">1.38MB</span>
+                             <button class="del" type="button">삭제</button>
+                           </dd>
+                           <dd>
+                             <span class="name">1월 30일 홍길동 쇼핑엔티 고객서비스단 활동내역.pptx</span>
+                             <span class="size">1.38MB</span>
+                             <button class="del" type="button">삭제</button>
+                           </dd>
+                         </dl>
+                       </li>
+                     </ul>
+                   </fieldset>
+                 </form>
+                 <div class="btns_wrap btn2">
+                   <span class="btn size2 bgcolor2"><a href="#">취소</a></span>
+                   <span class="btn size2 bgcolor4"><a>등록</a></span>
+                 </div>
+               </div>
+             </div>
+           </section>
+         </main>
+         <!--main E-->
+         <!--footer S-->
+         <? include "../includefile/footer.html"; ?>
+         <!-- dimmed-->
+         <div class="dim" style="display:none;"></div>
+         <!-- //dimmed -->
+         <!--footer E-->
+       </div><!-- end wrap_inner -->
+     </div><!-- end wrap -->
+     <? include "../includefile/page_top.html"; ?>
+   </div><!-- end container -->
+   <? include "../includefile/scriptlink.html"; ?>
+   <? include "../includefile/footer_pc.html"; ?>
+   <? include "../includefile/scriptlink_pc.html"; ?>
+   <? include "../includefile/scriptlink_pc_sub.html"; ?>
+   <script type="text/javascript">
+     $(document).ready(function() {
+       //서브 클래스 추가
+       $(".header_wrap").addClass("sub");
+     });
+   </script>
+ </body>
+
+ </html>

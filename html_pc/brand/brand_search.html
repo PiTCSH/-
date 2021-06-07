@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>브랜드 찾기</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+						<div class="brand">
+							<div class="brand_tab_wrap fixed">
+								<ul class="brand_tab">
+									<li class="on"><button type="button"><span>가나다순</span></button></li>
+									<li><button type="button"><span>ABC순</span></button></li>
+								</ul>
+							</div>
+
+							<div class="brand_con">
+
+								<div class="brand_div">
+									<div class="brand_div_tab">
+										<button type="button" class="on">ㄱ</button>
+										<button type="button">ㄴ</button>
+										<button type="button">ㄷ</button>
+										<button type="button">ㄹ</button>
+										<button type="button">ㅁ</button>
+										<button type="button">ㅂ</button>
+										<button type="button">ㅅ</button>
+										<button type="button">ㅇ</button>
+										<button type="button">ㅈ</button>
+										<button type="button">ㅊ</button>
+										<button type="button">ㅋ</button>
+										<button type="button">ㅌ</button>
+										<button type="button">ㅍ</button>
+										<button type="button">ㅎ</button>
+										<button type="button" class="etc">기타</button>
+									</div>
+								</div>
+
+								<div class="brand_div">
+									<div class="brand_div_tab">
+										<button type="button" class="on">A</button>
+										<button type="button">B</button>
+										<button type="button">C</button>
+										<button type="button">D</button>
+										<button type="button">E</button>
+										<button type="button">F</button>
+										<button type="button">G</button>
+										<button type="button">H</button>
+										<button type="button">I</button>
+										<button type="button">J</button>
+										<button type="button">K</button>
+										<button type="button">L</button>
+										<button type="button">M</button>
+										<button type="button">N</button>
+										<button type="button">O</button>
+										<button type="button">P</button>
+										<button type="button">Q</button>
+										<button type="button">R</button>
+										<button type="button">S</button>
+										<button type="button">T</button>
+										<button type="button">U</button>
+										<button type="button">V</button>
+										<button type="button">W</button>
+										<button type="button">X</button>
+										<button type="button">Y</button>
+										<button type="button">Z</button>
+										<button type="button" class="etc">etc</button>
+									</div>
+								</div>
+
+								<dl class="brand_end">
+									<dt><span class="end">‘00’ 검색결과</span><span class="num">총 00건</span></dt>
+									<dd>
+										<ul>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+											<li>검색결과</li>
+										</ul>
+									</dd>
+								</dl>
+
+							</div>
+						</div>
+
+
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+		});
+	</script>
+	<script>
+		$(function() {
+			//탭
+			$('.brand_div:nth-child(2)').hide();
+			$('.brand_tab li button').on('click', function() {
+				index = $(this).parent().index() + 1;
+				$('.brand_tab li').removeClass('on')
+				$(this).parent().addClass('on')
+				$('.brand_div').hide();
+				$('.brand_div:nth-child(' + index + ')').show();
+				$('html,body').animate({
+					scrollTop: $(".brand_con").offset().top - 162
+				}, 'fast');
+			});
+
+			$('.brand_div_tab button').on('click', function() {
+				$(this).parent().children('button').removeClass('on')
+				$(this).addClass('on');
+			});
+
+			$('.header_wrap').addClass('fixed');
+
+		});
+	</script>
+</body>
+</html>

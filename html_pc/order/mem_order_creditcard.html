@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>신규카드등록</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+					<div class="orderZone">
+						<h3 class="order_tit" id="ordererinfoh3">카드정보</h3>
+						<div class="order_wrap rcvcustomer">
+							<dl class="form_input">
+								<dt>카드번호</dt>
+								<dd>
+									<div class="creditcard_area">
+										<p>
+											<span>
+												<span class="inputBox"><input type="text" name="" tabindex="1" /></span>
+											</span>
+										</p>
+										<p>
+											<span>
+												<span class="inputBox"><input type="text" name="" tabindex="2" /></span>
+											</span>
+										</p>
+										<p>
+											<span>
+												<span class="inputBox"><input type="text" name="" tabindex="3" /></span>
+											</span>
+										</p>
+										<p>
+											<span>
+												<span class="inputBox"><input type="text" name="" tabindex="4" /></span>
+											</span>
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form_input">
+								<dt>유효기간</dt>
+								<dd>
+									<div class="cardinfo_area">
+										<p>
+											<span>
+												<span class="inputBox"><input type="tel" placeholder="" name="" tabindex="5" autocapitalize="off" /></span>
+											</span>
+										</p>
+										<p>
+											<span>
+												<em>/</em>
+												<span class="inputBox"><input type="tel" placeholder="" name="" tabindex="6" autocapitalize="off" /></span>
+											</span>
+										</p>
+										<p>
+											<span><em class="monthyear">(월/년)</em></span>
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl class="form_input">
+								<dt>카드 소유자</dt>
+								<dd>
+									<p>
+										<span>
+											<select name="" tabindex="7">
+			                                    <option value="">본인</option>
+			                                    <option value="">본인</option>
+			                                    <option value="">본인</option>
+			                                    <option value="">본인</option>
+			                                    <option value="">본인</option>
+			                                </select>
+										</span>
+									</p>
+								</dd>
+							</dl>
+							<dl class="form_input">
+								<dt>카드 소유자 성함</dt>
+								<dd>
+									<p>
+										<span>
+											<span class="inputBox"><input type="text" placeholder="이름 입력" name="" tabindex="8" autocapitalize="off" /></span>
+										</span>
+									</p>
+								</dd>
+							</dl>
+							<dl class="form_input">
+								<dt>카드 소유자 생년월일</dt>
+								<dd>
+									<p>
+										<span>
+											<span class="inputBox"><input type="text" placeholder="(예:810203)" name="" tabindex="9" autocapitalize="off" /></span>
+										</span>
+									</p>
+								</dd>
+							</dl>
+							<div class="form_input">
+								<p class="check address_area3"><input type="checkbox" id="myAddr" /><label for="myAddr">이 카드를 보관하여 다음 결제시에도 재사용에 동의</label></p>
+							</div>
+							<div class="btns_wrap">
+								<span class="btn fullwidth bgcolor4"><a>확인</a></span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

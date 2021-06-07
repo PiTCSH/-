@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>주소찾기</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+            <div class="addr_con">
+              <div class="addr_form_wrap">
+                <div class="addr_form">
+          				<input type="text" placeholder="도로명, 건물명, 번지 검색" value="태광산업">
+          				<a href="#none" class="btn_search">검색</a>
+          				<button type="button" class="btn_del" style="display: none;">삭제</button>
+          			</div>
+              </div>
+
+              <div class="addr_all">
+                총 <span>0</span>건
+              </div>
+
+              <dl class="addr_warring">
+                <dt>
+                  <span>상암</span>에 대한 검색결과가 없습니다.
+                  <!-- <span>상암</span>에 대한 검색결과가 너무 많습니다. -->
+                </dt>
+                <dd>검색어를 상세히 입력해주세요.</dd>
+              </dl>
+
+              <dl class="addr_tip">
+                <dt>TIP 이렇게 검색하세요!</dt>
+                <dd><span class="dot">·</span><span class="big">도로명 + 건물번호</span><span class="small">예) 동호로 310</span></dd>
+                <dd><span class="dot">·</span><span class="big">지역명 + 번지</span><span class="small">예) 장충동2가 162-1</span></dd>
+                <dd><span class="dot">·</span><span class="big">지역명 + 건물명</span><span class="small">예) 장충동 태광산업</span></dd>
+              </dl>
+
+              <div class="addr_all">
+                총 <span>999</span>건
+              </div>
+
+              <ul class="addr_list">
+                <li>
+                  <div class="addr_detail">
+                    <div class="zip">000000</div>
+                    <div class="add"><span class="name">도로명</span>서울특별시 중구 동호로 310 (장충동2가)</div>
+                    <div class="add"><span class="name">지번</span>서울특별시 중구 장충동2가 162-1 태광산업</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="addr_detail">
+                    <div class="zip">000000</div>
+                    <div class="add"><span class="name">도로명</span>서울특별시 중구 동호로 310 (장충동2가)</div>
+                    <div class="add"><span class="name">지번</span>서울특별시 중구 장충동2가 162-1 태광산업</div>
+                  </div>
+                </li>
+              </ul>
+              <button type="button" name="button" class="btn_see">더보기 (10/23)<span></span></button>
+
+              <div class="addr_detail">
+                <div class="zip">000000</div>
+                <div class="add"><span class="name">도로명</span>서울특별시 중구 동호로 310 (장충동2가)</div>
+                <div class="add"><span class="name">지번</span>서울특별시 중구 장충동2가 162-1 태광산업</div>
+                <input type="text" placeholder="상세 주소를 입력해 주세요.">
+                <button type="button" name="button" class="btn_next">다음</button>
+              </div>
+
+            </div>
+          </section>
+        </main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+	  });
+	</script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //주소검색 입력
+			$('.addr_form input').on('keyup', function() {
+				if ($(this).val().length >= 1) {
+					$('.addr_form .btn_del').show();
+				} else {
+					$('.addr_form .btn_del').hide();
+				}
+			});
+			//주소검색 삭제
+			$(".addr_form .btn_del").on('click', function() {
+				$(".addr_form input").val('');
+			});
+    });
+  </script>
+</body>
+
+</html>

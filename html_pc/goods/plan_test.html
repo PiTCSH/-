@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+  <? include "../includefile/skipNavi.html"; ?>
+  <? include "../includefile/header_pc.html"; ?>
+  <div class="container">
+    <div class="wrap">
+      <? include "../includefile/ctgr_sideBar.html"; ?>
+      <div class="wrap_inner">
+        <!--header S-->
+        <header class="header detail">
+          <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+          <span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+          <h2 class="goods_detail"><span>기획전</span></h2>
+          <div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+            <a class="txt"></a>
+            <a class="btn">버튼</a>
+          </div>
+          <a href="../mypage/cart.html" class="btn_cart">장바구니
+            <!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+        </header>
+        <!--header E-->
+        <!--main S-->
+        <main id="contents">
+          <section class="contents colorContents">
+            <div class="sub_tit_wrap">
+              <h2 class="sub_tit"><span class="tl">기획전 이름</span></h2>
+              <div class="goodAlarm_btn">
+                <button class="btn_share"><span class="icon icon_sh"></span><span class="txt">공유</span></button>
+              </div>
+            </div>
+
+            <div class="eventmain">
+              <ul class="BannerList">
+                <li>
+                  <a href="http://m.shoppingntmall.com/plan/event/swipeDetail/2018030305?pageType=1">
+                    <img src="//img.shoppingntmall.com/banner/944/1000944.jpg" alt="" onerror="this.src=&quot;/resources/img/empty/image_W.jpg&quot;">
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="list_select" style="padding-right:0;">
+              <p class="list_total">전체<span>600</span>개</p>
+              <ul class="list_sort">
+                <li>
+                  <select>
+                    <option>인기순</option><!-- 2015-04-27 인기순 추가 -->
+                    <option>최신순</option>
+                    <option>낮은가격순</option>
+                    <option>높은가격순</option>
+                  </select>
+                  <!-- 2015-04-27 sort 선택 삭제 -->
+                </li>
+                <li><a class="btn_list_type"></a></li>
+              </ul>
+            </div>
+
+            <div class="goods_list_wrap">
+              <div class="goods_wide_out">
+                <div class="goods_wide">
+                  <div class="goods_img">
+                    <!-- 2016-06-21 : 품절 예시 -->
+                    <a>
+                      <img src="../../img/_tmp/014.jpg" alt="">
+                      <img src="../../img/_tmp/014_s.jpg" alt="" class="s">
+                    </a><!-- 2016-06-21 -->
+                  </div>
+                  <div class="goods_cont">
+                    <div class="buy_list_ul_div">
+                      <a href="#none" class="new_good_name">
+                        <span class="pink">TV쇼핑/적립</span>
+                        <span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+                      </a>
+                      <div class="new_good_price">
+                        <div class="price_row1">
+                          <span class="price_ph">
+                            <span class="price_per">20%</span>
+                            <span class="price_hi">190,000,000</span>
+                          </span>
+                          <!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+                        </div>
+                        <div class="price_row2">
+                          <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+                          <span class="price_per">할인가</span>
+                        </div>
+                        <div class="big_acc_wrap">
+                          <div class="big_acc"><span>120원</span>앱주문시 적립</div>
+                          <div class="star_wrap">
+                            <div class="star"><span style="width:20%"></span></div>
+                            <span class="num">(235,000)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new_good_bene">
+                      <a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+                      <ul class="bene_ul">
+                        <li>사은품</li>
+                        <li>무이자</li>
+                        <li>무료배송</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_wide_out">
+                <div class="goods_wide">
+                  <div class="goods_img">
+                    <a>
+                      <img src="../../img/_tmp/014.jpg" alt="">
+                      <img src="../../img/_tmp/014_s.jpg" alt="" class="s">
+                    </a>
+                    <div class="ing">방송&nbsp;중&nbsp;&nbsp;구매가능</div>
+                  </div>
+                  <div class="goods_cont">
+                    <div class="buy_list_ul_div">
+                      <a href="#none" class="new_good_name">
+                        <span class="pink">TV쇼핑/적립</span>
+                        <span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+                      </a>
+                      <div class="new_good_price">
+                        <div class="price_row1">
+                          <span class="price_ph">
+                            <span class="price_per">20%</span>
+                            <span class="price_hi">190,000,000</span>
+                          </span>
+                          <!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+                        </div>
+                        <div class="price_row2">
+                          <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+                          <span class="price_per">할인가</span>
+                        </div>
+                        <div class="big_acc_wrap">
+                          <div class="big_acc"><span>120원</span>앱주문시 적립</div>
+                          <div class="star_wrap">
+                            <div class="star"><span style="width:20%"></span></div>
+                            <span class="num">(235,000)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new_good_bene">
+                      <a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+                      <ul class="bene_ul">
+                        <li>사은품</li>
+                        <li>무이자</li>
+                        <li>무료배송</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_wide_out">
+                <div class="goods_wide">
+                  <div class="goods_img">
+                    <a>
+                      <img src="../../img/_tmp/014.jpg" alt="">
+                      <img src="../../img/_tmp/014_s.jpg" alt="" class="s">
+                    </a>
+                  </div>
+                  <div class="goods_cont">
+                    <div class="buy_list_ul_div">
+                      <a href="#none" class="new_good_name">
+                        <span class="pink">TV쇼핑/적립</span>
+                        <span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+                      </a>
+                      <div class="new_good_price">
+                        <div class="price_row1">
+                          <span class="price_ph">
+                            <span class="price_per">20%</span>
+                            <span class="price_hi">190,000,000</span>
+                          </span>
+                          <!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+                        </div>
+                        <div class="price_row2">
+                          <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+                          <span class="price_per">할인가</span>
+                        </div>
+                        <div class="big_acc_wrap">
+                          <div class="big_acc"><span>120원</span>앱주문시 적립</div>
+                          <div class="star_wrap">
+                            <div class="star"><span style="width:20%"></span></div>
+                            <span class="num">(235,000)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new_good_bene">
+                      <a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+                      <ul class="bene_ul">
+                        <li>사은품</li>
+                        <li>무이자</li>
+                        <li>무료배송</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_wide_out">
+                <div class="goods_wide">
+                  <div class="goods_img">
+                    <a>
+                      <img src="../../img/_tmp/014.jpg" alt="">
+                      <img src="../../img/_tmp/014_s.jpg" alt="" class="s">
+                    </a>
+                  </div>
+                  <div class="goods_cont">
+                    <div class="buy_list_ul_div">
+                      <a href="#none" class="new_good_name">
+                        <span class="pink">TV쇼핑/적립</span>
+                        <span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+                      </a>
+                      <div class="new_good_price">
+                        <div class="price_row1">
+                          <span class="price_ph">
+                            <span class="price_per">20%</span>
+                            <span class="price_hi">190,000,000</span>
+                          </span>
+                          <!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+                        </div>
+                        <div class="price_row2">
+                          <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+                          <span class="price_per">할인가</span>
+                        </div>
+                        <div class="big_acc_wrap">
+                          <div class="big_acc"><span>120원</span>앱주문시 적립</div>
+                          <div class="star_wrap">
+                            <div class="star"><span style="width:20%"></span></div>
+                            <span class="num">(235,000)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new_good_bene">
+                      <a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+                      <ul class="bene_ul">
+                        <li>사은품</li>
+                        <li>무이자</li>
+                        <li>무료배송</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+        </main>
+        <!--main E-->
+        <!--footer S-->
+        <? include "../includefile/footer.html"; ?>
+        <!-- dimmed-->
+        <div class="dim" style="display:none;"></div>
+        <!-- //dimmed -->
+        <!--footer E-->
+      </div><!-- end wrap_inner -->
+    </div><!-- end wrap -->
+    <? include "../includefile/page_top.html"; ?>
+  </div><!-- end container -->
+  <div class="sns_pop" style="display:none;">
+    <div class="sns_pop_bg"></div>
+    <div class="sns_pop_con">
+      <dl class="sns_pop_dl">
+        <dt>공유하기</dt>
+        <dd>
+          <a href="#none" id="kakaoTalkBtn">카카오톡</a>
+          <a href="#none" id="smsShareBtn">문자</a>
+          <a href="#none" id="kakaoStoryBtn">카카오스토리</a>
+          <a href="#none" id="faceBookBtn">페이스북</a>
+          <a href="#none" id="LinkBtn">링크복사</a>
+        </dd>
+      </dl>
+      <button type="button" class="sns_pop_btn">닫기</button>
+    </div>
+  </div>
+  <? include "../includefile/scriptlink.html"; ?>
+  <? include "../includefile/footer_pc.html"; ?>
+  <? include "../includefile/scriptlink_pc.html"; ?>
+  <? include "../includefile/scriptlink_pc_sub.html"; ?>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //서브 클래스 추가
+      $(".header_wrap").addClass("sub");
+
+      //공유하기 팝업
+      $('.btn_share').click(function() {
+        $('.sns_pop').fadeIn(300);
+        $(".sns_pop, .sns_tost").insertAfter(".pc_wrap");
+      });
+      $('.sns_pop_btn, .sns_pop_bg').click(function() {
+        $('.sns_pop').fadeOut(300);
+      });
+
+      //모바일 PC 분기처리
+			var filter2 = 'win16|win32|win64|mac|macintel';
+		  if (navigator.platform) {
+		    if (filter2.indexOf(navigator.platform.toLowerCase()) < 0) {
+		      //모바일 접속
+		      $('.pro_pc').hide(0);
+		      $('.pro_mo').show(0);
+		    } else {
+		      //PC 접속
+		      $('.pro_mo').hide(0);
+		      $('.pro_pc').show(0);
+		    }
+		  }
+    });
+  </script>
+  <script type="text/javascript">
+    jQuery(function() {
+      var imgSlideList = jQuery('#img-swipe').find('.swipe-wrap').find('> li');
+      if (imgSlideList.length > 1) {
+        var imgSwipe = Swipe(document.getElementById('img-swipe'), {
+          callback: function(index, elem) {
+            jQuery('#swipe-circle').find('a').eq(index).addClass('active').siblings().removeClass('active');
+          },
+          enable3d: !isGinger
+        });
+      };
+
+      var eventSlideList = $('#ban-slide').find('.swipe-wrap').find('> li');
+      var eventSwipe = Swipe(document.getElementById('ban-slide'), {
+        callback: function(index, elem) {
+          $('#ban-circle').find('a').eq(index).addClass('active').siblings().removeClass('active');
+        },
+        auto: 10000
+      });
+      $('#ban-circle').find('a').each(function(idx) {
+        $(this).click(function() {
+          eventSwipe.slide(idx)
+        });
+      })
+    });
+  </script>
+</body>
+
+</html>

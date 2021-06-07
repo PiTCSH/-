@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>비회원 주문 / 배송조회</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+            <ul class="sm_tab mb0">
+							<li class=""><a href="#none">주문 비밀번호 조회</a></li>
+							<li class="on"><a href="#none">본인 확인 조회</a></li>
+						</ul>
+						<form class="" action="">
+							<div class="join_wrap">
+								<p class="modify_p mb"><span>·</span>상품 주문시 발송 된 알림톡 및 SMS를 확인해주세요.<br>  주문번호를 모르시는 경우, 고객센터(080-130-1010)로 문의하세요.</p>
+								<div class="join_form">
+									<input type="text" class="join_input only_num" name="" value="" placeholder="주문번호" maxlength="14">
+									<input type="text" class="join_input" name="" value="" placeholder="이름">
+                  <input type="tel" class="join_input only_num" name="" value="" placeholder="생년월일 예)19990101" maxlength="8">
+									<!--
+										<p class="warring">생년월일을 입력해주세요.</p>
+										<p class="warring">생년월일 형식이 올바르지 않습니다. <br>확인 후 다시 입력해주세요.</p>
+									-->
+									<input type="tel" class="join_input only_phone" name="" value="" placeholder="휴대폰 번호 - 없이 입력" maxlength="13">
+									<!-- <p class="warring">휴대폰 번호를 입력해주세요.</p> -->
+									<!-- <p class="warring">휴대폰 번호 형식이 올바르지 않습니다. <br>확인 후 다시 입력해주세요.</p> -->
+								</div>
+								<div class="btn_wrap">
+									<button type="button" class="wide navy">조회하기</button>
+								</div>
+							</div>
+						</form>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+	  });
+	</script>
+	<script>
+		$(function() {
+			//인풋 숫자만
+			$(".only_num").on("keyup", function() {
+			    $(this).val($(this).val().replace(/[^0-9]/g,""));
+			});
+
+			//인풋 핸드폰 번호
+			$(".only_phone").on("keyup", function() {
+				$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})/,"$1-$2-$3").replace("--", "-") );
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>3월5일[원데이딜]</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+				<section class="contents colorContents">
+
+						<div class="eventmain">
+							<!--원데이 시간 카운트 추가-->
+							<div class="count_wrap day_07">
+								<div class="count">
+									<div class="inner">
+										<span id="days" class="number"></span>
+										<span id="days_txt" class="txt"></span>
+										<span id="times" class="number"></span>
+										<span id="txt" class="txt"></span>
+									</div>
+								</div>
+							</div>
+							<script>
+							var countDownDate = new Date("05/08/2018 23:59:59").getTime();
+							</script>
+							<!-- // var time = setInterval(function() {
+							// 	var now = new Date().getTime();
+							// 	var distance = countDownDate - now;
+
+							// 	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+							// 	if((days == 0)){
+							//     	document.getElementById('days').style.display = 'none';
+							//     	document.getElementById('days_txt').style.display = 'none';
+							//     };
+							// 	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							// 	if((hours + '').length == 1){
+							// 		hours = '0' + hours;
+							// 	};
+							// 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+							// 	if((minutes + '').length == 1){
+							// 		minutes = '0' + minutes;
+							// 	};
+							// 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+							// 	if((seconds + '').length == 1){
+							// 		seconds = '0' + seconds;
+							// 	};
+
+							// 	document.getElementById("days").innerHTML = days;
+							// 	document.getElementById("days_txt").innerHTML = "일";
+							// 	document.getElementById("times").innerHTML = hours + ":" + minutes + ":" + seconds;
+							// 	document.getElementById("txt").innerHTML = "남음";
+
+							// 	if (distance < 0) {
+							// 		clearInterval(time);
+							// 		document.getElementById("days").innerHTML = "기간만료";
+							// 		document.getElementById('days_txt').style.display = 'none';
+							// 		document.getElementById('times').style.display = 'none';
+							// 		document.getElementById('txt').style.display = 'none';
+							// 	}
+							// }, 1000); -->
+
+							<!--//원데이 시간 카운트 추가-->
+
+							<select onchange="selectLimeDetail(this.value)">
+								<option value="">전체보기</option>
+								<option value="01">타임딜</option>
+								<option value="02">연관상품</option>
+							</select>
+						</div>
+						<!-- 상품 목록 --><!-- 2016-06-16 상품리스트 추가 -->
+						<div class="goods_list_wrap">
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<!-- <p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p> -->
+											<p class="counsel">상담전용 상품입니다</p>
+
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<!-- <p class="sell">
+												판매가 <em>76,200</em>원
+											</p> -->
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<!-- <span class="sale">일시불 할인</span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<!-- <span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="goods_wide">
+								<div class="goods_img">
+									<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+								</div>
+								<div class="goods_cont">
+									<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+									<div class="goods">
+										<!-- 상품가격 -->
+										<div class="goods_price">
+											<p class="sell">
+												판매가 <em>76,200</em>원
+											</p>
+											<p class="sale">
+												<i>쇼핑엔T가</i> <em>43,800</em>원
+											</p>
+										</div>
+										<!-- //상품가격 -->
+										<!-- 혜택 -->
+										<div class="goods_benefit">
+											<p><span>사은품</span></p>
+											<p><span>무이자12</span></p>
+											<p><span>무료배송</span></p>
+										</div>
+										<!-- //혜택 -->
+										<div class="goods_benefit2">
+											<span class="rate"><em>20</em>%<span></span></span>
+											<span class="sale">일시불 할인</span>
+										</div>
+									</div>
+								</div>
+							</div>
+				            <div class="btns_wrap"><!-- 2016-06-16 더보기 버튼 추가 -->
+								<span class="btn viewmore"><a>더보기</a></span>
+							</div>
+						</div>
+			            <!-- /상품 목록 -->
+				</section>
+
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

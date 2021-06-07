@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>회사 소개</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+						<div class="visualimg">
+							<img src="../../img/service_img.jpg" alt="똑똑한 쇼핑 파트너 쇼핑엔T" />
+						</div>
+						<div class="svcInfo">
+							<ul>
+								<li>
+									<span>회사명</span>
+									<p>주식회사 티알엔</p>
+								</li>
+								<li>
+									<span>대표이사</span>
+									<p>민택근</p>
+								</li>
+								<li>
+									<span>설립일</span>
+									<p>1991년 3월 27일</p>
+								</li>
+								<li>
+									<span>자본금</span>
+									<p>150억</p>
+								</li>
+								<li>
+									<span>전화</span>
+									<p><a href="tel:080-130-1000">080-130-1000</a></p>
+								</li>
+								<li>
+									<span>팩스</span>
+									<p>070-4580-6099</p>
+								</li>
+								<li>
+									<span>전자우편</span>
+									<p><a href="mailto:help@shoppingnt.co.kr">help@shoppingnt.co.kr</a></p>
+								</li>
+								<li>
+									<span>홈페이지</span>
+									<p><a href="https://www.trncompany.co.kr" target="_blank">https://www.trncompany.co.kr</a></p>
+								</li>
+								<li>
+									<span>주소</span>
+									<p>서울특별시 중구 동호로 310, 별관<br />(장충동 2가, 태광산업)</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+		});
+	</script>
+</body>
+</html>

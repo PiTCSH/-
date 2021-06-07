@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>나의 적립금</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<div class="sm_wrap">
+
+							<div class="sm_tit_wrap">
+								<div class="sm_tit">
+									<dl class="sm_tit_big">
+										<dt>총 적립금</dt>
+										<dd><span class="big">24,000</span>원</dd>
+									</dl>
+									<dl class="sm_tit_small">
+										<dt>30일이내 소멸 예정</dt>
+										<dd><span class="big">24,000</span>원</dd>
+									</dl>
+								</div>
+							</div>
+
+							<ul class="sm_tab">
+								<li class="on"><a href="#none">적립/사용 내역</a></li>
+								<li><a href="#none">소멸예정 내역</a></li>
+							</ul>
+
+							<!-- 적립/사용내역 -->
+							<div class="sm_con sm_con1">
+								<div class="sm_con_top">
+									<div class="sm_select">
+										<button type="button" class="sm_btn">전체 내역<span>보기</span></button>
+										<ul>
+											<li class="on"><a href="#none">전체 내역</a></li>
+											<li><a href="#none">적립 내역</a></li>
+											<li><a href="#none">사용 내역</a></li>
+											<li><a href="#none">소멸 내역</a></li>
+										</ul>
+									</div>
+									<div class="sm_con_date">
+										조회 기간 20.02.01 ~20.02.30
+									</div>
+								</div>
+
+								<ul class="sm_con_tab">
+									<li class="on"><a href="#none">1개월</a></li>
+									<li><a href="#none">3개월</a></li>
+									<li><a href="#none">6개월</a></li>
+									<li><a href="#none">12개월</a></li>
+								</ul>
+
+								<ul class="sm_list">
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num minus">-3,000</span>
+									</li>
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num plus">+3,000</span>
+									</li>
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num plus">+3,000</span>
+									</li>
+								</ul>
+
+								<div class="btns_wrap"><span class="btn viewmore"><a>더보기</a></span></div>
+
+								<!-- 내역이 없을 경우 -->
+								<!-- <div class="list_nodata">
+									<p>적립/사용 내역이 없습니다.<br>적립/사용 이력이 있으시다면<br>기간을 길게 설정해보세요.</p>
+								</div> -->
+
+							</div>
+							<!-- //적립/사용내역 -->
+
+							<!-- 소멸예정 내역 -->
+							<div class="sm_con sm_con2">
+								<div class="sm_con_top">
+									<div class="sm_con_date">
+										조회 기간 20.02.01 ~20.02.30
+									</div>
+								</div>
+
+								<ul class="sm_con_tab t3">
+									<li class="on"><a href="#none">7일</a></li>
+									<li><a href="#none">1개월</a></li>
+									<li><a href="#none">3개월</a></li>
+								</ul>
+
+								<ul class="sm_list">
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num minus">-3,000</span>
+									</li>
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num plus">+3,000</span>
+									</li>
+									<li>
+										<span class="date">2018.11.30 - 2019.1.30</span>
+										<span class="name">18년 12월 골드 쇼핑엔티 할인권<i class="new">N</i></span>
+										<span class="num plus">+3,000</span>
+									</li>
+								</ul>
+
+								<div class="btns_wrap"><span class="btn viewmore"><a>더보기</a></span></div>
+								<!-- 내역이 없을 경우 -->
+								<!-- <div class="list_nodata">
+									<p>소멸예정 내역이 없습니다.<br>소멸예정 이력이 있으시다면<br>기간을 길게 설정해보세요.</p>
+								</div> -->
+
+							</div>
+							<!-- //소멸예정 내역 -->
+
+						</div>
+
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+
+			//전체탭
+			$('.sm_con2').hide();
+			$('.sm_tab li a').on('click',function(){
+       index = $(this).parent().index() + 1;
+       $('.sm_tab li').removeClass('on')
+       $(this).parent().addClass('on')
+       $('.sm_con').hide();
+       $('.sm_con'+ index).show();
+     });
+
+			//전체내역
+			$('.sm_btn').on('click',function(){
+				$('.sm_select ul').slideToggle('300');
+				$(this).children('span').toggleClass('on');
+			});
+
+			//개월탭
+			$('.sm_con_tab li a').on('click',function(){
+				$(this).parent().parent().children('li').removeClass('on');
+				$(this).parent().toggleClass('on');
+			});
+
+		});
+	</script>
+</body>
+
+</html>

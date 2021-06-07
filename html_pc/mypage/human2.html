@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+  <? include "../includefile/skipNavi.html"; ?>
+  <? include "../includefile/header_pc.html"; ?>
+  <div class="container">
+    <div class="wrap">
+      <? include "../includefile/ctgr_sideBar.html"; ?>
+      <div class="wrap_inner">
+        <!--header S-->
+        <header class="header detail">
+          <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+          <span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+          <h2 class="goods_detail"><span>휴먼고객확인</span></h2>
+          <div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+            <a class="txt"></a>
+            <a class="btn">버튼</a>
+          </div>
+          <a href="../mypage/cart.html" class="btn_cart">장바구니
+            <!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+        </header>
+        <!--header E-->
+        <!--main S-->
+        <main id="contents">
+          <section class="contents" style="min-height: 733px;">
+
+            <form id="dormantForm" method="post" action="/mypage/dormantRestore" onsubmit="javascript:return false;">
+              <div class="restore">
+                <div class="txt">
+                  <p><em>고객님 아이디가</em>복원 되었습니다.</p>
+                  <span>저희 쇼핑엔티를 다시 이용해주셔서 감사합니다.<br>더 좋은 서비스로 고객님과 함께 하겠습니다.</span>
+                  <div class="btns_wrap btn2">
+                    <span class="btn size3 bgcolor5"><a href="#메인으로">홈으로 가기</a></span>
+                    <span class="btn size3 bgcolor4"><a href="javascript:goLogin();">로그인</a></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+        </main>
+        <!--main E-->
+        <!--footer S-->
+        <? include "../includefile/footer.html"; ?>
+        <!-- dimmed-->
+        <div class="dim" style="display:none;"></div>
+        <!-- //dimmed -->
+        <!--footer E-->
+      </div><!-- end wrap_inner -->
+    </div><!-- end wrap -->
+    <? include "../includefile/page_top.html"; ?>
+  </div><!-- end container -->
+  <? include "../includefile/scriptlink.html"; ?>
+  <? include "../includefile/footer_pc.html"; ?>
+  <? include "../includefile/scriptlink_pc.html"; ?>
+  <? include "../includefile/scriptlink_pc_sub.html"; ?>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //서브 클래스 추가
+      $(".header_wrap").addClass("sub");
+    });
+  </script>
+</body>
+
+</html>

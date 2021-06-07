@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    //메인 gnb 위치 옮기기
+    $(".gnb_wrap").insertBefore('.pc_cate_tit');
+
+    //퀙메뉴
+    $(window).scroll(function(){
+      var st = $(window).scrollTop();
+      if ($('body').offset().top + 168 <= st){
+        $('.pc_quick').addClass('fixed');
+      } else {
+        $('.pc_quick').removeClass('fixed');
+      }
+    });
+
+    //TOP버튼
+    $(".pc_quick_top").on('click', function() {
+      $('html, body').stop().animate({scrollTop:0}, 300);
+    });
+
+  });
+
+</script>

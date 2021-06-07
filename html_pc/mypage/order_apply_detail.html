@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>취소/교환/반품 현황</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+						<ul class="order_new_tab">
+							<li><a href="#none">
+									<span class="num">99</span>
+									<span class="txt">주문취소</span>
+								</a></li>
+							<li><a href="#none">
+									<span class="num">0</span>
+									<span class="txt">교환접수</span>
+								</a></li>
+							<li><a href="#none">
+									<span class="num">2</span>
+									<span class="txt">교환완료</span>
+								</a></li>
+							<li><a href="#none">
+									<span class="num">0</span>
+									<span class="txt">반품접수</span>
+								</a></li>
+							<li class="on"><a href="#none">
+									<span class="num">99<span class="over">+</span></span>
+									<span class="txt">반품완료</span>
+								</a></li>
+						</ul>
+						<div class="mypage_wrap orderlist">
+							<ul class="order_day_tab ui-tab-btns-period ui-accordion-btn">
+								<li class="on"><a href="#none" class="current">1개월</a><span></span></li>
+								<li><a href="#none">3개월</a><span></span></li>
+								<li><a href="#none">6개월</a><span></span></li>
+								<li><a href="#none" class="accordion_btn">기간조회</a></li>
+							</ul>
+							<!-- 기간 조회 -->
+							<div class="accordion_wrap mg">
+								<!-- 2015-05-18 수정, 위치변경 -->
+								<div class="period">
+									<div class="accordion_con">
+										<div class="period_inquiry">
+											<div class="period_ymd">
+												<p>
+													<span>
+														<select name="" tabindex="4">
+															<option value="">2014</option>
+															<option value="">2015</option>
+														</select>
+														<em>년</em>
+													</span>
+												</p>
+												<p>
+													<span>
+														<select name="" tabindex="4">
+															<option value="">1</option>
+															<option value="">2</option>
+															<option value="">3</option>
+															<option value="">4</option>
+															<option value="">5</option>
+															<option value="">6</option>
+															<option value="">7</option>
+															<option value="">8</option>
+															<option value="">9</option>
+															<option value="">10</option>
+															<option value="">11</option>
+															<option value="">12</option>
+														</select>
+														<em>월</em>
+													</span>
+												</p>
+												<p>
+													<span>
+														<select name="" tabindex="5">
+															<option value="">1</option>
+															<option value="">2</option>
+															<option value="">3</option>
+															<option value="">4</option>
+															<option value="">5</option>
+															<option value="">6</option>
+															<option value="">7</option>
+															<option value="">8</option>
+															<option value="">9</option>
+															<option value="">10</option>
+															<option value="">11</option>
+															<option value="">12</option>
+															<option value="">13</option>
+															<option value="">14</option>
+															<option value="">15</option>
+															<option value="">16</option>
+															<option value="">17</option>
+															<option value="">18</option>
+															<option value="">19</option>
+															<option value="">20</option>
+															<option value="">21</option>
+															<option value="">22</option>
+															<option value="">23</option>
+															<option value="">24</option>
+															<option value="">25</option>
+															<option value="">26</option>
+															<option value="">27</option>
+															<option value="">28</option>
+															<option value="">29</option>
+															<option value="">30</option>
+															<option value="">31</option>
+														</select>
+														<em>일</em>
+													</span>
+												</p>
+											</div>
+											<div class="period_ymd">
+												<p>
+													<span>
+														<!-- 2015-05-18 수정 -->
+														<select name="" tabindex="4">
+															<option value="">2014</option>
+															<option value="">2015</option>
+														</select>
+														<em>년</em>
+													</span>
+												</p>
+												<p>
+													<span>
+														<select name="" tabindex="4">
+															<option value="">1</option>
+															<option value="">2</option>
+															<option value="">3</option>
+															<option value="">4</option>
+															<option value="">5</option>
+															<option value="">6</option>
+															<option value="">7</option>
+															<option value="">8</option>
+															<option value="">9</option>
+															<option value="">10</option>
+															<option value="">11</option>
+															<option value="">12</option>
+														</select>
+														<em>월</em>
+													</span>
+												</p>
+												<p>
+													<span>
+														<select name="" tabindex="5">
+															<option value="">1</option>
+															<option value="">2</option>
+															<option value="">3</option>
+															<option value="">4</option>
+															<option value="">5</option>
+															<option value="">6</option>
+															<option value="">7</option>
+															<option value="">8</option>
+															<option value="">9</option>
+															<option value="">10</option>
+															<option value="">11</option>
+															<option value="">12</option>
+															<option value="">13</option>
+															<option value="">14</option>
+															<option value="">15</option>
+															<option value="">16</option>
+															<option value="">17</option>
+															<option value="">18</option>
+															<option value="">19</option>
+															<option value="">20</option>
+															<option value="">21</option>
+															<option value="">22</option>
+															<option value="">23</option>
+															<option value="">24</option>
+															<option value="">25</option>
+															<option value="">26</option>
+															<option value="">27</option>
+															<option value="">28</option>
+															<option value="">29</option>
+															<option value="">30</option>
+															<option value="">31</option>
+														</select>
+														<em>일</em>
+													</span>
+												</p>
+											</div>
+											<p class="inquiry"><span class="btn size2 bgcolor1"><a>조회</a></span></p><!--  2015-05-19 수정 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //기간 조회 -->
+							<!-- tab1 -->
+							<div class="result_wrap_new">
+								2015.05.01 - 2015.05.30
+							</div>
+							<div class="orderList_wrap">
+
+								<!-- 내역이 없을 경우
+                <p class="list_nodata">
+                  주문 내역이 없습니다.<br />주문 이력이 있으시다면 기간을 설정해 보세요.
+                </p> -->
+
+								<!-- 비회원 조회 시
+                <div class="tit head">
+                  <p><strong class="emp1">회원 가입하시면 더 많은 혜택을 얻게 됩니다!</strong></p>
+                </div>
+                -->
+
+								<div class="board">
+									<div class="inquiry_goods_list">
+
+										<div class="order_goods_tit">
+											<span class="tit_date">2020.05.09</span>
+											<a href="#none" class="tit_num">주문번호 21481961<i></i></a>
+										</div>
+										<ul class="order_goods">
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">반품접수</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+														<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">반품상세</button>
+													<button type="button">반품철회</button>
+												</div>
+											</li>
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">반품수거중</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+														<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">반품상세</button>
+												</div>
+											</li>
+										</ul>
+
+
+										<div class="order_goods_tit">
+											<span class="tit_date">2020.05.09</span>
+											<a href="#none" class="tit_num">주문번호 21481961<i></i></a>
+										</div>
+										<ul class="order_goods">
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">반품완료</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+														<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">반품상세</button>
+												</div>
+											</li>
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">교환접수</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+													<span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">교환상세</button>
+													<button type="button">교환철회</button>
+												</div>
+											</li>
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">교환수거중</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+													<span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">교환상세</button>
+												</div>
+											</li>
+											<li>
+												<div class="goods">
+													<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+													<div class="goods_ing">교환완료</div>
+													<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+													<span><em>164,800</em>원</span></div>
+													<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+												</div>
+												<div class="goods_btn">
+													<button type="button">교환상세</button>
+												</div>
+											</li>
+										</ul>
+
+
+
+									</div>
+								</div>
+							</div>
+							<div class="addr_con bt">
+								<button type="button" name="button" class="btn_see">더보기 (10/23)<span></span></button>
+							</div>
+							<!-- /tab1 -->
+						</div>
+						<div class="sub_line"></div>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+
+			//버튼 갯수
+	    $('.goods_btn').each(function() {
+				if ($('button', this).length < 2) {
+	        $(this).addClass('w100');
+	      } else if ($('button', this).length < 3) {
+	        $(this).addClass('w50');
+	      } else if ($('button', this).length < 4) {
+	        $(this).addClass('w33');
+	      } else if ($('button', this).length < 5) {
+	        $(this).addClass('w25');
+	      }
+	    });
+
+		});
+	</script>
+</body>
+
+</html>

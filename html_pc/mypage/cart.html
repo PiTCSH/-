@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>장바구니</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<div class="mypage_wrap cartwrap cartwrap_wide">
+
+							<div class="result_wrap fixed">
+								<p class="count">
+									<input type="checkbox" />
+									전체 상품 선택 <span class="num">총 <em>23</em>개</span>
+								</p>
+							</div>
+
+							<div class="sub_line2"></div>
+
+							<div class="cart_list bg">
+								<div class="cart_list_tit">
+									<input type="checkbox"><span class="txt1">주)해농</span><span class="txt2">업체별 배송</span>
+								</div>
+								<ul class="order_goods">
+									<li>
+										<div class="goods_small">
+											<span class="goods_check"><input type="checkbox" /></span>
+											<div class="goods_img"><img src="../../img/tmp/001.jpg" alt="" /></div>
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+														<span class="price_per">할인가</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 2015-05-13 수정 -->
+										<div class="goods_append">
+											<p>
+												<em>옵션/수량</em>
+												<span>바다를 품은 육포 2BOX / 1개</span>
+											</p>
+											<p>
+												<em>사은품</em>
+												<span>강화유리 접시 5P 화이트/1개</span>
+												<span class="gift_option">[사은품 옵션 : 꽃무늬 유리]</span>
+											</p>
+										</div>
+										<div class="goods_state_bg">
+											<div class="btns_wrap btn3">
+												<span class="btn size2 bgcolor2"><a>삭제</a></span>
+												<span class="btn size2 acdntype2 ui-mypage-switch" data-target="opt_change2"><a>옵션/수량변경</a></span><!-- 2015-06-01 수정 -->
+												<span class="btn size2 bgcolor4"><a>바로구매</a></span>
+											</div>
+											<div id="opt_change2" class="opt_change optionWrap" style="display:none;">
+												<div class="selected">
+													<select class="" name="">
+														<option value="">그레이</option>
+													</select>
+													<article class="sel_amount ui-stepper">
+														<div class="pmpm">
+															<span class="minus"><em>-</em></span>
+															<p><input type="number" value="1" min="1" max="999" /></p>
+															<span class="plus"><em>+</em></span>
+														</div>
+														<div class="btns_wrap">
+															<span class="btn size2 bgcolor1"><a>취소</a></span>
+															<span class="btn size2 bgcolor4"><a>변경</a></span>
+														</div>
+													</article>
+												</div>
+											</div>
+										</div>
+
+										<div class="goods_account new">
+											<dl>
+												<dt><em>1,393,000</em>원 <span>+</span> 배송비 <em>3,000</em>원 <span>=</span> <strong>18,700원</strong> </dt>
+												<dd>
+													000,000,000원 추가시 무료배송
+													<div class="goods_account_save"><a href="#none">배송비 절약상품 더보기</a></div>
+												</dd>
+											</dl>
+
+										</div>
+
+									</li>
+								</ul>
+								<div class="sub_line">
+
+								</div>
+								<ul class="order_goods">
+									<li>
+										<div class="goods_small">
+											<span class="goods_check"><input type="checkbox" /></span>
+											<div class="goods_img"><img src="../../img/tmp/001.jpg" alt="" /></div>
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 2015-05-13 수정 -->
+										<div class="goods_append">
+											<p>
+												<em>옵션/수량</em>
+												<span>바다를 품은 육포 2BOX / 1개</span>
+											</p>
+										</div>
+										<!-- /2015-05-13 수정 -->
+										<div class="goods_state_bg">
+											<!-- 2015-05-13 수정 -->
+											<div class="btns_wrap btn3">
+												<span class="btn size2 bgcolor2"><a>삭제</a></span>
+												<span class="btn size2 acdntype2 ui-mypage-switch" data-target="opt_change3"><a>옵션/수량변경</a></span><!-- 2015-06-01 수정 -->
+												<span class="btn size2 bgcolor4"><a>바로구매</a></span>
+											</div>
+											<div id="opt_change3" class="opt_change optionWrap" style="display:none;">
+												<div class="selected">
+													<select class="" name="">
+														<option value="">그레이</option>
+													</select>
+													<article class="sel_amount ui-stepper">
+														<div class="pmpm">
+															<span class="minus"><em>-</em></span>
+															<p><input type="number" value="1" min="1" max="999" /></p>
+															<span class="plus"><em>+</em></span>
+														</div>
+														<div class="btns_wrap">
+															<span class="btn size2 bgcolor1"><a>취소</a></span>
+															<span class="btn size2 bgcolor4"><a>변경</a></span>
+														</div>
+													</article>
+												</div>
+											</div>
+										</div>
+										<div class="goods_account new">
+											<dl>
+												<dt><em>1,393,000</em>원 <span>+</span> 배송비 <em>3,000</em>원 <span>=</span> <strong>18,700원</strong> </dt>
+											</dl>
+
+										</div>
+
+									</li>
+								</ul>
+
+								<div class="sub_line"></div>
+								<dl class="apply_dl">
+									<dt><span>구매예상 금액</span></dt>
+									<dd>
+										<ul class="apply_info">
+											<li class="bold"><span class="left">상품 금액</span><span class="right">000,000,000원</span></li>
+											<li><span class="left">배송비</span><span class="right">+ 000,000원</span></li>
+											<li><span class="left">할인금액</span><span class="right">- 000,000원</span></li>
+											<li class="end"><span class="left">총 결제 금액</span><span class="right">000,000,000원</span></li>
+										</ul>
+									</dd>
+									<dd>
+										<div class="btns_wrap btn3">
+											<span class="btn size2 bgcolor2"><a>선택삭제</a></span>
+											<span class="btn size2 bgcolor5"><a>선택주문</a></span>
+											<span class="btn size2 bgcolor4"><a>전체주문</a></span>
+										</div>
+										<!-- <div class="list_nodata">
+											<p>장바구니가 비었습니다.</p>
+										</div> -->
+									</dd>
+								</dl>
+
+							</div>
+							<div class="sub_line"></div>
+							<div class="soldout_cart_list">
+
+								<div class="soldout_top">
+									<h3>일시품절 상품 <span><span>총 10개</span></span></h3>
+									<button type="button" class="soldout_btn ">품절상품버튼</button>
+								</div>
+
+								<div class="soldout_con">
+									<p class="soldout_no">
+										일시품절인 상품이 없습니다.
+									</p>
+									<div class="soldout_p">
+										<span class="btn size2 bgcolor1"><a>품절상품 전체삭제</a></span>
+									</div>
+									<div class="cart_list">
+										<ul class="order_goods">
+											<li>
+												<div class="goods">
+													<!-- 일시품절 상품 표시 -->
+													<p class="soldout jang"><span><em>일시품절</em></span></p>
+													<!-- //일시품절 상품 표시 -->
+													<div class="goods_img">
+														<img src="../../img/tmp/001.jpg" alt="" />
+													</div>
+													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<div class="goods_price">
+														<del><em>287,100</em>원</del>
+														<span><em>139,700</em>원</span>
+													</div>
+												</div>
+												<div class="goods_append">
+													<p>
+														<em>옵션/수량</em>
+														<span>바다를 품은 육포 2BOX / 1개</span>
+													</p>
+													<p>
+														<em>사은품</em>
+														<span>강화유리 접시 5P 화이트/1개</span>
+														<span class="gift_option">[사은품 옵션 : 꽃무늬 유리]</span>
+													</p>
+												</div>
+												<div class="goods_state">
+													<div class="btns_wrap btn2">
+														<span class="btn size2 bgcolor1"><a><i class="icon_alarm"></i>입고 알림</a></span>
+														<span class="btn size2 bgcolor2"><a>삭제</a></span>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<ul class="order_goods">
+											<li>
+												<div class="goods">
+													<!-- 일시품절 상품 표시 -->
+													<p class="soldout jang"><span><em>일시품절</em></span></p>
+													<!-- //일시품절 상품 표시 -->
+													<div class="goods_img">
+														<img src="../../img/tmp/002.jpg" alt="" />
+													</div>
+													<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+													<p class="goods_counsel">상담 전용 상품입니다.</p>
+												</div>
+												<div class="goods_state">
+													<div class="btns_wrap btn2">
+														<span class="btn size2 bgcolor1"><a><i class="icon_alarm"></i>입고 알림</a></span>
+														<span class="btn size2 bgcolor2"><a>삭제</a></span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="sub_line"></div>
+						<div class="search_cate_prd">
+							<div class="top_tit">
+								<span class="tit">다른 고객이 함께 본 상품</span>
+							</div>
+							<div class="recom_swiper recom_1">
+								<ul class="sc_pro swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+
+						</div>
+						<div class="sub_line"></div>
+						<div class="search_cate_prd">
+							<div class="top_tit">
+								<span class="tit">함께 비교하면 좋을 상품</span>
+							</div>
+							<div class="recom_swiper recom_2">
+								<ul class="sc_pro swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img">
+											<a href="#none"><img src="http://img.shoppingntmall.com/goods/890/10010890_h.jpg" alt=""></a>
+										</div>
+										<div class="txt">
+											<div class="buy_list_ul_div">
+												<a href="#none" class="new_good_name">
+													<span class="pink">TV쇼핑/적립</span>
+													<span class="tits">2016년형 부라더미싱 신모델 번호 파티와이드그릴</span>
+												</a>
+												<div class="new_good_price">
+													<div class="price_row1">
+														<div class="price_ph">
+
+															<span class="price_hi">190,000,000</span>
+														</div>
+														<!-- <span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span> -->
+													</div>
+													<div class="price_row2">
+														<span class="price_txt"><span class="num">190,000,000</span><span class="won">원</span></span>
+													</div>
+													<div class="big_acc_wrap row">
+														<div class="star_wrap">
+															<div class="star"><span style="width:20%"></span></div>
+															<span class="num">(235,000)</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="new_good_bene">
+												<a href="http://m.shoppingntmall.com/plan/planshop/swipeDetail/2019060689?pageType=1" target="_blank" class="pakpak_btn">릴레이 팍팍</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+
+						</div>
+						<div class="sub_line"></div>
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+		<div class="cart_floating">
+	    <dl class="cart_all">
+	        <dt id="floatingNum">총 주문 예상 금액 (0개)</dt>
+	        <dd><span id="floatingAmt">0</span> 원</dd>
+	    </dl>
+	    <div class="cart_btn">
+	        <button type="button" class="cart_btn_del" onclick="javascript:deleteSelectCart();">선택삭제</button>
+	        <button type="button" class="cart_btn_order" onclick="javascript:goOrderSelect('');">선택상품주문</button>
+	    </div>
+		</div>
+		<style>
+			.footer {padding-bottom:100px;}
+		   .floating_btn_top {bottom:105px !important;}
+		</style>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+	  });
+	</script>
+	<script>
+		var recom_swiper = new Swiper('.recom_1, .recom_2', {
+			slidesPerView: 'auto',
+			spaceBetween: 0
+		});
+		$(function() {
+
+			//헤더 고정
+      $('.header_wrap').addClass('fixed');
+
+			$(".soldout_btn").on('click', function() {
+				$(this).toggleClass('on');
+				$('.soldout_con').slideToggle(300);
+			});
+
+		});
+	</script>
+</body>
+
+</html>

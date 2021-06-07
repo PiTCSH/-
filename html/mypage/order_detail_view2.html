@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+  <? include "../includefile/skipNavi.html"; ?>
+  <!-- <? include "../includefile/header_pc.html"; ?> -->
+  <div class="container">
+    <div class="wrap">
+      <? include "../includefile/ctgr_sideBar.html"; ?>
+      <div class="wrap_inner">
+        <!--header S-->
+        <header class="header detail">
+          <span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+          <span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+          <h2 class="goods_detail"><span>주문 상세보기</span></h2>
+          <div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+            <a class="txt"></a>
+            <a class="btn">버튼</a>
+          </div>
+          <a href="../mypage/cart.html" class="btn_cart">장바구니
+            <!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+        </header>
+        <!--header E-->
+        <!--main S-->
+        <main id="contents">
+          <section class="contents" id="orderDtailPart">
+
+
+            <!--배너추가 2018-03-06-->
+            <div class="banner_area slick-initialized slick-slider slick-dotted">
+              <div class="slick-list draggable">
+                <div class="slick-track" style="opacity: 1; width: 375px; transform: translate3d(0px, 0px, 0px);">
+                  <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 375px;" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
+                    <a href="/plan/event/swipeDetail/2018050353?pageType=1" class="link_banner" tabindex="0">
+                      <img src="//img.shoppingntmall.com/banner/173/1001173.jpg" alt="" onerror="this.src=&quot;/resources/img/empty/image_W.jpg&quot;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <ul class="slick-dots" role="tablist">
+                <li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 1" tabindex="0" aria-selected="true">1</button></li>
+              </ul>
+            </div>
+            <!--//배너추가 2018-03-06-->
+
+            <div class="mypage_wrap orderdetail">
+              <div class="orderList_wrap">
+                <!-- 상품 -->
+                <!-- 배송지 변경 노출여부 -->
+                <!-- 취소 여부 -->
+                <!-- 결제 여부(0이면 주문접수상태) -->
+                <!-- 무형상품 여부 -->
+                <!-- 무형상품 업체지시 여부(결제완료까지 상담내용 수정가능) -->
+                <dl class="order_list">
+                  <dt class="goods_order">
+                    <span class="order_date">2021. 03. 25</span>
+                    <span class="order_num">[ 주문번호 <em>20210325120557</em> ]</span>
+                  </dt>
+
+                  <dt class="title">
+                    <!-- 2015-06-19 추가 -->
+                    <h3 class="greytype">기본 정보</h3>
+                  </dt>
+                  <!-- 상품 SEQ -->
+                  <dd class="goods_list">
+                    <div class="goods_state">
+                      <span>배송완료</span>
+                      <div class="btns_wrap">
+                        <span class="btn size2 bgcolor1"><a receiver="최용남" goodsname="마넬뉴욕 모던 젤리 블라우스 4종/1개" orderno="20210325120557" ordergseq="001" slipino="" addr="" action="https://m.shoppingntmall.com/mypage/delivery/info"
+                            onclick="deliveryRetrieve(this,1);">배송조회</a></span>
+                      </div>
+
+                    </div>
+                    <div class="btns_wrap">
+                      <p class="desc iconed emp2">반품 및 교환접수와 같은 서비스를 이용 하시려면<br> 로그인을 해주시기 바랍니다.</p>
+                      <span class="btn fullwidth bgcolor5"><a class="btn btn_radius4 btn_white btn_h28" href="https://m.shoppingntmall.com/mypage/order/list">로그인</a></span>
+                    </div>
+                    <ul class="order_goods">
+                      <li>
+                        <div class="goods">
+                          <p class="goods_img" onclick="javascript:goUrl('/display/goods/10342751');">
+                            <img src="https://img.shoppingntmall.com/goods/751/10342751_k.jpg" alt="마넬뉴욕 모던 젤리 블라우스 4종" onerror="this.src=&quot;/resources/img/empty/image_S.jpg&quot;">
+                          </p>
+                          <div class="goods_name" onclick="javascript:goUrl('/display/goods/10342751');">마넬뉴욕 모던 젤리 블라우스 4종</div>
+                          <div class="goods_price">
+                            <span><em>39,000</em>원</span>
+                          </div>
+                        </div>
+                        <div class="goods_append">
+                          <!-- @@@ 2014-11-19 옵션수량 한줄로 수정 -->
+                          <p>
+                            <em>옵션</em>
+                            <span>66</span><!-- @@@ 2014-11-19 소스(p를 span으로) 수정 -->
+                          </p>
+                          <p>
+                            <em>수량</em>
+                            <span>1개</span><!-- @@@ 2014-11-19 소스(p를 span으로/span을 em으로) 수정 -->
+                          </p>
+                          <!-- //@@@ 2014-11-19 옵션수량 한줄로 수정 -->
+                        </div>
+
+
+
+                        <div class="goods_case">
+                          <ul class="tab_group piece2 tab_detail ui-tab-btns">
+                            <li>
+                              <a style="transition: all 300ms; -webkit-transition: all 300ms;">입금정보</a>
+                            </li>
+                            <li>
+                              <a id="tabdt_1" style="transition: all 300ms; -webkit-transition: all 300ms;">옵션변경</a>
+                            </li>
+                          </ul>
+                          <!-- 입금정보 -->
+                          <div class="case_con ui-tab-content" id="delivery_1" style="display:none;">
+                            <div class="method">
+                              <dl>
+                                <dd>
+                                  <ul>
+                                    <!-- 무통장입금 결제정보 -->
+                                    <li><em>결제수단</em>무통장입금</li>
+                                    <li><em>입금은행</em>우체국</li>
+                                    <li><em>입금계좌번호</em>81088480091090</li>
+                                    <li><em>입금기한</em>03월 29일</li>
+                                    <!-- //무통장입금 결제정보 -->
+                                  </ul>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                          <!-- //입금정보 -->
+                          <!-- 옵션변경 -->
+                          <div class="case_con ui-tab-content" id="option_1" style="display:none;">
+                            <div class="option">
+                              <dl>
+                                <dt>현재 옵션</dt>
+                                <dd>
+                                  <p class="sel_option">66 /1개</p>
+                                  <p class="selOPtion" style="display:block;">
+                                    <select class="selOPtion" onchange="choiceGoodsdt(this, '1');" id="selOPtion_1">
+                                      <option id="base">옵션선택</option>
+                                      <option value="002" brieforderablecnt="699">
+                                        66
+                                      </option>
+                                      <option value="003" brieforderablecnt="693">
+                                        77
+                                      </option>
+                                      <option value="004" brieforderablecnt="108">
+                                        88
+                                      </option>
+                                    </select>
+                                  </p>
+                                </dd>
+                              </dl>
+                              <div class="btns_wrap btn2">
+                                <span class="btn size2 bgcolor2"><a onclick="goodsdtChangeCancel(1);">취소</a></span>
+                                <span class="btn size2 bgcolor4"><a onclick="saveGoodsdt(this,1);">변경</a></span>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //옵션변경 -->
+                        </div>
+                      </li>
+                    </ul>
+                    <input type="hidden" id="orderGoodsdtCode_1" value="002">
+                    <input type="hidden" id="orderQty_1" value="1">
+                    <input type="hidden" id="goodsCode_1" value="10342751">
+                    <input type="hidden" id="orderGSeq_1" value="001">
+                    <input type="hidden" id="orderNo_1" value="20210325120557">
+                    <input type="hidden" id="goodsName_1" value="마넬뉴욕 모던 젤리 블라우스 4종">
+                    <input type="hidden" id="addr_1" value="경기 광명시 철산로 13-12 103동 604호 (철산동,쌍마한신아파트)">
+                    <input type="hidden" id="receiver_1" value="최용남">
+                    <input type="hidden" id="slipINo_1" value="">
+                    <input type="hidden" id="doFlag_1" value="10">
+
+                  </dd>
+
+                </dl>
+              </div>
+              <input type="hidden" id="deliveryFlag" value="0">
+              <div class="orderDetail_wrap">
+                <!-- 배송지 변경 -->
+                <h3 class="greytype" id="deliveryHeader">
+                  배송정보
+                  <span class="btn size2 bgcolor1 ui-chg-addr-switch" id="deliverycancel" style="display:block;">
+                    <a>배송지변경</a>
+                  </span>
+                </h3>
+                <div class="detail_con">
+                  <!-- @@@ 2014-11-10 배송지변경 버튼클릭 영역 추가 -->
+                  <div id="chg-addr-on" class="change_addr order_wrap" style="display:none;">
+                    <div class="rcvcustomer">
+                      <!-- @@@ 2014-11-14 버튼에서 탭으로 수정 -->
+                      <ul class="tab_group tab_address">
+                        <li><a id="defaultAddr" class="current" onclick="javascript:clickReceiverTab('default');">기본 주소</a></li>
+                        <li><a id="recentAddr" class="" onclick="javascript:clickReceiverTab('recent');">최근 주소</a></li>
+                        <li><a id="newAddr" class="" onclick="javascript:clickReceiverTab('new');">신규 주소</a></li>
+                      </ul>
+                      <!-- //@@@ 2014-11-14 버튼에서 탭으로 수정 -->
+                      <dl class="form_input2 receiverinfo">
+                        <dt>받으시는 분</dt>
+                        <dd>
+                          <div class="receive_area">
+                            <span class="inputBox"><input type="text" placeholder="이름을 입력하세요." name="receiverName" id="receiverName" tabindex="1" autocapitalize="off" onchange="lengthCheck('receiverName');" maxlength="10" readonly="readonly"></span>
+                            <p class="delivery"><span class="btn size2 bgcolor1 adresslist"><a id="deliveryList" onclick="openRecList();" style="display: none;">배송지 목록</a></span></p>
+                          </div>
+                          <div class="delivery_list" id="recListPart" style="display:none;">
+                            <ul>
+                              <!-- 주소지 순번 -->
+                              <!-- 최근 주문배송지 0이면 최근주문배송지 없음 -->
+                              <!-- 기본 주문배송지 0이면 기본배송지 없음-->
+                              <li>
+                                <div>
+                                  <p>최용남</p>
+                                  <p>경기 광명시 철산로 13-12 103동 604호 (철산동,쌍마한신아파트)</p>
+                                  <input type="hidden" name="receiver_name_2" id="receiver_name_2" value="최용남">
+                                  <input type="hidden" name="receiver_seq_2" id="receiver_seq_2" value="0000000007">
+                                  <input type="hidden" name="receiver_ddd_2" id="receiver_ddd_2" value="">
+                                  <input type="hidden" name="receiver_tel1_2" id="receiver_tel1_2" value="">
+                                  <input type="hidden" name="receiver_tel2_2" id="receiver_tel2_2" value="">
+                                  <input type="hidden" name="post_num1_2" id="post_num1_2" value="경기 광명시 철산로 13-12">
+                                  <input type="hidden" name="post_num2_2" id="post_num2_2" value="103동 604호 (철산동,쌍마한신아파트)">
+                                  <input type="hidden" name="receiver_hp1_2" id="receiver_hp1_2" value="010">
+                                  <input type="hidden" name="receiver_hp2_2" id="receiver_hp2_2" value="2601">
+                                  <input type="hidden" name="receiver_hp3_2" id="receiver_hp3_2" value="7093">
+                                  <input type="hidden" name="area_gb_2" id="area_gb_2" value="10">
+                                  <input type="hidden" name="default_yn_2" id="default_yn_2" value="">
+                                  <input type="hidden" name="last_order_rec_seq_2" id="last_order_rec_seq_2" value="0000000007">
+                                  <input type="hidden" name="receiver_post_seq_2" id="receiver_post_seq_2" value="601">
+                                  <input type="hidden" name="receiver_post_2" id="receiver_post_2" value="14236">
+                                </div>
+                                <p class="select"><a class="btn_ib8 btn_radius4 btn_white btn_h25" id="choice_receiver_2" onclick="selectReceiverAddr('nomal',2);">선택</a></p>
+                              </li>
+                              <li>
+                                <div>
+                                  <p>테스트1</p>
+                                  <p>제주 제주시 광양9길 3 aaa (이도이동)</p>
+                                  <input type="hidden" name="receiver_name_3" id="receiver_name_3" value="테스트1">
+                                  <input type="hidden" name="receiver_seq_3" id="receiver_seq_3" value="0000000012">
+                                  <input type="hidden" name="receiver_ddd_3" id="receiver_ddd_3" value="">
+                                  <input type="hidden" name="receiver_tel1_3" id="receiver_tel1_3" value="">
+                                  <input type="hidden" name="receiver_tel2_3" id="receiver_tel2_3" value="">
+                                  <input type="hidden" name="post_num1_3" id="post_num1_3" value="제주 제주시 광양9길 3">
+                                  <input type="hidden" name="post_num2_3" id="post_num2_3" value="aaa (이도이동)">
+                                  <input type="hidden" name="receiver_hp1_3" id="receiver_hp1_3" value="010">
+                                  <input type="hidden" name="receiver_hp2_3" id="receiver_hp2_3" value="2601">
+                                  <input type="hidden" name="receiver_hp3_3" id="receiver_hp3_3" value="7093">
+                                  <input type="hidden" name="area_gb_3" id="area_gb_3" value="30">
+                                  <input type="hidden" name="default_yn_3" id="default_yn_3" value="">
+                                  <input type="hidden" name="last_order_rec_seq_3" id="last_order_rec_seq_3" value="0000000007">
+                                  <input type="hidden" name="receiver_post_seq_3" id="receiver_post_seq_3" value="604">
+                                  <input type="hidden" name="receiver_post_3" id="receiver_post_3" value="63208">
+                                </div>
+                                <p class="select"><a class="btn_ib8 btn_radius4 btn_white btn_h25" id="choice_receiver_3" onclick="selectReceiverAddr('nomal',3);">선택</a></p>
+                              </li>
+                              <input type="hidden" name="receiverCount" id="receiverCount" value="3">
+                              <input type="hidden" name="orderReceiverSeq" id="orderReceiverSeq" value="0000000007">
+                              <input type="hidden" name="orderCustAreaGb" id="orderCustAreaGb" value="10">
+                              <input type="hidden" name="flagGb" id="flagGb" value="1">
+                              <input type="hidden" name="postNum1" id="postNum1" value="142">
+                              <input type="hidden" name="postNum2" id="postNum2" value="36">
+                              <input type="hidden" name="postSeq" id="postSeq" value="">
+                              <input type="hidden" name="roadAddrYn" id="roadAddrYn" value="">
+                              <input type="hidden" name="roadAddrNo" id="roadAddrNo" value="">
+                              <input type="hidden" name="custAreaGb" id="custAreaGb" value="10" readonly="readonly">
+                              <input type="hidden" name="receiverSeq" id="receiverSeq" value="0000000007">
+                              <input type="hidden" name="defaultSeq" id="defaultSeq" value="2">
+                              <input type="hidden" name="recentSeq" id="recentSeq" value="2">
+                              <input type="hidden" name="selectTabIndex" id="selectTabIndex" value="1">
+                            </ul>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form_input">
+                        <dt>주소</dt>
+                        <dd>
+                          <!-- @@@ 2014-11-21 영역 분리 -->
+                          <div class="address_area">
+                            <p>
+                              <span>
+                                <span class="inputBox"><input type="text" name="addr" id="display_post1" readonly="readonly" tabindex="2" autocapitalize="off" onclick="postPopOpen();"></span>
+                              </span>
+                            </p>
+                            <p>
+                              <span>
+                                <em>-</em>
+                                <span class="inputBox"><input type="text" name="addr" id="display_post2" readonly="readonly" tabindex="2" autocapitalize="off" onclick="postPopOpen();"></span>
+                              </span>
+                            </p>
+                            <span class="post"><span class="btn size2 bgcolor1"><a onclick="postPopOpen();">우편번호찾기</a></span></span>
+                          </div>
+                          <!-- //@@@ 2014-11-21 영역 분리 -->
+                          <p class="address_area2"><span class="inputBox"><input type="text" name="baseAddress" id="baseAddress" tabindex="3" autocapitalize="off" readonly="readonly"></span></p>
+                          <p class="address_area2"><span class="inputBox"><input type="text" name="address" id="address" tabindex="4" autocapitalize="off" onchange="lengthCheck('address');" maxlength="100" readonly="readonly"></span></p>
+                          <p class="check address_area3"><input type="checkbox" id="myAddr" onclick="javascript:defaultAddrYn();" style="display: none;"><label id="myAddrLabel" for="myAddr" style="display: none;">이 주소를 내 기본주소로 지정하기</label></p>
+                        </dd>
+                      </dl>
+                      <dl class="form_input">
+                        <dt>휴대전화</dt>
+                        <dd>
+                          <div class="phone_area">
+                            <p>
+                              <span>
+                                <select name="receiverHp1" id="receiverHp1" tabindex="5" onchange="changeReceiverHp1();" disabled="disabled">
+                                  <option value="">선택</option>
+                                  <option value="010">010</option>
+                                  <option value="011">011</option>
+                                  <option value="016">016</option>
+                                  <option value="017">017</option>
+                                  <option value="018">018</option>
+                                  <option value="019">019</option>
+                                </select>
+                              </span>
+                            </p>
+                            <p>
+                              <span>
+                                <em>-</em>
+                                <span class="inputBox"><input type="tel" name="receiverHp2" id="receiverHp2" placeholder="" maxlength="4" tabindex="6" autocapitalize="off" onkeyup="changeReceiverHp2();" readonly="readonly"></span>
+                              </span>
+                            </p>
+                            <p>
+                              <span>
+                                <em>-</em>
+                                <span class="inputBox"><input type="tel" name="receiverHp3" id="receiverHp3" placeholder="" maxlength="4" tabindex="7" autocapitalize="off" readonly="readonly"></span>
+                              </span>
+                            </p>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form_input">
+                        <dt><span class="emp0">전화번호(선택사항)</span></dt>
+                        <dd>
+                          <div class="phone_area">
+                            <p>
+                              <span>
+                                <select name="receiverDdd" id="receiverDdd" tabindex="8" onchange="changeReceiverDdd();" disabled="disabled">
+                                  <option value="">선택</option>
+                                  <option value="02">02</option>
+                                  <option value="031">031</option>
+                                  <option value="032">032</option>
+                                  <option value="033">033</option>
+                                  <option value="041">041</option>
+                                  <option value="042">042</option>
+                                  <option value="043">043</option>
+                                  <option value="044">044</option>
+                                  <option value="051">051</option>
+                                  <option value="052">052</option>
+                                  <option value="053">053</option>
+                                  <option value="054">054</option>
+                                  <option value="055">055</option>
+                                  <option value="061">061</option>
+                                  <option value="062">062</option>
+                                  <option value="063">063</option>
+                                  <option value="064">064</option>
+                                  <option value="070">070</option>
+                                  <option value="0502">0502</option>
+                                  <option value="0505">0505</option>
+                                  <option value="0506">0506</option>
+                                  <option value="0130">0130</option>
+                                  <option value="0303">0303</option>
+                                  <option value="010">010</option>
+                                  <option value="011">011</option>
+                                  <option value="016">016</option>
+                                  <option value="017">017</option>
+                                  <option value="018">018</option>
+                                  <option value="019">019</option>
+                                </select>
+                              </span>
+                            </p>
+                            <p>
+                              <span>
+                                <em>-</em>
+                                <span class="inputBox"><input type="tel" placeholder="" name="receiverTel1" id="receiverTel1" maxlength="4" tabindex="9" autocapitalize="off" onkeyup="changeReceiverTel1();" readonly="readonly"></span>
+                              </span>
+                            </p>
+                            <p>
+                              <span>
+                                <em>-</em>
+                                <span class="inputBox"><input type="tel" placeholder="" name="receiverTel2" id="receiverTel2" maxlength="4" tabindex="10" autocapitalize="off" readonly="readonly"></span>
+                              </span>
+                            </p>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="form_input">
+                        <dt><span class="emp0">배송메모(선택사항)</span></dt>
+                        <dd>
+                          <select name="shipMsgCode" id="shipMsgCode" onchange="javascript:shipMsgCheck();" tabindex="11">
+                            <option value="">배송메모를 선택해 주세요.</option>
+                            <option value="01">빠른 배송 부탁 드립니다.</option>
+                            <option value="02">부재 시 경비실(관리실)에 맡겨주세요.</option>
+                            <option value="03">부재 시 핸드폰으로 연락주세요.</option>
+                            <option value="04">배송 전 미리 연락주세요.</option>
+                            <option value="05">직접입력</option>
+                          </select>
+                          <p class="delivery_area">
+                            <span class="textarea">
+                              <textarea tabindex="12" maxlength="100" onchange="lengthCheck('msg');" id="msg"></textarea>
+                            </span>
+                          </p>
+                        </dd>
+                      </dl>
+                      <div class="btns_wrap btn2">
+                        <span class="btn size2 bgcolor2"><a onclick="deliveryDtChangeCancel();">취소</a></span>
+                        <span class="btn size2 bgcolor4"><a onclick="saveDeliveryChange();">변경</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //@@@ 2014-11-10 배송지변경 버튼클릭 영역 추가 -->
+                  <div id="chg-addr-off" class="info_box" style="display:block;">
+                    <dl>
+                      <dt>주문번호</dt>
+                      <dd>20210325120557</dd>
+                    </dl>
+                    <dl>
+                      <dt>주문고객</dt>
+                      <dd>최*남</dd>
+                    </dl>
+                    <dl>
+                      <dt>받는고객 정보</dt>
+                      <dd>최*남</dd>
+                    </dl>
+                    <dl>
+                      <dt>휴대전화</dt>
+                      <dd>010-****-7093</dd>
+                    </dl>
+                    <dl>
+                      <dt>주소</dt>
+                      <dd>
+                        <!-- 마현 주소정제 2016-08-17 -->
+                        14236<br>
+                        <!-- //마현 주소정제 2016-08-17 -->
+                        경기 광명시 철산로 13-12<br>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>이메일</dt>
+                      <dd>77bbgl@gmail.com</dd>
+                    </dl>
+                    <dl>
+                      <dt>배송메모</dt>
+                      <dd style="height:18px;"></dd>
+                    </dl>
+
+                  </div>
+                </div>
+
+                <!-- 배송지 변경 END -->
+
+                <h3 class="greytype">
+                  주문/결제 정보
+
+                </h3>
+                <div class="total_wrap">
+                  <ul class="goods">
+                    <li>
+                      <dl>
+                        <dt>총 상품가격</dt>
+                        <dd>
+                          <span class="price"><em>39,000</em>원</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <div class="discount">
+                        <dl>
+                          <dt>상품 할인</dt><!-- @@@ 2014-11-19 용어 수정 -->
+                          <dd>
+                            <span class="price minus"><em> 13,650</em>원</span>
+                          </dd>
+                        </dl>
+                        <!-- //@@@ 2014-11-19 기본할인 추가 -->
+                        <!-- @@@ 2014-11-19 순서변경 -->
+                        <!-- //@@@ 2014-11-19 순서변경 -->
+                        <dl>
+                          <dt>배송비</dt>
+                          <dd>
+                            <span class="price plus"><em>0</em>원</span>
+                          </dd>
+                        </dl>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="payment">
+                    <!-- 무통장입금 + 미입금 -->
+                    <p class="order_accept">주문접수(입금/대기중)</p>
+                    <dl>
+                      <dt>
+                        총 결제금액
+                        <span>(할인적용, 배송비포함)</span>
+                      </dt>
+                      <dd>
+                        <span class="price"><em>25,350</em>원</span>
+                      </dd>
+                    </dl>
+                  </div>
+
+                </div>
+
+                <div class="info_box">
+                  <!-- 무통장입금 결제정보 -->
+                  <dl><dt>결제수단</dt>
+                    <dd>무통장입금</dd>
+                  </dl>
+                  <dl><dt>입금은행</dt>
+                    <dd>우체국</dd>
+                  </dl>
+                  <dl><dt>입금계좌번호</dt>
+                    <dd>81088480091090</dd>
+                  </dl>
+                  <dl><dt>입금기한</dt>
+                    <dd>2021.03.29</dd>
+                  </dl>
+                  <!-- //무통장입금 결제정보 -->
+
+                </div>
+
+              </div>
+
+              <!-- 무형상품 연락처 변경 -->
+            </div>
+            <form name="goodsdtForm" id="goodsdtForm">
+              <input type="hidden" name="orderNo" id="orderNo" value="20210325120557">
+              <input type="hidden" name="orderGSeq" id="orderGSeq" value="">
+              <input type="hidden" name="goodsCode" id="goodsCode" value="">
+              <input type="hidden" name="beforeGoodsdtCode" id="beforeGoodsdtCode" value="">
+              <input type="hidden" name="goodsdtCode" id="goodsdtCode" value="">
+              <input type="hidden" name="orderQty" id="orderQty" value="">
+              <input type="hidden" name="doFlag" id="doFlag" value="">
+            </form>
+            <form name="deliveryForm" id="deliveryForm" action="/mypage/delivery/info" method="POST">
+              <input type="hidden" name="goodsName" id="goodsName" value="">
+              <input type="hidden" name="addr" id="addr" value="">
+              <input type="hidden" name="receiver" id="receiver" value="">
+              <input type="hidden" name="slipINo" id="slipINo" value="">
+              <input type="hidden" name="loChk" id="loChk" value="loginPass">
+            </form>
+            <input type="hidden" name="immaterialFlag" id="immaterialFlag" value="0">
+          </section>
+        </main>
+        <!--main E-->
+        <!--footer S-->
+        <? include "../includefile/footer.html"; ?>
+        <!-- dimmed-->
+        <div class="dim" style="display:none;"></div>
+        <!-- //dimmed -->
+        <!--footer E-->
+      </div><!-- end wrap_inner -->
+    </div><!-- end wrap -->
+    <? include "../includefile/page_top.html"; ?>
+  </div><!-- end container -->
+
+  <div class="ship_pop ship_pop0" style="display:none;">
+    <div class="ship_pop_tit">배송지 변경</div>
+    <button type="button" class="ship_pop_close">닫기</button>
+    <div class="ship_pop_con">
+
+
+      <div class="ship_add">
+        <button type="button" class="ship_btn1">+ 신규 배송지 추가</button>
+      </div>
+      <ul class="ship_list">
+        <li>
+          <dl class="ship_list_uesr">
+            <dt>홍길동<span class="col">기본배송지</span></dt>
+            <dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+            <dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+          </dl>
+          <div class="goods_btn">
+            <button type="button">선택</button>
+            <!-- <button type="button">기본배송지</button> -->
+            <button type="button" class="ship_btn2">수정</button>
+            <!-- <button type="button">삭제</button> -->
+          </div>
+        </li>
+        <li>
+          <dl class="ship_list_uesr">
+            <dt>홍길동<span class="col">기본배송지</span></dt>
+            <dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+            <dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+          </dl>
+          <div class="goods_btn">
+            <button type="button">선택</button>
+            <!-- <button type="button">기본배송지</button> -->
+            <button type="button" class="ship_btn2">수정</button>
+            <button type="button">삭제</button>
+          </div>
+        </li>
+        <li>
+          <dl class="ship_list_uesr">
+            <dt>홍길동<span class="col">기본배송지</span></dt>
+            <dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+            <dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+          </dl>
+          <div class="goods_btn">
+            <!-- <button type="button">선택</button> -->
+            <!-- <button type="button">기본배송지</button> -->
+            <button type="button" class="ship_btn2">수정</button>
+            <!-- <button type="button">삭제</button> -->
+          </div>
+        </li>
+        <li>
+          <dl class="ship_list_uesr">
+            <dt>홍길동<span class="col">기본배송지</span></dt>
+            <dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+            <dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+          </dl>
+          <div class="goods_btn">
+            <!-- <button type="button">선택</button> -->
+            <button type="button">기본배송지</button>
+            <button type="button" class="ship_btn2">수정</button>
+            <button type="button">삭제</button>
+          </div>
+        </li>
+      </ul>
+      <button type="button" name="button" class="btn_see bd">더보기 (10/23)<span></span></button>
+      <div class="list_nodata">
+        <p style="padding:120px 0;">등록된 배송지가 없습니다.<br>신규 배송지를 등록해 주세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ship_pop ship_pop1" style="display:none;">
+    <div class="ship_pop_tit">신규 배송지 추가
+      <!-- 배송지 수정 -->
+    </div>
+    <button type="button" class="ship_pop_close">닫기</button>
+    <div class="ship_pop_con pd">
+      <div class="order_wrap">
+        <div class="form_input_new">
+          <span class="inputBox"><input type="text" placeholder="이름" name="id" tabindex="1"></span>
+          <div class="post_wrap">
+            <span><span class="inputBox"><input type="text" placeholder="우편번호" name="addr" tabindex="2"></span></span>
+            <span class="post"><span class="btn size2 bgcolor1"><a href="#addr" class="addr_btn">주소찾기</a></span></span>
+          </div>
+          <span class="inputBox"><input type="text" name="addr" tabindex="3" autocapitalize="off" readonly="readonly"></span>
+          <span class="inputBox"><input type="text" name="addr" tabindex="4" autocapitalize="off" readonly="readonly"></span>
+          <div class="phone_wrap">
+            <select name="" tabindex="5">
+              <option value="">010</option>
+              <option value="">011</option>
+              <option value="">016</option>
+              <option value="">017</option>
+              <option value="">018</option>
+              <option value="">019</option>
+            </select>
+            <span class="inputBox"><input type="tel" name="tel1" tabindex="6" autocapitalize="off" placeholder="휴대폰번호(-없이 입력)"></span>
+          </div>
+          <div class="phone_wrap">
+            <select name="" tabindex="8">
+              <option value="">02</option>
+            </select>
+            <span class="inputBox"><input type="tel" name="tel1" tabindex="9" placeholder="전화번호(선택)"></span>
+          </div>
+          <div class="join_check"><input type="checkbox" id="myAddr" name="myAddr"><label for="myAddr"><span class="check"></span><span class="txt">기본배송지로 설정</span></label></div>
+        </div>
+      </div>
+    </div>
+    <div class="ship_pop_btn">
+      <button type="button" class="ship_pop_btn_cancle">취소</button>
+      <button type="button" class="ship_pop_btn_save">저장</button>
+    </div>
+  </div>
+
+  <? include "../includefile/scriptlink.html"; ?>
+  <!-- <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+  <script type="text/javascript">
+
+
+    $(function() {
+
+      //서브 클래스 추가
+      $(".header_wrap").addClass("sub");
+      if ("0" == jQuery('#immaterialFlag').val()) {
+        clickReceiverTab('default');
+      } else {
+        clickCounselModify();
+      }
+
+    });
+
+    function banner_roll() {
+      $('.banner_area').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000
+      });
+    };
+
+
+    // 배송지 정보 tab 선택 시
+    function clickReceiverTab(reqType) {
+      var shipAddr = jQuery("section.address");
+
+      if ("new" == reqType) {
+        jQuery("#selectTabIndex").val('3');
+        jQuery('#myAddr').show();
+        jQuery('#myAddrLabel').show();
+        //shipAddr.find("ul.ea2 > li").find('a').removeClass("on");
+        //jQuery("section.address").find("ul.ea2 > li:eq(1)").find("a").addClass("on");
+        jQuery("#receiverName").val('');
+        jQuery("#receiverDdd").val('');
+        jQuery("#receiverTel1").val('');
+        jQuery("#receiverTel2").val('');
+        jQuery("#receiverHp1").val('');
+        jQuery("#receiverHp2").val('');
+        jQuery("#receiverHp3").val('');
+        jQuery("#postNum1").val('');
+        jQuery("#postNum2").val('');
+        jQuery("#baseAddress").val('');
+        jQuery("#address").val('').attr('placeholder', '상세 주소를 입력해 주세요.');
+        jQuery('#receiverSeq').val('');
+        jQuery('#roadAddrNo').val('');
+        jQuery('#display_post1').val('');
+        jQuery('#display_post2').val('');
+
+
+        jQuery('#receiverName').removeAttr('readonly');
+        jQuery('#custAreaGb').removeAttr('readonly');
+        jQuery('#receiverDdd').removeAttr('disabled');
+        jQuery('#receiverTel1').removeAttr('readonly');
+        jQuery('#receiverTel2').removeAttr('readonly');
+        jQuery('#receiverHp1').removeAttr('disabled');
+        jQuery('#receiverHp2').removeAttr('readonly');
+        jQuery('#receiverHp3').removeAttr('readonly');
+        jQuery('#address').removeAttr('readonly');
+
+        //shipAddr.find("div.fav").css('display', 'block');
+        //shipAddr.find("div.lst_addr").css('display', 'none');
+
+        jQuery("#custAreaGb").val("10");
+        jQuery("#deliveryList").css('display', 'none');
+        jQuery("#recListPart").css('display', 'none');
+        jQuery('#flagGb').val('0');
+        jQuery('#defaultAddr').attr('class', '')
+        jQuery('#newAddr').attr('class', 'current')
+        jQuery('#recentAddr').attr('class', '')
+      } else if ("default" == reqType) {
+        jQuery("#selectTabIndex").val('1');
+        jQuery('#myAddr').hide();
+        jQuery('#myAddrLabel').hide();
+        selectReceiverAddr('default', 0);
+        jQuery("#deliveryList").css('display', 'none');
+        jQuery('#defaultAddr').attr('class', 'current')
+        jQuery('#newAddr').attr('class', '')
+        jQuery('#recentAddr').attr('class', '')
+      } else if ("recent" == reqType) {
+        jQuery("#selectTabIndex").val('2');
+        jQuery('#myAddr').hide();
+        jQuery('#myAddrLabel').hide();
+        selectReceiverAddr('recent', 0);
+        jQuery("#deliveryList").css('display', 'block');
+        jQuery('#defaultAddr').attr('class', '')
+        jQuery('#newAddr').attr('class', '')
+        jQuery('#recentAddr').attr('class', 'current')
+      }
+
+    }
+
+    function selectReceiverAddr(selBase, idx) {
+
+      jQuery("#recListPart").css('display', 'none');
+
+      var param = new Object();
+      var receiverName = jQuery("#receiverName").val();
+      var seq = "";
+
+      if ("recent" == selBase) {
+        jQuery('#flagGb').val('1');
+        seq = jQuery('#recentSeq').val();
+        if (seq == '0') {
+          seq = jQuery('#defaultSeq').val();
+          //최근 주문배송지가 없습니다.
+        }
+        jQuery('#receiverName').val(jQuery('#receiver_name_' + seq).val());
+        jQuery('#custAreaGb').val(jQuery('#area_gb_' + seq).val());
+        jQuery('#receiverDdd').val(jQuery('#receiver_ddd_' + seq).val());
+        jQuery('#receiverTel1').val(jQuery('#receiver_tel1_' + seq).val());
+        jQuery('#receiverTel2').val(jQuery('#receiver_tel2_' + seq).val());
+        jQuery('#receiverHp1').val(jQuery('#receiver_hp1_' + seq).val());
+        jQuery('#receiverHp2').val(jQuery('#receiver_hp2_' + seq).val());
+        jQuery('#receiverHp3').val(jQuery('#receiver_hp3_' + seq).val());
+        jQuery('#baseAddress').val(jQuery('#post_num1_' + seq).val());
+        jQuery('#address').val(jQuery('#post_num2_' + seq).val());
+        jQuery('#receiverSeq').val(jQuery('#receiver_seq_' + seq).val());
+        jQuery('#display_post1').val(jQuery('#receiver_post_' + seq).val().substr(0, 3));
+        jQuery('#display_post2').val(jQuery('#receiver_post_' + seq).val().substr(3, 6));
+        jQuery('#postNum1').val(jQuery('#receiver_post_' + seq).val().substr(0, 3));
+        jQuery('#postNum2').val(jQuery('#receiver_post_' + seq).val().substr(3, 6));
+
+        jQuery('#receiverName').attr('readonly', 'readonly');
+        jQuery('#display_post').attr('readonly', 'readonly');
+        jQuery('#custAreaGb').attr('readonly', 'readonly');
+        jQuery('#receiverDdd').attr('disabled', 'disabled');
+        jQuery('#receiverTel1').attr('readonly', 'readonly');
+        jQuery('#receiverTel2').attr('readonly', 'readonly');
+        jQuery('#receiverHp1').attr('disabled', 'disabled');
+        jQuery('#receiverHp2').attr('readonly', 'readonly');
+        jQuery('#receiverHp3').attr('readonly', 'readonly');
+        jQuery('#baseAddress').attr('readonly', 'readonly');
+        jQuery('#address').attr('readonly', 'readonly');
+
+
+      } else if ("default" == selBase) {
+        jQuery('#flagGb').val('1');
+        seq = jQuery('#defaultSeq').val();
+        if (seq == '0') {
+          //기본 배송지가 없습니다.
+        }
+        jQuery('#receiverName').val(jQuery('#receiver_name_' + seq).val());
+        jQuery('#custAreaGb').val(jQuery('#area_gb_' + seq).val());
+        jQuery('#receiverDdd').val(jQuery('#receiver_ddd_' + seq).val());
+        jQuery('#receiverTel1').val(jQuery('#receiver_tel1_' + seq).val());
+        jQuery('#receiverTel2').val(jQuery('#receiver_tel2_' + seq).val());
+        jQuery('#receiverHp1').val(jQuery('#receiver_hp1_' + seq).val());
+        jQuery('#receiverHp2').val(jQuery('#receiver_hp2_' + seq).val());
+        jQuery('#receiverHp3').val(jQuery('#receiver_hp3_' + seq).val());
+        jQuery('#baseAddress').val(jQuery('#post_num1_' + seq).val());
+        jQuery('#address').val(jQuery('#post_num2_' + seq).val());
+        jQuery('#receiverSeq').val(jQuery('#receiver_seq_' + seq).val());
+        jQuery('#display_post1').val(jQuery('#receiver_post_' + seq).val().substr(0, 3));
+        jQuery('#display_post2').val(jQuery('#receiver_post_' + seq).val().substr(3, 6));
+        jQuery('#postNum1').val(jQuery('#receiver_post_' + seq).val().substr(0, 3));
+        jQuery('#postNum2').val(jQuery('#receiver_post_' + seq).val().substr(3, 6));
+
+        jQuery('#receiverName').attr('readonly', 'readonly');
+        jQuery('#custAreaGb').attr('readonly', 'readonly');
+        jQuery('#receiverDdd').attr('disabled', 'disabled');
+        jQuery('#receiverTel1').attr('readonly', 'readonly');
+        jQuery('#receiverTel2').attr('readonly', 'readonly');
+        jQuery('#receiverHp1').attr('disabled', 'disabled');
+        jQuery('#receiverHp2').attr('readonly', 'readonly');
+        jQuery('#receiverHp3').attr('readonly', 'readonly');
+        jQuery('#baseAddress').attr('readonly', 'readonly');
+        jQuery('#address').attr('readonly', 'readonly');
+
+      } else {
+        jQuery('#flagGb').val('1');
+        seq = idx;
+        jQuery('#receiverName').val(jQuery('#receiver_name_' + seq).val());
+        jQuery('#custAreaGb').val(jQuery('#area_gb_' + seq).val());
+        jQuery('#receiverDdd').val(jQuery('#receiver_ddd_' + seq).val());
+        jQuery('#receiverTel1').val(jQuery('#receiver_tel1_' + seq).val());
+        jQuery('#receiverTel2').val(jQuery('#receiver_tel2_' + seq).val());
+        jQuery('#receiverHp1').val(jQuery('#receiver_hp1_' + seq).val());
+        jQuery('#receiverHp2').val(jQuery('#receiver_hp2_' + seq).val());
+        jQuery('#receiverHp3').val(jQuery('#receiver_hp3_' + seq).val());
+        jQuery('#baseAddress').val(jQuery('#post_num1_' + seq).val());
+        jQuery('#address').val(jQuery('#post_num2_' + seq).val());
+        jQuery('#receiverSeq').val(jQuery('#receiver_seq_' + seq).val());
+
+        jQuery('#receiverName').attr('readonly', 'readonly');
+        jQuery('#custAreaGb').attr('readonly', 'readonly');
+        jQuery('#receiverDdd').attr('disabled', 'disabled');
+        jQuery('#receiverTel1').attr('readonly', 'readonly');
+        jQuery('#receiverTel2').attr('readonly', 'readonly');
+        jQuery('#receiverHp1').attr('disabled', 'disabled');
+        jQuery('#receiverHp2').attr('readonly', 'readonly');
+        jQuery('#receiverHp3').attr('readonly', 'readonly');
+        jQuery('#baseAddress').attr('readonly', 'readonly');
+        jQuery('#address').attr('readonly', 'readonly');
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>

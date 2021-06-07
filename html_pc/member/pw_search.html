@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>비밀번호 찾기</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+					<form>
+						<div class="memSrchZone">
+							<div class="tit">
+								<p>비밀번호 찾기를 위한 <strong class="emp1">본인인증</strong> 단계입니다.</p>
+								<p>아이디 입력 후 본인인증 방법을 선택해주세요.</p><!-- 2015-04-28 수정 -->
+							</div>
+							<div class="result_pw">
+								<dl class="form_input2">
+									<dt><label for="id">아이디</label></dt>
+									<dd>
+										<span class="inputBox"><input type="text" placeholder="" name="id" tabindex="1" autocapitalize="off" /></span>
+									</dd>
+								</dl>
+								<p>올바른 아이디를 입력해 주세요.</p><!-- 2015-04-28 수정 -->
+							</div>
+							<div class="btns_wrap certify"><span class="btn size3 bgcolor5"><a href="#">휴대폰 인증</a></span></div><!-- 2015-04-28 수정 -->
+							<ul class="mark refer"><!-- 2015-04-28 수정 -->
+								<li class="refer">※ 본인인증을 위해 입력하신 개인정보는 본인인증기관에서 수집하는 정보이며, 수집된 정보는 본인인증 외 어떠한 용도로도 이용되거나 별도 저장되지 않습니다.</li>
+							</ul>
+						</div>
+					</form>
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

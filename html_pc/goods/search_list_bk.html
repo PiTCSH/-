@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>검색</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+				<section class="contents">
+					<div class="tit head">
+						<p><strong class="emp1">“<em>패딩</em>”</span> 검색 결과 (총 <span class="emp2">1,231</span>개)</strong></p>
+					</div>
+					<!-- /검색결과갯수 -->
+					<!-- 검색결과카테고리 --><!-- 2015-06-05 구조 수정, 2015-05-14 추가 -->
+					<div class="searchctgr">
+						<table>
+							<colgroup>
+								<col width="" /><col width="" /><col width="" />
+							</colgroup>
+							<thead>
+								<tr>
+									<td colspan="3">카테고리 세부 항목</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#." class="selected">패션잡화 (<em>10</em>)</a></td>
+									<td><a href="#.">유아동 (<em>68</em>)</a></td>
+									<td><a href="#.">스케쥴러/플래너/달력/캘린더/리필속지 (<em>235</em>)</a></td>
+								</tr>
+								<tr>
+									<td><a href="#.">생활 (<em>44</em>)</a></td>
+									<td><a href="#.">헬스/레저 (<em>24</em>)</a></td>
+									<td><a href="#.">이미용 용품 (<em>942</em>)</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /검색결과카테고리 -->
+
+					<div class="contents_wrap search"><!-- 2015-05-14 div 추가 -->
+						<!-- buttons -->
+						<div class="btns_wrap">
+							<span class="btn fullwidth bgcolor5 resulttv"><a>TV로 검색 결과 보기</a></span>
+						</div>
+						<!-- /buttons -->
+						<!-- 상품 목록 -->
+						<div class="goods_wrap"><!-- 2015-05-14 class 삭제 -->
+							<!-- 갤러리형 -->
+							<ul id="goodsImage" class="goods_image">
+								<li>
+									<div class="goods">
+										<div class="goods_img">
+											<img src="../../img/tmp/006.jpg" alt="" />
+										</div>
+										<div class="goods_name">무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+										<div class="goods_price">
+											<del><em>287,100</em>원</del>
+											<span><em>139,700</em>원</span>
+										</div>
+										<span class="wish"><em>찜하기</em></span><!-- 2015-05-14 위치 변경 -->
+									</div>
+								</li>
+								<li>
+									<div class="goods">
+										<div class="goods_img">
+											<a ><img src="../../img/tmp/007.jpg" alt="" /></a>
+										</div>
+										<div class="goods_name">무방부제 무발색제 2종</div>
+										<div class="goods_price">
+											<p class="counsel">상담 전용 상품입니다.</p>
+										</div>
+										<span class="wish"><em>찜하기</em></span><!-- 2015-05-14 위치 변경 -->
+									</div>
+								</li>
+								<li>
+									<div class="goods">
+										<div class="goods_img">
+											<!-- 품절상품 표시 -->
+											<p class="soldout"><span><em>일시품절</em></span></p>
+											<!-- /품절상품 표시 -->
+											<a ><img src="../../img/tmp/007.jpg" alt="" /></a>
+										</div>
+										<div class="goods_name">무방부제 무발색제 2종</div>
+										<div class="goods_price">
+											<del><em>287,100</em>원</del>
+											<span><em>139,700</em>원</span>
+										</div>
+										<span class="wish on"><em>찜하기</em></span><!-- 2015-05-14 위치 변경 -->
+									</div>
+								</li>
+								<li>
+									<div class="goods"></div>
+								</li>
+							</ul>
+							<!-- /갤러리형 -->
+						</div>
+						<!-- /상품 목록 -->
+					</div><!-- /2015-05-14 div 추가 -->
+
+					<div class="ui-more-loading"><img src="../../img/loading.png" alt="" /></div>
+
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+	</script>
+	</body>
+
+	</html>

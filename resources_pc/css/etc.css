@@ -1,0 +1,239 @@
+@charset "utf-8";
+/*
+* 파일명	: etc.css (기타)
+* 작성일	: 2015.04.20
+* 수정일	: 2015.05.27
+*/
+
+/*서비스소개*/
+.visualimg img {width:100%;}
+.svcInfo {padding:0 15px;}
+.svcInfo ul {margin-top:10px;}
+.svcInfo ul li {position:relative;padding:8px 0;border-bottom:1px solid #eee;}
+.svcInfo ul li span {display:inline-block;width:70px;font-weight:bold;}
+.svcInfo ul li p {display:inline-block;color:#666;}
+
+/*약관*/
+.provision {padding:15px 15px 0;}
+.provision dl dt {padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.provision dl dd {padding-top:5px;color:#666;font-size:11px;}
+.provision dl dd p {padding-bottom:5px;color:#666;font-size:11px;}
+.provision dl dd ul {overflow:hidden;}
+.provision dl dd ul li {padding:0 0 10px;}
+.provision dl dd .text1 {padding-bottom:5px;padding-left:12px;color:#666;font-size:11px;text-indent:-12px;}
+.provision dl dd .text2 {padding:3px 0;padding-left:15px;color:#666;font-size:11px;text-indent:-15px;}
+
+.provision .additional {margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#f9f9f9;}
+.provision .additional dl:first-child dt {padding-top:0;}
+.provision .additional dl dd {padding-top:5px;}
+
+/*개인정보취급방침*/
+.policy {padding:15px 15px 0;}
+.policy h3 {margin-bottom:5px;color:#555;font-size:12px;}
+.policy dl dt {padding-top:10px;color:#555;font-size:12px;font-weight:bold;}
+.policy dl dd {padding-top:5px;color:#666;font-size:11px;}
+.policy dl dd ul {overflow:hidden;}
+.policy dl dd ul li {padding:0 0 10px;}
+.policy p {padding-bottom:5px;color:#666;font-size:11px;}
+.policy p span {vertical-align:top;}
+.policy p a {color:#666;font-size:11px;}
+.policy p .bold{font-weight:700;}
+.policy dl dd .text1 {padding-left:14px;color:#666;font-size:11px;text-indent:-14px;}
+.policy dl dd .text2 {padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;}
+.policy dl dd .text2_b {padding-top:3px;padding-bottom:3px;padding-left:6px;color:#666;font-size:11px;text-indent:-6px;font-weight:bold;}
+.policy dl dd .text3 {padding-left:10px;color:#666;font-size:11px;text-indent:-10px;}
+
+.policy .result table {width:100%;}
+.policy .result table tr {cursor:pointer;}
+.policy .result table tr th p {padding:7px 2px;color:#555;font-size:14px;border:1px solid #ddd;border-right:none;background:#f6f6f6;}
+.policy .result table tr th:first-child p {border-left:none;}
+.policy .result table tr td {padding:7px 2px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;vertical-align:middle;}
+.policy .result table tr td:nth-child(1) {color:#666;text-align:center;border-left:none}
+.policy .result table tr td:nth-child(2) p {padding:0;color:#666;}
+.policy .result table tr td:nth-child(2) .juso1 {color:#666;}
+.policy .result table tr td:nth-child(2) .juso2 {margin-top:3px;color:#999;font-size:11px;}
+
+.policy .result2 table {width:100%;}
+.policy .result2 th {padding:7px 2px;color:#555;font-size:14px;border:1px solid #ddd;border-right:none;background:#f6f6f6;}
+.policy .result2 td {padding:7px 2px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;text-align:center;vertical-align:middle; color:#666; font-size:11px; text-align:center;}
+.policy .result2 th:first-child, .policy .result2 td:first-child {border-left:0;}
+.policy .result2.tl td {text-align:left; padding:7px 10px;}
+.prev_link{font-weight:bold;}
+
+
+
+.pd_left10 {padding-left:10px;}
+.pd_left12 {padding-left:12px;}
+.pd_left15 {padding-left:15px;}
+
+.policy .date {margin-top:20px;padding:12px 15px;border:1px solid #f6f8fa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#f9f9f9;}
+.policy .date p {margin:0;padding:0;color:#444;font-size:12px;font-weight:bold;text-align:center;}
+.policy .date p span {position:relative;margin-left:12px;padding-left:10px;font-weight:normal;vertical-align:top;}
+.policy .date p span em {position:absolute;top:1px;left:0;width:1px;height:12px;font-size:0;background:#ddd;}
+
+.colTable table {width:100%;}
+.colTable table thead tr th {text-align:center;}
+.colTable table thead tr th p {padding:7px 0;color:#555;font-size:12px;border-top:1px solid #eee;border-left:1px solid #eee;border-bottom:1px solid #eee;background:#f9f9f9;}
+.colTable table thead tr th:first-child p {border-top-left-radius:3px;-webkit-border-top-left-radius:3px;-moz-border-top-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-left-radius:3px;-moz-border-bottom-left-radius:3px;}
+.colTable table thead tr th:last-child p {border-right:1px solid #eee;border-top-right-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-top-right-radius:3px;border-bottom-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-bottom-right-radius:3px;}
+.colTable table tbody tr th {padding:6px 0 3px;color:#555;font-size:12px;text-align:center;border-bottom:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td {padding:6px 5px 3px;border-bottom:1px solid #eee;border-left:1px solid #eee;vertical-align:top;}
+.colTable table tbody tr td:first-child {border-left:0;}
+.colTable table tbody tr th p {padding-top:3px;}
+.colTable table tbody tr td p {padding-top:3px;}
+
+.tb_list table {width:100%;border-top:1px solid #eee;}
+.tb_list table thead tr th {padding:10px 12px;text-align:center;background:#f6f6f6;border-bottom:1px solid #eee;border-left:1px solid #eee;font-size:13px;font-weight:normal;}
+.tb_list table thead tr th:first-child {border-left:0;}
+.tb_list table tbody tr th {padding:10px 12px;color:#555;font-size:12px;text-align:center;border-bottom:1px solid #eee;}
+.tb_list table tbody tr td {padding:10px 12px;border-bottom:1px solid #eee;border-left:1px solid #eee;}
+
+/*채무지급 보증안내*/
+.credit {padding:22px 15px 25px;}
+.credit p {margin-bottom:13px;color:#555;font-size:13px;}
+.credit img {width:100%;}
+
+.select_st{width:100%;height:22px;border:#888888 solid 1px;background:#ffffff; display:block;}
+
+/* 2019-04.03 시스템 점검 추가 */
+.check_time {padding:45px 20px 120px 20px; text-align:center;}
+.check_time dt {padding-top:100px; color:rgba(17,17,17); font-size:18px; font-weight:700; margin-bottom:10px; background:url('../../img/icon_check2.png') no-repeat center top; background-size:84px auto;}
+.check_time dd {color:rgba(85,85,85); font-size:14px; line-height:20px;}
+.check_time dd div {margin-top:50px; background:#ededed; font-size:16px; line-height:60px; line-height:60px;}
+.check_time dd div span {padding-left:5px; display:inline-block; vertical-align:top; margin-top:0; font-weight:700;}
+
+/* 설정 */
+.toggle {position:relative; width:40px; height:20px; display:inline-block;}
+.toggle input {display:none;}
+.toggle label {display:block; width:40px; height:20px; box-sizing:border-box; border-radius:40px; border:1px solid #cccccc; background: #cccccc; transition: all 0.3s ease; cursor:pointer;}
+.toggle label>span {position:absolute; top:1px; left:1px; display:block; width:18px; height:18px; border-radius:50%; box-sizing:border-box; transition: all 0.3s; background:#fff;}
+.toggle input:active + label, .toggle input:checked + label {border:10px solid #e50278;}
+.toggle input:active + label > span, .toggle input:checked + label > span {left:21px; }
+
+.setting_dl {padding:16px; color:#111;}
+.setting_dl dt {font-size:16px; font-weight:700; margin-bottom:16px;}
+.setting_dl dd {position:relative;}
+.setting_dl dd button {height:32px; line-height:32px; padding:0 11px; background:#fff;}
+.setting_dl dd li {position:relative; margin:26px 0;}
+.setting_dl dd li:last-child {margin-bottom:10px;}
+.setting_dl dd .title {min-height:20px; line-height:20px; font-size:14px;}
+.setting_dl dd .toggle {position:absolute; right:0; top:0;}
+.setting_dl dd p {font-size:13px; line-height:16px; color:#6d6d6d; margin-top:8px;}
+
+.setting_dl.first {overflow:hidden;}
+.setting_dl.first dt {margin-bottom:0; float:left; line-height:32px;}
+.setting_dl.first dt b {font-size:18px;}
+.setting_dl.first dd {float:right;}
+.setting_dl.first dd button {color:#111; border:1px solid #111; font-size:14px; }
+.setting_dl.first dd button.on {border:1px solid #ddd; background:#f7f7f7;}
+.setting_dl.last dd button {color:#434343; border:1px solid #e4e4e4; font-size:13px; position:absolute; right:0; top:0;}
+
+/* 티알엔 약관 */
+.trn_etc .select {font-size:14px; color:#333; border:solid 1px #ccc; display:block; vertical-align:top;}
+.trn_etc .select {height:34px; line-height:30px; background:white url(../../img/icon_arr_down.png) no-repeat right 12px center; color:#373737; border-radius:0; width:100%; background-size:10px;}
+_:-ms-fullscreen, :root .trn_etc .select {padding:6px 8px;}
+
+.trn_etc .sub_con {max-width:1140px; margin:0 auto; padding:30px 20px;}
+.trn_etc .sub_titz {padding:0 0 15px 0; border-bottom:2px solid #111; margin-bottom:30px; position:relative;}
+.trn_etc .sub_titz.mn {margin-bottom:0;}
+.trn_etc .sub_titz.bn {border:0;}
+.trn_etc .sub_titz .txt {position:absolute; right:0; top:5px; color:#666; font-size:16px; padding-left:15px;}
+.trn_etc .sub_titz .txt span {color:#0086c5; font-size:18px; display:inline-block; position:absolute; left:0; top:3px;}
+.trn_etc .sub_h3 {color:#111; font-size:24px; font-weight:700;}
+.trn_etc .sub_h4 {color:#111; font-size:20px; font-weight:400;}
+
+.trn_etc .etc_select {position:absolute; right:0; top:-4px}
+.trn_etc .etc_select .date {display:inline-block; margin-right:11px; padding-left:9px; color:#666; vertical-align:middle; line-height:32px;}
+.trn_etc .etc_select .select {width:122px; display:inline-block;}
+
+.trn_etc .etc_tab {padding:25px 0; border-bottom:1px solid #ccc; font-size:0; margin-bottom:30px;}
+.trn_etc .etc_tab ol {display:inline-block; width:32.33%; margin-bottom:-10px; vertical-align:top; margin-right:1%;}
+.trn_etc .etc_tab ol li {margin-bottom:10px;}
+.trn_etc .etc_tab ol li a {font-weight:300; position:relative; padding-left:70px; display:block; line-height:22px; font-size:16px;}
+.trn_etc .etc_tab ol li a span {vertical-align:0;}
+.trn_etc .etc_tab ol li strong {display:inline-block;  font-weight:700; position:absolute; left:0; top:0;}
+.trn_etc .etc_tab p {font-size:16px; line-height:24px;}
+.trn_etc .etc_tab.cb {margin-bottom:0;}
+.trn_etc .etc_tab.cb ol {width:100%; position:relative !important; top:0 !important;}
+.trn_etc .etc_tab.cb ol li a {padding-left:0; font-weight:700;}
+
+.trn_etc .etc_con li{margin-bottom:30px;color:#111;}
+.trn_etc .etc_con li, .trn_etc .etc_con strong, .trn_etc .etc_con p{line-height:30px;font-weight:300; font-size:16px;}
+.trn_etc .etc_con li strong{color:#111; font-size: inherit;font-weight:700; display:block; margin-bottom:5px;}
+.trn_etc .etc_con li li{margin-bottom:0;}
+.trn_etc .etc_con li li li{margin-left:20px}
+.trn_etc .etc_con li li p{margin-left:15px}
+.trn_etc .etc_con .font11{display:block;margin-top:10px}
+.trn_etc .etc_con button {font-size:16px; color:#111; font-weight:300; padding:0;}
+.trn_etc .etc_con .dot {font-weight:800;}
+
+.trn_etc .etc_tb {margin:15px 0;border-bottom:1px solid #ccc;width:100%;}
+.trn_etc .etc_tb th, .trn_etc .etc_tb td {font-size:16px; text-align:center; line-height:24px; padding:14px;  }
+.trn_etc .etc_tb.bd {max-width:400px;}
+.trn_etc .etc_tb.bd td {text-align:left;}
+.trn_etc .etc_tb.bd th, .trn_etc .etc_tb.bd td {border:solid #ddd; border-width:0 1px 1px 1px;}
+.trn_etc .etc_tb.bd th:first-child, .trn_etc .etc_tb.bd td:first-child {border-left:0;}
+.trn_etc .etc_tb.bd th:last-child, .trn_etc .etc_tb.bd td:last-child {border-right:0;}
+.trn_etc .etc_tb th {font-weight:700; background-color:#e5e5e5;}
+.trn_etc .etc_tb td {font-weight:300 !important; border-bottom:1px solid #ccc; vertical-align:middle;}
+.trn_etc .etc_tb td.tc, .trn_etc .etc_tb td.tl {padding:14px !important;}
+.trn_etc .etc_tb .small {float:left; margin: 10px 0 0 0; font-size:13px;}
+.trn_etc .etc_tb .nbor{padding-left:30px;}
+.trn_etc .etc_tb.flt td:first-child {padding-left:35px;}
+.trn_etc .etc_tb.flt td:last-child {padding-right:35px;}
+.trn_etc .etc_tb.flt td.nfc {padding-left:14px !important;}
+.trn_etc .etc_tb.flt.tl td {text-align:left;}
+
+@media screen and (max-width:1140px)  {
+  .trn_etc .etc_tab {overflow:hidden; position:relative;}
+  .trn_etc .etc_tab ol {display:block; width:50%; float:left;}
+  .trn_etc .etc_tab ol:nth-child(2) {width:100%; margin-top:10px;}
+  .trn_etc .etc_tab ol:last-child {position:absolute; right:0; top:25px;}
+  .trn_etc .etc_tab ol li a {font-size:15px;}
+}
+
+@media screen and (max-width: 736px) {
+
+  .trn_etc .select {font-size:14px;}
+  .trn_etc .select {height:38px; line-height:38px; background:url(../../img/icon_arr_down.png) no-repeat right 8px center; background-size:10px;}
+  _:-ms-fullscreen, :root .trn_etc .select {padding:3px 4px;}
+
+  .trn_etc .sub_con {padding:16px 16px;}
+  .trn_etc .sub_titz {padding:0 0 12px 0; margin-bottom:24px;}
+  .trn_etc .sub_titz .txt {top:5px;  font-size:12px; padding-left:8px;}
+  .trn_etc .sub_titz .txt.mo {display:none;}
+  .trn_etc .sub_titz .txt span {font-size:14px; top:2px;}
+  .trn_etc .sub_h3 {font-size:18px;}
+  .trn_etc .sub_h4 {font-size:14px;}
+
+  .trn_etc .etc_select .date {font-size:11px; margin-right:3px; line-height:25px;}
+  .trn_etc .etc_select .select {width:100px; height:25px; line-height:25px; font-size:11px; }
+  .trn_etc .etc_select2 {position:relative; top:0; right:0; text-align:right; margin-top:6px;}
+
+  .trn_etc .etc_tab {padding:10px 5px 5px 5px; }
+  .trn_etc .etc_tab ol {margin:0 !important; vertical-align:top;}
+  .trn_etc .etc_tab ol:last-child {top:0; position:relative; margin-top:10px;}
+  .trn_etc .etc_tab ol li {margin-bottom:6px;}
+  .trn_etc .etc_tab ol li a {font-size:12px; letter-spacing:-1px; padding-left:42px; line-height:16px;}
+  .trn_etc .etc_tab ol li strong {}
+  .trn_etc .etc_tab p {font-size:11px; line-height:16px;}
+
+  .trn_etc .etc_con {font-size:11px; line-height:16px;}
+  .trn_etc .etc_con li{margin-bottom:15px;}
+  .trn_etc .etc_con li, .trn_etc .etc_con strong, .trn_etc .etc_con p{line-height:16px; font-size:11px;}
+  .trn_etc .etc_con li strong{margin-bottom:3px;}
+  .trn_etc .etc_con li li li{margin-left:12px}
+  .trn_etc .etc_con li li p{margin-left:8px}
+  .trn_etc .etc_con .font11{margin-top:6px}
+  .trn_etc .etc_con button, .trn_etc .etc_con a {font-size:11px; line-height:16px;}
+
+  .trn_etc .etc_tb {margin:10px 0;}
+  .trn_etc .etc_tb th, .trn_etc .etc_tb td {font-size:11px; line-height:16px; padding:8px; word-break:break-all; }
+  .trn_etc .etc_tb td.tc, .trn_etc .etc_tb td.tl {padding:8px !important;}
+  .trn_etc .etc_tb .small {float:left; margin:6px 0 0 0; font-size:10px;}
+  .trn_etc .etc_tb .nbor {padding-left:15px;}
+  .trn_etc .etc_tb.flt td:first-child {padding-left:15px;}
+  .trn_etc .etc_tb.flt td:last-child {padding-right:15px;}
+  .trn_etc .etc_tb.flt td.nfc {padding-left:10px !important;}
+
+}

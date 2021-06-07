@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>설정</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<dl class="setting_dl first">
+							<dt>로그인해주세요.</dt>
+							<dd><button type="button" name="button">로그인</button></dd>
+						</dl>
+						<div class="sub_line"></div>
+
+						<dl class="setting_dl first">
+							<dt><b>홍길동 님</b></dt>
+							<dd><button type="button" name="button" class="on">로그아웃</button></dd>
+						</dl>
+						<div class="sub_line"></div>
+
+						<dl class="setting_dl">
+							<dt>로그인 설정</dt>
+							<dd><ul>
+								<li><div class="title">자동 로그인</div><div class="toggle"><input type="checkbox" id="toggle1" name="" value=""><label for="toggle1"><span></span></label></div></li>
+								<li><div class="title">네이버 로그인</div><div class="toggle"><input type="checkbox" id="toggle2" name="" value="" checked><label for="toggle2"><span></span></label></div></li>
+								<li><div class="title">카카오 로그인</div><div class="toggle"><input type="checkbox" id="toggle3" name="" value=""><label for="toggle3"><span></span></label></div></li>
+								<li><div class="title">Apple 로그인</div><div class="toggle"><input type="checkbox" id="toggle4" name="" value=""><label for="toggle4"><span></span></label></div></li>
+							</ul></dd>
+						</dl>
+						<div class="sub_line"></div>
+
+						<dl class="setting_dl">
+							<dt>알림 설정</dt>
+							<dd>
+								<div class="title">혜택 알림 받기</div><div class="toggle"><input type="checkbox" id="toggle5" name="" value=""><label for="toggle5"><span></span></label></div>
+								<p>알림 설정 시 프로모션, 쿠폰, 이벤트 등<br>혜택 정보를 받아 보실 수 있습니다.</p>
+							</dd>
+						</dl>
+						<div class="sub_line"></div>
+
+						<dl class="setting_dl">
+							<dt>앱 접근 권한 설정 </dt>
+							<dd>
+								<div class="toggle"><input type="checkbox" id="toggle6" name="" value=""><label for="toggle6"><span></span></label></div>
+								<p>카메라, 사진첩 등의 권한 설정입니다. </p>
+							</dd>
+						</dl>
+						<div class="sub_line"></div>
+
+						<dl class="setting_dl last">
+							<dt>버전 정보</dt>
+							<dd>
+								<div class="title">v2.2.2</div><button type="button" name="button">업데이트</button>
+								<p>최신 버전으로 업데이트 해주세요.</p>
+								<!-- <p>최신 버전입니다.</p> -->
+							</dd>
+						</dl>
+
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//서브 클래스 추가
+			$(".header_wrap").addClass("sub");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>검색결과</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+					<div class="tit head">
+						<p><span class="emp2">“패딩”</span> 검색 결과 (총 <span class="emp2">1,231</span>개)</p>
+					</div>
+					<!-- /검색결과갯수 -->
+					<!-- 검색결과카테고리 --><!-- 2015-06-05 구조 수정, 2016-06-16 텍스트 수정 -->
+					<div class="searchctgr">
+						<table>
+							<colgroup>
+								<col width="" /><col width="" /><col width="" />
+							</colgroup>
+							<thead>
+								<tr>
+									<td colspan="3">카테고리 세부 항목</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="selected"><a href="#.">전체</a></td><!-- 2016-06-16 selected클래스 a태그에서 td태그로 이동 -->
+									<td><a href="#.">수납장 (<em>68</em>)</a></td>
+									<td><a href="#.">슈퍼싱글침대/싱글침대/퀸침대 (<em>235</em>)</a></td>
+								</tr>
+								<tr>
+									<td><a href="#.">킹침대 (<em>44</em>)</a></td>
+									<td><a href="#.">더블침대 (<em>24</em>)</a></td>
+									<td><a href="#.">이미용 용품 (<em>942</em>)</a></td>
+								</tr>
+								<tr>
+									<td><a href="#.">핸드형 청소기 (<em>44</em>)</a></td>
+									<td><a href="#."></a></td>
+									<td><a href="#."></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btns_wrap search_tv"><!-- 2016-06-27 TV로 검색 결과보기 버튼 추가 -->
+							<span class="btn fullwidth bgcolor5"><a href="#.">TV로 검색 결과보기</a></span>
+						</div>
+					</div>
+					<!-- /검색결과카테고리 -->
+
+					<div class="topbanner"><!-- 2016-06-16 top배너 추가 -->
+						<ul>
+							<li><a><img src="../../img/tmp/event_img5.png" alt=""></a></li>
+						</ul>
+					</div>
+					<!-- T는 상품 목록 --><!-- 2016-06-16 상품목록 추가 -->
+					<div class="goods_list_wrap">
+						<div class="goods_wide">
+							<div class="goods_img">
+								<p class="soldout"><span><em>일시품절</em></span></p><!-- 2016-06-21 : 품절 예시 -->
+								<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+							</div>
+							<div class="goods_cont">
+								<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+								<div class="goods">
+									<!-- 상품가격 -->
+									<div class="goods_price">
+										<p class="sell">
+											판매가 <em>76,200</em>원
+										</p>
+										<p class="sale">
+											<i>쇼핑엔T가</i> <em>43,800</em>원
+										</p>
+									</div>
+									<!-- //상품가격 -->
+									<!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span>사은품</span></p>
+										<p><span>무이자12</span></p>
+										<p><span>무료배송</span></p>
+									</div>
+									<!-- //혜택 -->
+									<div class="goods_benefit2">
+										<span class="rate"><em>20</em>%<span></span></span>
+										<span class="sale">일시불 할인</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="goods_wide">
+							<div class="goods_img">
+								<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+							</div>
+							<div class="goods_cont">
+								<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+								<div class="goods">
+									<!-- 상품가격 -->
+									<div class="goods_price">
+										<!-- <p class="sell">
+											판매가 <em>76,200</em>원
+										</p>
+										<p class="sale">
+											<i>쇼핑엔T가</i> <em>43,800</em>원
+										</p> -->
+										<p class="counsel">상담전용 상품입니다</p>
+
+									</div>
+									<!-- //상품가격 -->
+									<!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span>사은품</span></p>
+										<p><span>무이자12</span></p>
+										<p><span>무료배송</span></p>
+									</div>
+									<!-- //혜택 -->
+									<div class="goods_benefit2">
+										<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+										<span class="sale">일시불 할인</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="goods_wide">
+							<div class="goods_img">
+								<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+							</div>
+							<div class="goods_cont">
+								<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+								<div class="goods">
+									<!-- 상품가격 -->
+									<div class="goods_price">
+										<p class="sell">
+											판매가 <em>76,200</em>원
+										</p>
+										<p class="sale">
+											<i>쇼핑엔T가</i> <em>43,800</em>원
+										</p>
+									</div>
+									<!-- //상품가격 -->
+									<!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span>사은품</span></p>
+										<p><span>무이자12</span></p>
+										<p><span>무료배송</span></p>
+									</div>
+									<!-- //혜택 -->
+									<div class="goods_benefit2">
+										<span class="rate"><em>20</em>%<span></span></span>
+										<span class="sale">일시불 할인</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="goods_wide">
+							<div class="goods_img">
+								<a><img src="../../img/tmp/014.jpg" alt="" /></a>
+							</div>
+							<div class="goods_cont">
+								<p class="goods_name">[국내초저가] 피현정 에디션 360 탄산 휩 클렌저</p>
+								<div class="goods">
+									<!-- 상품가격 -->
+									<div class="goods_price">
+										<!-- <p class="sell">
+											판매가 <em>76,200</em>원
+										</p>
+										<p class="sale">
+											<i>쇼핑엔T가</i> <em>43,800</em>원
+										</p> -->
+										<p class="counsel">상담전용 상품입니다</p>
+
+									</div>
+									<!-- //상품가격 -->
+									<!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span>사은품</span></p>
+										<p><span>무이자12</span></p>
+										<p><span>무료배송</span></p>
+									</div>
+									<!-- //혜택 -->
+									<div class="goods_benefit2">
+										<!-- <span class="rate"><em>20</em>%<span></span></span> -->
+										<span class="sale">일시불 할인</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="goods_wide">
+							<div class="goods_img">
+								<a><img src="../../img/tmp/013.jpg" alt="" /></a>
+							</div>
+							<div class="goods_cont">
+								<p class="goods_name">1+1이벤트 얇은 수분 보호막으로 하루종일 촉촉하게</p>
+								<div class="goods">
+									<!-- 상품가격 -->
+									<div class="goods_price">
+										<p class="sell">
+											판매가 <em>76,200</em>원
+										</p>
+										<p class="sale">
+											<i>쇼핑엔T가</i> <em>43,800</em>원
+										</p>
+									</div>
+									<!-- //상품가격 -->
+									<!-- 혜택 -->
+									<div class="goods_benefit">
+										<p><span>사은품</span></p>
+										<p><span>무이자12</span></p>
+										<p><span>무료배송</span></p>
+									</div>
+									<!-- //혜택 -->
+									<div class="goods_benefit2">
+										<span class="rate"><em>20</em>%<span></span></span>
+										<span class="sale">일시불 할인</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--T는 상품 목록 //-->
+
+					<div class="ui-more-loading"><img src="../../img/loading.png" alt="" /></div>
+
+				</section>
+			</main>
+			<!--main E-->
+			<!--footer S-->
+			<? include "../includefile/footer.html"; ?>
+			<!-- dimmed-->
+			<div class="dim" style="display:none;"></div>
+			<!-- //dimmed -->
+			<!--footer E-->
+		</div><!-- end wrap_inner -->
+	</div><!-- end wrap -->
+	<? include "../includefile/page_top.html"; ?>
+</div><!-- end container -->
+<? include "../includefile/scriptlink.html"; ?>
+<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+	});
+</script>
+</body>
+
+</html>

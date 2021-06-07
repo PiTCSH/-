@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>반품신청<!--반품상세--></span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니
+						<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<!-- 반품상세 -->
+						<div class="order_goods_tit top">
+							<span class="tit_date">2020.05.09</span>
+							<a href="#none" class="tit_num">주문번호 21481961</a>
+						</div>
+						<div class="sub_line"></div>
+						<dl class="apply_dl">
+							<dt><span>반품신청 상품</span> (2/2)</dt>
+							<dd>
+								<ul class="order_goods">
+									<li class="order_goods_check">
+										<span class="goods_check"><input type="checkbox"></span>
+										<div class="goods">
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+											<div class="goods_ing">입금대기</div>
+											<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+											<div class="goods_price">
+												<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+											<div class="goods_op row">옵션: 단품 | 수량: 1개<br>사은품 사은품 사은품 사은품</div>
+											<!-- <div class="goods_in">우체국 81087680230382</div> -->
+											<!-- <div class="goods_cont">상담하실 내용</div> -->
+										</div>
+									</li>
+									<li class="order_goods_check">
+										<span class="goods_check"><input type="checkbox"></span>
+										<div class="goods">
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+											<div class="goods_ing">입금대기</div>
+											<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+											<div class="goods_price">
+												<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+											<div class="goods_op row">옵션: 단품 | 수량: 1개<br>사은품 사은품 사은품 사은품</div>
+											<!-- <div class="goods_in">우체국 81087680230382</div> -->
+											<!-- <div class="goods_cont">상담하실 내용</div> -->
+										</div>
+									</li>
+								</ul>
+
+								<ul class="apply_list">
+									<li><span>*</span>페이코는 부분환불이 불가한 결제 수단입니다.</li>
+									<li><span>*</span>반품 신청하시는 경우 상담원이 별로도 안내드릴 예정입니다.</li>
+									<li><span>*</span>고객센터 문의 (080-130-1010)</li>
+								</ul>
+
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>반품 사유</span></dt>
+							<dd>
+								<div class="apply_form1">
+									<select>
+										<option>반품사유를 선택해주세요.</option>
+										<option>구매의사취소</option>
+										<option>상품불량, 파손</option>
+									</select>
+									<span class="textarea2"><textarea placeholder="상세사유 입력(200자)"></textarea></span>
+									<p class="apply_wp">* 선택한 사유에 따라 배송비 부담자가 안내됩니다.</p>
+									<!-- <p class="apply_wp">* 반품 배송비 고객부담 사유입니다.</p> -->
+								</div>
+
+								<ul class="add_photoFile">
+									<li>
+										<div class="file_wrap pop_btn" id="LoadImg01">
+											<button class="file_cover"><span>추가</span></button>
+											<input type="file" class="upload" accept="image/*" onchange="loadImg(this,$('#LoadImg01'))">
+										</div>
+									</li>
+									<li>
+										<div class="file_wrap pop_btn" id="LoadImg02">
+											<button class="file_cover"><span>추가</span></button>
+											<input type="file" class="upload" accept="image/*" onchange="loadImg(this,$('#LoadImg02'))">
+										</div>
+									</li>
+									<li>
+										<div class="file_wrap" id="LoadImg03">
+											<button class="file_cover"><span>추가</span></button>
+											<input type="file" class="upload" accept="image/*" onchange="loadImg(this,$('#LoadImg03'))">
+										</div>
+									</li>
+									<li>
+										<div class="file_wrap" id="LoadImg04">
+											<button class="file_cover"><span>추가</span></button>
+											<input type="file" class="upload" accept="image/*" onchange="loadImg(this,$('#LoadImg04'))">
+										</div>
+									</li>
+									<!--사진업로드팝업-->
+									<div class="pop_wrap">
+										<div class="pop_inner">
+											<div class="pop_cont">
+												<strong>상품평 이미지 등록</strong>
+												<a href="#" class="btn_camera"><span>사진찍기</span></a>
+												<a href="#" class="btn_album"><span>앨범에서 선택</span></a>
+											</div>
+											<span class="pop_close">닫기</span>
+										</div>
+									</div>
+									<!--//사진업로드팝업-->
+								</ul>
+								<ul class="apply_list">
+									<li><span>·</span>상품이상 등의 사유일 경우, 상품이 잘 나오도록 사진을 첨부해주세요.</li>
+									<li><span>·</span>최대 10MB까지의 jpg, jpeg, gif, png 파일만 첨부가 가능합니다.</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>회수지 정보</span></dt>
+							<dd>
+								<div class="apply_form2">
+
+									<div class="bank_name">
+										<span class="inputBox"><input type="text" placeholder="우편번호" name="" tabindex="" autocapitalize="off"></span>
+										<p class="account"><span class="btn size2 bgcolor1"><a href="#">주소변경</a></span></p><!-- 2015-06-01 수정 -->
+									</div>
+									<span class="inputBox"><input type="text" placeholder="주소" name="" tabindex="" autocapitalize="off"></span>
+									<span class="inputBox"><input type="text" placeholder="상세주소" name="" tabindex="" autocapitalize="off"></span>
+									<p class="apply_wp">* 회수지 주소가 변경되었습니다.</p>
+									<p class="apply_wp">* 해당 주소는 제주/도서산간 배송불가 지역입니다. 다른 주소를 입력해주세요.</p>
+									<div class="btns_wrap btn2">
+										<span class="btn size2 bgcolor2"><a href="#">취소</a></span>
+										<span class="btn size2 bgcolor5"><a>수정완료</a></span>
+									</div>
+								</div>
+
+								<ul class="apply_list">
+									<li><span>*</span>회수지 주소에 따라 추가 회수비용을 요구할 수 있습니다.</li>
+									<li><span>*</span>파트너사가 환불 접수 내역 확인 후 자동으로 상품회수가 진행됩니다. 일반택배 상품의 경우, 승인 후 2-5일 내에 택배기사님이 방문 예정이니 상품을 받으신 상태로 포장해주세요.</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>기존 결제정보</span></dt>
+							<dd>
+								<ul class="apply_info">
+									<li><span class="left">상품금액 합계 </span><span class="right">25,000원</span></li>
+									<li><span class="left">할인금액 합계</span><span class="right">5,700원</span></li>
+									<li><span class="left">배송비 합계</span><span class="right">2,500원</span></li>
+									<li><span class="left">승인내역</span><span class="right">비씨카드(91002300********)<br>2020-07-10 11:22:21(일시불)<br>신용카드 21,800원</span></li>
+									<li class="bold"><span class="left">기존 결제금액</span><span class="right">21,800원</span></li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>환불내역</span></dt>
+							<dd>
+								<ul class="apply_info">
+									<li class="bold"><span class="left">차감금액</span><span class="right">5,000원</span></li>
+									<li><span class="left">교환/반품 배송비 합계</span><span class="right">5,000원</span></li>
+									<li><span class="left">신용카드 환불</span><span class="right">16,800원</span></li>
+									<li><span class="left">적립금 환불</span><span class="right">2,000원</span></li>
+									<li><span class="left">쿠폰 환불</span><span class="right">1,500원</span></li>
+									<li class="end"><span class="left">환불예정금액</span><span class="right">(+) 16,800원</span></li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>환불계좌 정보입력</span></dt>
+							<dd>
+								<div class="apply_form3">
+									<div class="bank_name2">
+										<select>
+											<option>은행 선택</option>
+										</select>
+										<span class="inputBox"><input type="text" placeholder="계좌번호 입력 ‘-’를 제외하고 적어주세요" name="" tabindex="" autocapitalize="off"></span>
+									</div>
+									<div class="bank_name">
+										<span class="inputBox"><input type="text" placeholder="예금주" name="" tabindex="" autocapitalize="off"></span>
+										<p class="account"><span class="btn size2 bgcolor1"><a href="#">계좌인증</a></span></p><!-- 2015-06-01 수정 -->
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>반품 불가사항 안내</span></dt>
+							<dd>
+								<ul class="apply_list">
+									<li><span>·</span>구성품 누락 또는 상품택기 제거되어 있을 경우</li>
+									<li><span>·</span>상품포장의 개봉, 상품사용으로 상품의 가치가 훼손된 경우(가전제품, 귀금속, 화장품 및 기타 위생제품)</li>
+									<li><span>·</span>시간경과에 따라 재판매가 어려운 상품이나 복제가 가능한 재화</li>
+									<li><span>·</span>사용한 쿠폰이 환불시점에 유효기간이 지난 경우 쿠폰은 자동소멸됩니다.</li>
+									<li><span>·</span>보다 자세한 내용은 상품 상세페이지에서 확인하시거나 고객센터로 연락 바랍니다.</li>
+									<li class="wp"><span>·</span>판매자 귀책사유가 아닐경우 반품택배비가 부과 될수도 있습니다.</li>
+								</ul>
+
+								<div class="join_check"><input type="checkbox" id="agree1" name="agree1"><label for="agree1"><span class="check"></span><span class="txt">반품불가사항 안내를 확인하였습니다.</span></label></div>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<div class="btn_wrap pd">
+							<button type="button" class="half gray">취소</button>
+							<button type="submit" class="half pink">반품신청</button>
+						</div>
+
+						<div class="sub_line2"></div>
+						<!-- //반품상세 -->
+
+						<!-- 반품신청 -->
+						<dl class="apply_dl center">
+							<dt><span>차액을 결제하시면 반품신청이 완료됩니다.</span></dt>
+							<dd>반품에 발생되는 배송비가 상품금액보다 더 크게 발생하였습니다.</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>차액결제 내역</span></dt>
+							<dd>
+								<ul class="apply_info">
+									<li class="bold"><span class="left">차액결제 내역</span><span class="right">1,200원</span></li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl pay_method ui-tab-btns">
+							<dt><span>결제수단 선택</span></dt>
+							<dd>
+								<div class="pay_tab">
+                  <div class="pay_tab_con">
+                    <span><a data-tab-target="pm_card" class="pay1 current" style="transition: all 300ms ease 0s;"><i></i><span></span>신용카드</a></span>
+                  </div>
+                </div>
+							</dd>
+						</dl>
+						<div class="apply_con">
+							<!-- 신용카드 선택시 -->
+							<div id="pm_card" class="pay_method_con ui-tab-content" style="display:block;">
+								<div class="card_select">
+									<select name="" tabindex="13">
+										<option value="" selected="selected">카드선택</option>
+										<option value="">국민카드</option>
+									</select>
+									<select name="" tabindex="14">
+										<option value="" selected="selected">할부선택</option>
+										<option value="">일시불</option>
+									</select>
+								</div>
+								<ul class="card_ul">
+									<li><span>신한카드</span>7% 청구 할인</li>
+									<li><span>국민카드</span>5% 청구 할인</li>
+									<li>국민카드 최대 6개월 무이자(60,000 x 6개월)<br />(6.14~6.15 / 50,000원 이상 결제 시)</li>
+								</ul>
+								<div class="card_discount">
+									<button type="button" class="card_btn">무이자 할부 카드 안내 보기<i></i></button>
+								</div>
+								<!--
+								<div class="card_point_area">
+									<dl class="form_input">
+										<dt>카드 포인트사용</dt>
+										<dd>
+											<p class="check"><input type="checkbox" id="point_use" /><label for="point_use">KB국민 포인트리 사용</label></p>
+											<p class="guide"><a class="btn_ib8 btn_radius4 btn_white btn_h32 ui-pop-btn" data-pop-id="pop_point_use">포인트 사용안내</a></p>
+										</dd>
+									</dl>
+								</div>
+								-->
+							</div>
+							<!-- //신용카드 선택시 -->
+						</div>
+
+						<div class="sub_line"></div>
+
+						<div class="btn_wrap pd">
+							<button type="button" class="half gray">취소</button>
+							<button type="submit" class="half pink">결제</button>
+						</div>
+
+						<div class="sub_line2"></div>
+
+						<!-- //반품신청 -->
+
+						<!-- 반품상세 -->
+						<div class="order_goods_tit top">
+							<span class="tit_date">2020.05.09</span>
+							<a href="#none" class="tit_num">주문번호 21481961</a>
+						</div>
+						<div class="sub_line"></div>
+						<dl class="apply_dl">
+							<dt><span>반품신청 상품</span> (2/2)</dt>
+							<dd>
+								<ul class="order_goods">
+									<li>
+										<div class="goods">
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+											<div class="goods_ing">반품중<!--반품완료--></div>
+											<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+											<div class="goods_price">
+												<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+											<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+											<!-- <div class="goods_in">우체국 81087680230382</div> -->
+											<!-- <div class="goods_cont">상담하실 내용</div> -->
+										</div>
+									</li>
+									<li>
+										<div class="goods">
+											<div class="goods_img"><a><img src="../../img/tmp/001.jpg" alt=""></a></div>
+											<div class="goods_ing">반품중<!--반품완료--></div>
+											<div class="goods_name">무방부제 무방부제 무방부제 무방부제 무방부제 무방부제 무발색제 싱가포르 화적포 스타일! 너비향 육포 2종</div>
+											<div class="goods_price">
+												<!-- <del><em>276,200</em>원</del> --><span><em>164,800</em>원</span></div>
+											<div class="goods_op">옵션: 단품 | 수량: 1개</div>
+											<!-- <div class="goods_in">우체국 81087680230382</div> -->
+											<!-- <div class="goods_cont">상담하실 내용</div> -->
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>반품사유</span></dt>
+							<dd>
+								<ul class="apply_info2">
+									<li><span class="title">사유</span>구매의사 취소</li>
+									<li><span class="title">상세사유</span>구매의사를 취소합니다.</li>
+									<li><span class="title">첨부사진</span>1장</li>
+								</ul>
+								<div class="apply_pd"></div>
+								<ul class="add_photoFile">
+									<li><div class="file_wrap">
+										<div class="file_cover none"></div>
+										<div class="img_wrap"><img src="이미지" alt=""></div>
+									</div></li>
+									<li><div class="file_wrap">
+										<div class="file_cover none"></div>
+									</div></li>
+									<li><div class="file_wrap">
+										<div class="file_cover none"></div>
+									</div></li>
+									<li><div class="file_wrap">
+										<div class="file_cover none"></div>
+									</div></li>
+								</ul>
+
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>회수지 정보</span></dt>
+							<dd>
+								<ul class="apply_info2">
+									<li><span class="title">보내시는 분</span>홍길동</li>
+									<li><span class="title">휴대폰 번호</span>010-1234-5678</li>
+									<li><span class="title">전화번호</span>02-1234-5678</li>
+									<li><span class="title">주소</span>서울시 중구 동호로 00</li>
+								</ul>
+								<div class="goods_btn mt">
+									<button type="button" onclick="location.href='#해당링크'">배송추적</button>
+								</div>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>환불내역</span></dt>
+							<dd>
+								<ul class="apply_info">
+									<li class="bold"><span class="left">차감금액</span><span class="right">5,000원</span></li>
+									<li><span class="left">교환/반품 배송비 합계</span><span class="right">5,000원</span></li>
+									<li><span class="left">신용카드 환불</span><span class="right">16,800원</span></li>
+									<li><span class="left">적립금 환불</span><span class="right">2,000원</span></li>
+									<li><span class="left">쿠폰 환불</span><span class="right">1,500원</span></li>
+									<li class="end"><span class="left">환불예정금액</span><span class="right">(+) 16,800원</span></li>
+								</ul>
+								<div class="goods_btn mt">
+									<button type="button" onclick="location.href='#해당링크'">주문내역</button>
+									<button type="button" onclick="location.href='#해당링크'">반품철회</button>
+								</div>
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>신용카드 환불</span></dt>
+							<dd>
+								<ul class="apply_info2">
+									<li class="tr"><span class="title">반품 신청일</span>비씨카드(91002300********)<br>2020-07-10 11:22:21(일시불)<br>신용카드 5,000원</li>
+								</ul>
+
+							</dd>
+						</dl>
+
+						<div class="sub_line"></div>
+
+						<dl class="apply_dl">
+							<dt><span>처리상태</span></dt>
+							<dd>
+								<ul class="apply_info2">
+									<li><span class="title">반품 신청일</span>2020.10.17 16:41</li>
+									<li><span class="title">반품 완료일</span></li>
+								</ul>
+
+							</dd>
+						</dl>
+
+						<!-- //반품상세 -->
+
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+<? include "../includefile/scriptlink_pc.html"; ?>
+<? include "../includefile/scriptlink_pc_sub.html"; ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//서브 클래스 추가
+		$(".header_wrap").addClass("sub");
+
+		$('.order_goods .order_goods_check:last-child').addClass('lbd');
+
+		//진입시 시스템 팝업
+		alert("페이코 반품 안내\n※ 페이코는 부분환불이 불가한 결제 수단입니다.\n※ 반품 신청하시는 경우 상담원이 별로도 안내드릴 예정입니다.\n※ 고객센터 문의 (080-130-1010)");
+
+		//버튼 갯수
+		$('.goods_btn').each(function() {
+			if ($('button', this).length < 2) {
+				$(this).addClass('w100');
+			} else if ($('button', this).length < 3) {
+				$(this).addClass('w50');
+			} else if ($('button', this).length < 4) {
+				$(this).addClass('w33');
+			} else if ($('button', this).length < 5) {
+				$(this).addClass('w25');
+			}
+		});
+
+		//회수지 변경
+		$('.ship_btn').on('click', function() {
+			$('.ship_pop').fadeIn('300');
+		});
+		$('.ship_pop_close').on('click', function() {
+			$('.ship_pop').fadeOut('300');
+		});
+
+	});
+</script>
+</body>
+
+</html>

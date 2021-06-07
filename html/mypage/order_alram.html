@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<!-- <? include "../includefile/header_pc.html"; ?> -->
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>쇼핑 알림</span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+            <!-- 내역이 없을 경우
+            <p class="list_nodata">
+              새로운 알림이 없습니다.
+            </p> -->
+						<div class="sub_line2"></div>
+						<dl class="setting_dl">
+							<dt>깜짝 쿠폰, 특가상품,<br>이벤트 소식을 먼저 받아보세요.</dt>
+							<dd>
+								<div class="toggle"><input type="checkbox" id="toggle5" name="" value=""><label for="toggle5"><span></span></label></div>
+								<p>혜택 알림 받기 신청<br><br></p>
+							</dd>
+						</dl>
+						<div class="sub_line"></div>
+            <ul class="order_alram_list">
+              <li><a href="#none">
+                <span class="img"><img src="../../img/tmp/005_1.jpg" alt="" /></span>
+                <span class="txt_wrap">
+                  <span class="tits">르까프 구스벤치 초특가!</span>
+                  <span class="txt">구스벤치 코트 초특가 78,000원! 남녀공용 르까프! 앱에서 구매시 적립까지!</span>
+                  <span class="date">2018.6.30 11:30</span>
+                </span>
+              </a></li>
+              <li><a href="#none">
+                <span class="img"><img src="../../img/tmp/005_1.jpg" alt="" /></span>
+                <span class="txt_wrap">
+                  <span class="tits">르까프 구스벤치 초특가!</span>
+                  <span class="txt">구스벤치 코트 초특가 78,000원! 남녀공용 르까프!  앱에서 구매시 적립까지! 앱에서 구매시 적립까지! 앱에서 구매시 적립까지!</span>
+                  <span class="date">2018.6.30 11:30</span>
+                </span>
+              </a></li>
+              <li class="noimage"><a href="#none">
+                <span class="txt_wrap">
+                  <span class="tits">르까프 구스벤치 초특가!</span>
+                  <span class="txt">구스벤치 코트 초특가 78,000원! 남녀공용 르까프! 앱에서 구매시 적립까지!</span>
+                  <span class="date">2018.6.30 11:30</span>
+                </span>
+              </a></li>
+              <li class="last">
+                최근 7일 이내 알림 내역만 확인 하실 수 있습니다.
+              </li>
+            </ul>
+
+					</section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+
+	<div id="detail_pop" class="detail_pop" style="display:none;">
+    <div class="detail_pop_bg"></div>
+    <div class="detail_pop_con">
+      <dl class="detail_dt">
+        <dt>
+					<span class="img"><img src="../../img/icon_alert_alarm.png" alt="알림"></span>
+					<span class="txt">쇼핑엔티 알림</span>
+        </dt>
+        <dd>
+					<span class="txt">
+					알림을 해제하시면 고객님을 위한 <br>
+					깜짝 쿠폰, 특가상품, 이벤트 소식 등<br>
+					쇼핑 혜택 정보를 받으실 수 없습니다.<br><br>
+					알림을 유지하시겠습니까?
+					</span>
+        </dd>
+      </dl>
+      <div class="detail_pop_btn">
+				<button type="button" class="detail_no">아니오</button>
+        <button type="button" class="detail_yes">예</button>
+      </div>
+    </div>
+  </div>
+
+	<? include "../includefile/scriptlink.html"; ?>
+	<!-- <? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?> -->
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+
+			//동의
+			$(".setting_dl .toggle input").click(function(){
+				var chk = $(this).is(":checked");//.attr('checked');
+				if(chk)
+				//alert('YYYY년 MM월 DD일 쇼핑엔티가 제공하는 푸시 알림을 거부하셨습니다.\n 메뉴 > 설정 > 알림에서 동의를 변경하실 수 있습니다.')
+				;
+				else $("#detail_pop").fadeIn(300);
+			 });
+
+			//팝업
+			$('.detail_no').click(function() {
+				// alert('YYYY년 MM월 DD일 쇼핑엔티가 제공하는 푸시 알림을 거부하셨습니다.\n 메뉴 > 설정 > 알림에서 동의를 변경하실 수 있습니다.');
+				$(this).parent().parent().parent().fadeOut(300);
+			});
+			$('.detail_yes').click(function() {
+				$(".setting_dl .toggle input").prop('checked', true);
+				$(this).parent().parent().parent().fadeOut(300);
+			});
+			$('.detail_pop_bg').click(function() {
+				$(this).parent().fadeOut(300);
+			});
+	  });
+	</script>
+</body>
+
+</html>

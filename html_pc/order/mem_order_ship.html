@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<? include "../includefile/declare.html"; ?>
+</head>
+<body>
+	<? include "../includefile/skipNavi.html"; ?>
+	<? include "../includefile/header_pc.html"; ?>
+	<div class="container">
+		<div class="wrap">
+			<? include "../includefile/ctgr_sideBar.html"; ?>
+			<div class="wrap_inner">
+				<!--header S-->
+				<header class="header detail">
+					<span class="floating_btn_back"><a href="javascript:window.history.back();">이전페이지로 바로가기</a></span>
+					<span class="floating_btn_home"><a href="../main/index.html">홈으로 바로가기</a></span>
+					<h2 class="goods_detail"><span>배송지 목록<!-- 배송지 관리 --></span></h2>
+					<div class="btn_search" onclick="javascript:goUrl('/display/goods/search/main')">
+						<a class="txt"></a>
+						<a class="btn">버튼</a>
+					</div>
+					<a href="../mypage/cart.html" class="btn_cart">장바구니<!--<span class="num num1">10</span><span class="num num2">99+</span><span class="num new">N</span>--></a>
+				</header>
+				<!--header E-->
+				<!--main S-->
+				<main id="contents">
+					<section class="contents">
+
+						<div class="ship_add">
+							<button type="button" class="ship_btn1">+ 신규 배송지 추가</button>
+						</div>
+            <ul class="ship_list">
+              <li>
+								<dl class="ship_list_uesr">
+									<dt>홍길동<span class="col">기본배송지</span></dt>
+									<dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+									<dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+								</dl>
+								<div class="goods_btn">
+									<button type="button">선택</button>
+									<!-- <button type="button">기본배송지</button> -->
+									<button type="button" class="ship_btn2">수정</button>
+									<!-- <button type="button">삭제</button> -->
+								</div>
+              </li>
+							<li>
+								<dl class="ship_list_uesr">
+									<dt>홍길동<span class="col">기본배송지</span></dt>
+									<dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+									<dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+								</dl>
+								<div class="goods_btn">
+									<button type="button">선택</button>
+									<!-- <button type="button">기본배송지</button> -->
+									<button type="button" class="ship_btn2">수정</button>
+									<button type="button">삭제</button>
+								</div>
+              </li>
+							<li>
+								<dl class="ship_list_uesr">
+									<dt>홍길동<span class="col">기본배송지</span></dt>
+									<dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+									<dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+								</dl>
+								<div class="goods_btn">
+									<!-- <button type="button">선택</button> -->
+									<!-- <button type="button">기본배송지</button> -->
+									<button type="button" class="ship_btn2">수정</button>
+									<!-- <button type="button">삭제</button> -->
+								</div>
+              </li>
+							<li>
+								<dl class="ship_list_uesr">
+									<dt>홍길동<span class="col">기본배송지</span></dt>
+									<dd>[04969] 서울 관악구 신림로 34 402호 (신림로, 태영 아파트 아파트림로, 태영 아파트, 태영 아파트 아아파트)</dd>
+									<dd class="last">010-1234-5678<span></span>02-1111-2222</dd>
+								</dl>
+								<div class="goods_btn">
+									<!-- <button type="button">선택</button> -->
+									<button type="button">기본배송지</button>
+									<button type="button" class="ship_btn2">수정</button>
+									<button type="button">삭제</button>
+								</div>
+              </li>
+            </ul>
+						<button type="button" name="button" class="btn_see bd">더보기 (10/23)<span></span></button>
+						<div class="list_nodata">
+							<p style="padding:120px 0;">등록된 배송지가 없습니다.<br>신규 배송지를 등록해 주세요.</p>
+						</div>
+          </section>
+				</main>
+				<!--main E-->
+				<!--footer S-->
+				<? include "../includefile/footer.html"; ?>
+				<!-- dimmed-->
+				<div class="dim" style="display:none;"></div>
+				<!-- //dimmed -->
+				<!--footer E-->
+			</div><!-- end wrap_inner -->
+		</div><!-- end wrap -->
+		<? include "../includefile/page_top.html"; ?>
+	</div><!-- end container -->
+
+	<div class="ship_pop" style="display:none;">
+    <div class="ship_pop_tit">신규 배송지 추가<!-- 배송지 수정 --></div>
+    <button type="button" class="ship_pop_close">닫기</button>
+    <div class="ship_pop_con pd">
+			<div class="order_wrap">
+				<div class="form_input_new">
+					<span class="inputBox"><input type="text" placeholder="이름" name="id" tabindex="1"></span>
+					<div class="post_wrap">
+						<span><span class="inputBox"><input type="text" placeholder="우편번호" name="addr" tabindex="2"></span></span>
+						<span class="post"><span class="btn size2 bgcolor1"><a href="#addr" class="addr_btn">주소찾기</a></span></span>
+					</div>
+					<span class="inputBox"><input type="text" name="addr" tabindex="3" autocapitalize="off" readonly="readonly"></span>
+					<span class="inputBox"><input type="text" name="addr" tabindex="4" autocapitalize="off" readonly="readonly"></span>
+					<div class="phone_wrap">
+						<select name="" tabindex="5">
+							<option value="">010</option>
+							<option value="">011</option>
+							<option value="">016</option>
+							<option value="">017</option>
+							<option value="">018</option>
+							<option value="">019</option>
+						</select>
+						<span class="inputBox"><input type="tel" name="tel1" tabindex="6" autocapitalize="off" placeholder="휴대폰번호(-없이 입력)"></span>
+					</div>
+					<div class="phone_wrap">
+						<select name="" tabindex="8">
+							<option value="">02</option>
+						</select>
+						<span class="inputBox"><input type="tel" name="tel1" tabindex="9" placeholder="전화번호(선택)"></span>
+					</div>
+					<div class="join_check"><input type="checkbox" id="myAddr" name="myAddr"><label for="myAddr"><span class="check"></span><span class="txt">기본배송지로 설정</span></label></div>
+				</div>
+			</div>
+		</div>
+		<div class="ship_pop_btn">
+			<button type="button" class="ship_pop_btn_cancle">취소</button>
+			<button type="button" class="ship_pop_btn_save">저장</button>
+		</div>
+  </div>
+	<? include "../includefile/scriptlink.html"; ?>
+	<? include "../includefile/footer_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc.html"; ?>
+	<? include "../includefile/scriptlink_pc_sub.html"; ?>
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    //서브 클래스 추가
+	    $(".header_wrap").addClass("sub");
+
+			//무이자 카드 팝업
+			$('.ship_btn1').on('click', function() {
+        $('.ship_pop_tit').text('신규 배송지 추가');
+      });
+			$('.ship_btn2').on('click', function() {
+        $('.ship_pop_tit').text('배송지 수정');
+      });
+      $('.ship_btn1, .ship_btn2').on('click', function() {
+        $('.ship_pop').fadeIn('300');
+      });
+      $('.ship_pop_close').on('click', function() {
+        $('.ship_pop').fadeOut('300');
+      });
+
+			//버튼 갯수
+	    $('.goods_btn').each(function() {
+	      if ($('button', this).length < 2) {
+	        $(this).addClass('w100');
+	      } else if ($('button', this).length < 3) {
+	        $(this).addClass('w50');
+	      } else if ($('button', this).length < 4) {
+	        $(this).addClass('w33');
+	      } else if ($('button', this).length < 5) {
+	        $(this).addClass('w25');
+	      }
+	    });
+	  });
+	</script>
+</body>
+
+</html>
